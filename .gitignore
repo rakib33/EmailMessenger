@@ -2,4 +2,5 @@ EmailMessenger\EmailMessenger\EmailMessenger\obj
 *.suo
 *.user
 EmailMessenger\EmailMessenger\EmailMessenger\obj
-
+EmailMessenger\EmEntity\obj
+EmailMessenger\EmEntity\bin
