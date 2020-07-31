@@ -1,0 +1,71 @@
+﻿<script id="itemTemplate" type="text/x-jquery-tmpl">
+    <tr>
+        <td>${SlNo}</td>
+        <td>${GroupName}</td>
+        <td>${ServerConnectionName}</td>
+        <td>${Description}</td>
+        <td>${Size}</td>
+        <td>${ConditionQuery}</td>
+    </tr>
+</script>
+
+<div id="group">
+    <div class="panel">
+        <div class="panel-body">
+            <h3 class="title-hero">
+                Group
+            </h3>
+            <div class="example-box-wrapper">
+                <!-- Button to Open the Modal -->
+                <button style="margin-bottom:10px" type="button" class="btn btn-sm btn-primary btn-hover" data-toggle="modal" data-backdrop="static" data-target="#groupAddEditModal">
+                    <span> Add Group </span> <span class="glyphicon glyphicon-plus"></span>
+                </button>
+
+                <div id="datatable-responsive_wrapper" class="dataTables_wrapper form-inline margin-top-05">
+                    <table id="grouptable" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                        <thead>
+                            <tr role="row">
+                                <th style="width:5px" class="all">Sl No</th>
+                                <th class="all">Group Name</th>
+                                <th>Connection</th>
+                                <th>Description</th>
+                                <th>Size</th>
+                                <th class="none">Condition Query</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="groupAddEditModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <span>Group Add/Edit</span>
+                <span><button type="button" class="close" data-dismiss="modal">&times;<i class="glyphicon glyphicon-close"></i></button></span>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                @Html.Partial("GroupAddEdit")
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="release btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/emailScript/groupParent.js"></script>

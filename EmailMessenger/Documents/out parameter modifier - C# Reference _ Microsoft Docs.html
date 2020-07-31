@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier -->
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual js" lang="en-us" dir="ltr" data-authenticated="false" data-auth-status-determined="true" data-target="docs" x-ms-format-detection="none"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="./out parameter modifier - C# Reference _ Microsoft Docs_files/62-186d68"><link rel="stylesheet" href="./out parameter modifier - C# Reference _ Microsoft Docs_files/override.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="out parameter modifier - C# Reference">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@docsmsft">
+
+		<meta name="ms.devlang" content="csharp">
+<meta name="author" content="BillWagner">
+<meta name="ms.author" content="wiwagn">
+<meta name="breadcrumb_path" content="/dotnet/breadcrumb/toc.json">
+<meta name="apiPlatform" content="dotnet">
+<meta name="ms.topic" content="conceptual">
+<meta name="ms.prod" content="dotnet-csharp">
+<meta name="uhfHeaderId" content="MSDocsHeader-DotNet">
+<meta name="ms.custom" content="seodec18">
+<meta name="ms.date" content="03/06/2018">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="core-docs">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="VS">
+<meta name="depot_name" content="VS.core-docs">
+<meta name="updated_at" content="2019-01-23 01:48 PM">
+<meta name="gitcommit" content="https://github.com/dotnet/docs/blob/95591611a8742bdc47413bd7235deeef1ddce795/docs/csharp/language-reference/keywords/out-parameter-modifier.md">
+<meta name="original_content_git_url" content="https://github.com/dotnet/docs/blob/live/docs/csharp/language-reference/keywords/out-parameter-modifier.md">
+<meta name="document_id" content="8f6c8480-77a7-7505-5224-0efe15b9b755">
+<meta name="document_version_independent_id" content="993250d1-108c-ab1a-886e-ca1bfa9104c7">
+<meta name="page_type" content="conceptual">
+<meta name="interactive_type" content="csharp">
+<meta name="toc_rel" content="toc.json">
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/VS.core-docs/{branchName}{pdfName}">
+<meta name="search.mshattr.devlang" content="csharp">
+<meta name="word_count" content="785">
+
+	<meta name="scope" content=".NET">
+<link href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier" rel="canonical">
+	<title>out parameter modifier - C# Reference | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="./out parameter modifier - C# Reference _ Microsoft Docs_files/828d5125.site-ltr.css">
+
+	<link rel="stylesheet" href="./out parameter modifier - C# Reference _ Microsoft Docs_files/baf7101.conceptual.css">
+
+
+	<script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/analytics.js.download"></script><script>
+	var msDocs = {
+		data:{
+			azureHeaderLocale: 'en-us',
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasComments: true,
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'dotnet/docs',
+			feedbackProductUrl: 'https://developercommunity.visualstudio.com/spaces/61/index.html',
+			contentGitUrl: 'https://github.com/dotnet/docs/blob/master/docs/csharp/language-reference/keywords/out-parameter-modifier.md',
+			learnBannerDetails: {
+				learnBannerProducts: ''
+			}
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: false,
+			enableUHFPPE: true
+		}
+	};
+	if (!('Promise' in window && 'resolve' in window.Promise && 'reject' in window.Promise && 'all' in window.Promise && 'race' in window.Promise)) {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/6ee34c01.bluebird.min.js"><\/script>');
+	}
+	if (typeof fetch !== 'function') {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/d9fc435c.fetch.min.js"><\/script>');
+	}
+	if (typeof HTMLTemplateElement === 'undefined') {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/96af6a8d.template.min.js"><\/script>');
+	}
+	</script>
+
+	<script src="./out parameter modifier - C# Reference _ Microsoft Docs_files/jquery-3.3.1.min.js.download" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+		<script src="./out parameter modifier - C# Reference _ Microsoft Docs_files/c5e5eb2a.index-docs.js.download"></script><style></style><script src="./out parameter modifier - C# Reference _ Microsoft Docs_files/jsll-4.js.download" async="" defer=""></script>
+
+<script>bazadebezolkohpepadr="532286030"</script><script type="text/javascript" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/1fba0845" defer=""></script><script src="./out parameter modifier - C# Reference _ Microsoft Docs_files/18-d72213" defer=""></script><style>
+			.c-uhfh input[type="search"],
+			.c-uhfh.c-sgl-stck .c-uhfh-actions .c-search input[type="search"] {
+				padding-left: 69px !important;
+			}</style><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js.download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(1).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(2).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(3).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(4).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(5).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(6).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(7).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(8).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(9).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(10).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(11).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(12).download"></script><script async="" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/t.js(13).download"></script><script async="" src="https://web.vortex.data.microsoft.com/collect/v1/t.js?ver=%272.1%27&amp;name=%27Ms.Webi.ContentUpdate%27&amp;time=%272019-02-26T05%3A09%3A59.885Z%27&amp;os=%27Windows%27&amp;appId=%27JS%3ADocs%27&amp;-ver=%271.0%27&amp;-impressionGuid=%27f56e494b-9243-4b6a-a9ee-d98275519c2a%27&amp;-pageName=%278f6c8480-77a7-7505-5224-0efe15b9b755%27&amp;-uri=%27https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdotnet%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier%27&amp;-market=%27en-us%27&amp;-pageTags=%27%7B%22pgdevlng%22%3A%22csharp%22%2C%22author%22%3A%22BillWagner%22%2C%22pgauth%22%3A%22wiwagn%22%2C%22pgtop%22%3A%22conceptual%22%2C%22product%22%3A%22dotnet-csharp%22%2C%22custom%22%3A%22seodec18%22%2C%22date%22%3A%2203%2F06%2F2018%22%2C%22depotname%22%3A%22VS.core-docs%22%2C%22publishtime%22%3A%222019-01-23%2001%3A48%20PM%22%2C%22gitcommit%22%3A%22https%3A%2F%2Fgithub.com%2Fdotnet%2Fdocs%2Fblob%2F95591611a8742bdc47413bd7235deeef1ddce795%2Fdocs%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier.md%22%2C%22giturl%22%3A%22https%3A%2F%2Fgithub.com%2Fdotnet%2Fdocs%2Fblob%2Flive%2Fdocs%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier.md%22%2C%22document_version_independent_id%22%3A%22993250d1-108c-ab1a-886e-ca1bfa9104c7%22%2C%22contentlocale%22%3A%22en-us%22%2C%22highContrast%22%3A%22false%22%2C%22metaTags%22%3A%7B%7D%7D%27&amp;-pageHeight=4403&amp;-vpHeight=756&amp;-vpWidth=1164&amp;-actionType=%27R%27&amp;-behavior=0&amp;-vScrollOffset=2181&amp;-hScrollOffset=0&amp;-contentVer=%272.0%27&amp;-content=%27%5B%5D%27&amp;*baseType=%27Ms.Content.ContentUpdate%27&amp;*title=%27out%20parameter%20modifier%20-%20C%23%20Reference%20%7C%20Microsoft%20Docs%27&amp;*cookieEnabled=true&amp;*isJs=true&amp;*isDomComplete=false&amp;*isLoggedIn=false&amp;ext-javascript-ver=%271.1%27&amp;ext-javascript-libVer=%274.2.11%27&amp;ext-javascript-domain=%27docs.microsoft.com%27&amp;ext-javascript-msfpc=%27GUID%3De43442e3313940f8a6afdd2ec88810ab%26HASH%3De434%26LV%3D201902%26V%3D4%26LU%3D1550394070737%27&amp;ext-javascript-userConsent=false&amp;ext-user-localId=%27t%3A2D7ED565359D630A2A86D867319D6033%27&amp;$mscomCookies=false"></script></head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder">
+		<div id="headerAreaHolder" data-bi-name="header">    <div id="headerArea" class="uhf" data-m="{&quot;cN&quot;:&quot;headerArea&quot;,&quot;cT&quot;:&quot;Area_coreuiArea&quot;,&quot;id&quot;:&quot;a1Body&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;Body&quot;}">
+                <div id="headerRegion" data-region-key="headerregion" data-m="{&quot;cN&quot;:&quot;headerRegion&quot;,&quot;cT&quot;:&quot;Region_coreui-region&quot;,&quot;id&quot;:&quot;r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;a1&quot;}">
+
+    <div id="headerUniversalHeader" data-m="{&quot;cN&quot;:&quot;headerUniversalHeader&quot;,&quot;cT&quot;:&quot;Module_coreui-universalheader&quot;,&quot;id&quot;:&quot;m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;r1a1&quot;}" data-module-id="Category|headerRegion|coreui-region|headerUniversalHeader|coreui-universalheader">
+        
+
+
+
+
+
+		<a id="uhfSkipToMain" class="m-skip-to-main" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#main" tabindex="0" style="z-index:3000002" data-m="{&quot;cN&quot;:&quot;Skip to content_nonnav&quot;,&quot;id&quot;:&quot;nn1m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;m1r1a1&quot;}">Skip to main content</a>
+
+
+<header role="banner" class="c-uhfh context-uhf c-sgl-stck c-category-header" itemscope="itemscope" data-header-footprint="/MSDocs/MSDocsHeader-DotNet, fromService: True" data-ckrate="1" data-magict="true" itemtype="http://schema.org/Organization">
+	<div class="theme-light js-global-head f-closed  global-head-cont" data-m="{&quot;cN&quot;:&quot;Universal Header_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;m1r1a1&quot;}">
+		<div class="c-uhfh-gcontainer-st">
+			<button type="button" class="c-action-trigger c-glyph glyph-global-nav-button" aria-label="All Microsoft expand to see list of Microsoft products and services" aria-expanded="false" data-m="{&quot;cN&quot;:&quot;Mobile menu button_nonnav&quot;,&quot;id&quot;:&quot;nn1c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2m1r1a1&quot;}"></button>
+			<button type="button" class="c-action-trigger c-glyph glyph-arrow-htmllegacy" aria-label="Close search" aria-expanded="false" data-m="{&quot;cN&quot;:&quot;Close Search_nonnav&quot;,&quot;id&quot;:&quot;nn2c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c2m1r1a1&quot;}"></button>
+					<a id="uhfLogo" class="c-logo c-sgl-stk-uhfLogo" itemprop="url" href="https://www.microsoft.com/" aria-label="Microsoft" data-m="{&quot;cN&quot;:&quot;GlobalNav_Logo_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c2m1r1a1&quot;}">
+						<img alt="" itemprop="logo" itemscope="itemscope" class="c-image" src="./out parameter modifier - C# Reference _ Microsoft Docs_files/RE1Mu3b" role="presentation" aria-hidden="true">
+						<span role="presentation" aria-hidden="true">Microsoft</span>
+					</a>
+			<div class="f-mobile-title">
+				<button type="button" class="c-action-trigger c-glyph glyph-chevron-left" aria-label="See more menu options" data-m="{&quot;cN&quot;:&quot;Mobile back button_nonnav&quot;,&quot;id&quot;:&quot;nn4c2m1r1a1&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c2m1r1a1&quot;}"></button>
+				<span data-global-title="Microsoft home" class="js-mobile-title">.NET</span>
+				<button type="button" class="c-action-trigger c-glyph glyph-chevron-right" aria-label="See more menu options" data-m="{&quot;cN&quot;:&quot;Mobile forward button_nonnav&quot;,&quot;id&quot;:&quot;nn5c2m1r1a1&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c2m1r1a1&quot;}"></button>
+			</div>
+					<div class="c-show-pipe x-hidden-vp-mobile-st">
+						<a id="uhfCatLogo" class="c-logo c-cat-logo" href="https://docs.microsoft.com/dotnet" aria-label=".NET" itemprop="url" data-m="{&quot;cN&quot;:&quot;CatNav_.NET_nav&quot;,&quot;id&quot;:&quot;n6c2m1r1a1&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c2m1r1a1&quot;}">
+								<span>.NET</span>
+						</a>
+					</div>
+				<div class="cat-logo-button-cont x-hidden">
+						<button type="button" id="uhfCatLogoButton" class="c-cat-logo-button x-hidden" aria-expanded="false" aria-label=".NET" data-m="{&quot;cN&quot;:&quot;.NET_nonnav&quot;,&quot;id&quot;:&quot;nn7c2m1r1a1&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c2m1r1a1&quot;}">
+							.NET
+						</button>
+				</div>
+
+
+
+			        <nav id="uhf-g-nav" aria-label="Contextual menu" class="c-uhfh-gnav" data-m="{&quot;cN&quot;:&quot;Category nav_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c8c2m1r1a1&quot;,&quot;sN&quot;:8,&quot;aN&quot;:&quot;c2m1r1a1&quot;}">
+            <ul class="js-paddle-items">
+                    <li class="single-link js-nav-menu x-hidden-none-mobile-vp uhf-menu-item">
+                        <a class="c-uhf-nav-link" href="https://docs.microsoft.com/dotnet" data-m="{&quot;cN&quot;:&quot;CatNav_Home_nav&quot;,&quot;id&quot;:&quot;n1c8c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c8c2m1r1a1&quot;}"> Home </a>
+                    </li>
+                                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_0" class="c-uhf-nav-link" href="https://docs.microsoft.com/dotnet/api/" data-m="{&quot;cN&quot;:&quot;CatNav_APIs_nav&quot;,&quot;id&quot;:&quot;n2c8c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c8c2m1r1a1&quot;}">APIs</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id=".NET Core" class="c-uhf-nav-link" href="https://docs.microsoft.com/dotnet/articles/core" data-m="{&quot;cN&quot;:&quot;CatNav_.NET Core_nav&quot;,&quot;id&quot;:&quot;n3c8c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c8c2m1r1a1&quot;}">.NET Core</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id=".NET Framework" class="c-uhf-nav-link" href="https://docs.microsoft.com/dotnet/articles/framework" data-m="{&quot;cN&quot;:&quot;CatNav_.NET Framework_nav&quot;,&quot;id&quot;:&quot;n4c8c2m1r1a1&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c8c2m1r1a1&quot;}">.NET Framework</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="ASP.NET" class="c-uhf-nav-link" href="https://docs.microsoft.com/aspnet" data-m="{&quot;cN&quot;:&quot;CatNav_ASP.NET_nav&quot;,&quot;id&quot;:&quot;n5c8c2m1r1a1&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c8c2m1r1a1&quot;}">ASP.NET</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="Xamarin" class="c-uhf-nav-link" href="https://developer.xamarin.com/guides/" data-m="{&quot;cN&quot;:&quot;CatNav_Xamarin_nav&quot;,&quot;id&quot;:&quot;n6c8c2m1r1a1&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c8c2m1r1a1&quot;}">Xamarin</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="Azure" class="c-uhf-nav-link" href="https://docs.microsoft.com/azure" data-m="{&quot;cN&quot;:&quot;CatNav_Azure_nav&quot;,&quot;id&quot;:&quot;n7c8c2m1r1a1&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c8c2m1r1a1&quot;}">Azure</a>
+                        </li>
+
+
+                <li id="overflow-menu" class="overflow-menu x-hidden uhf-menu-item">
+                        <div class="c-uhf-menu js-nav-menu">
+        <button data-m="{&quot;pid&quot;:&quot;More&quot;,&quot;id&quot;:&quot;nn8c8c2m1r1a1&quot;,&quot;sN&quot;:8,&quot;aN&quot;:&quot;c8c2m1r1a1&quot;}" type="button" aria-label="More" aria-expanded="false" style="white-space:nowrap">More</button>
+        <ul id="overflow-menu-list" aria-hidden="true" class="overflow-menu-list">
+        </ul>
+    </div>
+
+                </li>
+                            </ul>
+            
+        </nav>
+
+
+			<div class="c-uhfh-actions" data-m="{&quot;cN&quot;:&quot;Header actions_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c9c2m1r1a1&quot;,&quot;sN&quot;:9,&quot;aN&quot;:&quot;c2m1r1a1&quot;}">
+				<div class="wf-menu">        <nav id="uhf-c-nav" aria-label="All microsoft menu" data-m="{&quot;cN&quot;:&quot;GlobalNav_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c9c2m1r1a1&quot;}">
+            <ul class="js-paddle-items">
+                <li>
+                    <div class="c-uhf-menu js-nav-menu">
+                        <button type="button" class="c-button-logo all-ms-nav" aria-label="All Microsoft expand to see list of Microsoft products and services" aria-expanded="false" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_nonnav&quot;,&quot;id&quot;:&quot;nn1c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c1c9c2m1r1a1&quot;}" style="white-space: nowrap"> <span>All Microsoft</span></button>
+                        <ul class="f-multi-column f-multi-column-6" aria-hidden="true" data-m="{&quot;cN&quot;:&quot;More_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c1c9c2m1r1a1&quot;}">
+                                    <li class="c-w0-contr">
+            <ul class="c-w0">
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Office_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c1c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_6" class="js-subm-uhf-nav-link" href="https://products.office.com/en-us/home" data-m="{&quot;cN&quot;:&quot;W0Nav_Office_nav&quot;,&quot;id&quot;:&quot;n1c1c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c1c2c1c9c2m1r1a1&quot;}">Office</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Windows_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_7" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows/" data-m="{&quot;cN&quot;:&quot;W0Nav_Windows_nav&quot;,&quot;id&quot;:&quot;n1c2c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c2c1c9c2m1r1a1&quot;}">Windows</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Surface_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_8" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/surface" data-m="{&quot;cN&quot;:&quot;W0Nav_Surface_nav&quot;,&quot;id&quot;:&quot;n1c3c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c2c1c9c2m1r1a1&quot;}">Surface</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Xbox_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c4c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_9" class="js-subm-uhf-nav-link" href="https://www.xbox.com/" data-m="{&quot;cN&quot;:&quot;W0Nav_Xbox_nav&quot;,&quot;id&quot;:&quot;n1c4c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c4c2c1c9c2m1r1a1&quot;}">Xbox</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Deals_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c5c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_10" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/sale?icid=gm_nav_L0_salepage" data-m="{&quot;cN&quot;:&quot;W0Nav_Deals_nav&quot;,&quot;id&quot;:&quot;n1c5c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c5c2c1c9c2m1r1a1&quot;}">Deals</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Support_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c6c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+            <a id="l1_support" class="js-subm-uhf-nav-link" href="https://support.microsoft.com/en-us" data-m="{&quot;cN&quot;:&quot;W0Nav_Support_nav&quot;,&quot;id&quot;:&quot;n1c6c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c6c2c1c9c2m1r1a1&quot;}">Support</a>
+            
+        </li>
+            </ul>
+        </li>
+
+        <li class="f-sub-menu js-nav-menu nested-menu" data-m="{&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+
+            <button type="button" role="presentation" f-multi-parent="true" aria-expanded="false" data-m="{&quot;id&quot;:&quot;nn1c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c7c2c1c9c2m1r1a1&quot;}">Software</button>
+            <ul aria-hidden="true" role="presentation">
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Software_WindowsApps_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c7c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_14" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows/windows-10-apps" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Software_WindowsApps_nav&quot;,&quot;id&quot;:&quot;n1c2c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c7c2c1c9c2m1r1a1&quot;}">Windows apps</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Software_OneDrive_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c7c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_15" class="js-subm-uhf-nav-link" href="https://onedrive.live.com/about/en-us/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Software_OneDrive_nav&quot;,&quot;id&quot;:&quot;n1c3c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c7c2c1c9c2m1r1a1&quot;}">OneDrive</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Software_Outlook_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c4c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c7c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_16" class="js-subm-uhf-nav-link" href="https://outlook.live.com/owa/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Software_Outlook_nav&quot;,&quot;id&quot;:&quot;n1c4c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c4c7c2c1c9c2m1r1a1&quot;}">Outlook</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Software_Skype_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c5c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c7c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_17" class="js-subm-uhf-nav-link" href="https://www.skype.com/en/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Software_Skype_nav&quot;,&quot;id&quot;:&quot;n1c5c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c5c7c2c1c9c2m1r1a1&quot;}">Skype</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Software_OneNote_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c6c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c7c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_18" class="js-subm-uhf-nav-link" href="https://www.onenote.com/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Software_OneNote_nav&quot;,&quot;id&quot;:&quot;n1c6c7c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c6c7c2c1c9c2m1r1a1&quot;}">OneNote</a>
+            
+        </li>
+            </ul>
+            
+        </li>
+        <li class="f-sub-menu js-nav-menu nested-menu" data-m="{&quot;cN&quot;:&quot;PCsAndDevices_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c8c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:8,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+
+            <button type="button" role="presentation" f-multi-parent="true" aria-expanded="false" data-m="{&quot;cN&quot;:&quot;GlobalNav_PCsAndDevices_nonnav&quot;,&quot;id&quot;:&quot;nn1c8c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c8c2c1c9c2m1r1a1&quot;}">PCs &amp; Devices  </button>
+            <ul aria-hidden="true" role="presentation">
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_PCsAndDevices_PCsAndTablets_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c8c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c8c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_20" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows/devices" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_PCsAndDevices_PCsAndTablets_nav&quot;,&quot;id&quot;:&quot;n1c2c8c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c8c2c1c9c2m1r1a1&quot;}">PCs &amp; tablets</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_PCAndDevices_Accessories_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c8c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c8c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_21" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/accessories/en-us" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_PCAndDevices_Accessories_nav&quot;,&quot;id&quot;:&quot;n1c3c8c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c8c2c1c9c2m1r1a1&quot;}">Accessories</a>
+            
+        </li>
+            </ul>
+            
+        </li>
+        <li class="f-sub-menu js-nav-menu nested-menu" data-m="{&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:9,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+
+            <button type="button" role="presentation" f-multi-parent="true" aria-expanded="false" data-m="{&quot;id&quot;:&quot;nn1c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c9c2c1c9c2m1r1a1&quot;}">Entertainment</button>
+            <ul aria-hidden="true" role="presentation">
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Products_DevicesAndXbox_XboxAndGames_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c9c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_23" class="js-subm-uhf-nav-link" href="https://www.xbox.com/en-us/games/xbox-one?xr=shellnav" data-m="{&quot;cN&quot;:&quot;GlobalNav_Products_DevicesAndXbox_XboxAndGames_nav&quot;,&quot;id&quot;:&quot;n1c2c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c9c2c1c9c2m1r1a1&quot;}">Xbox games</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Entertainment_PCGames_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c9c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_24" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/windows/windows-10-games" data-m="{&quot;cN&quot;:&quot;GlobalNav_Entertainment_PCGames_nav&quot;,&quot;id&quot;:&quot;n1c3c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c9c2c1c9c2m1r1a1&quot;}">PC games</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Entertainment_WindowsDigitalGames_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c4c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c9c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_25" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/games/windows?icid=TopNavWindowsGames" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Entertainment_WindowsDigitalGames_nav&quot;,&quot;id&quot;:&quot;n1c4c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c4c9c2c1c9c2m1r1a1&quot;}">Windows digital games</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Entertainment_MoviesAndTV_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c5c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c9c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_26" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/movies-and-tv?icid=TopNavMoviesAndTv" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Entertainment_MoviesAndTV_nav&quot;,&quot;id&quot;:&quot;n1c5c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c5c9c2c1c9c2m1r1a1&quot;}">Movies &amp; TV</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Entertainment_Books_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c6c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c9c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_27" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/books" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Entertainment_Books_nav&quot;,&quot;id&quot;:&quot;n1c6c9c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c6c9c2c1c9c2m1r1a1&quot;}">Books</a>
+            
+        </li>
+            </ul>
+            
+        </li>
+        <li class="f-sub-menu js-nav-menu nested-menu" data-m="{&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:10,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+
+            <button type="button" role="presentation" f-multi-parent="true" aria-expanded="false" data-m="{&quot;id&quot;:&quot;nn1c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c10c2c1c9c2m1r1a1&quot;}">Business</button>
+            <ul aria-hidden="true" role="presentation">
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Business_MicrosoftAzure_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c10c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_29" class="js-subm-uhf-nav-link" href="https://azure.microsoft.com/en-us/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Business_MicrosoftAzure_nav&quot;,&quot;id&quot;:&quot;n1c2c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c10c2c1c9c2m1r1a1&quot;}">Microsoft Azure</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Business_MicrosoftDynamics365_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c10c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_30" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/dynamics365/home" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Business_MicrosoftDynamics365_nav&quot;,&quot;id&quot;:&quot;n1c3c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c10c2c1c9c2m1r1a1&quot;}">Microsoft Dynamics 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Business_Microsoft365_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c4c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c10c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_31" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-365/?omkt=en-US" data-m="{&quot;cN&quot;:&quot;GlobalNav_Business_Microsoft365_nav&quot;,&quot;id&quot;:&quot;n1c4c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c4c10c2c1c9c2m1r1a1&quot;}">Microsoft 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Business_Enterprise_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c5c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c10c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_32" class="js-subm-uhf-nav-link" href="https://enterprise.microsoft.com/en-us/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Business_Enterprise_nav&quot;,&quot;id&quot;:&quot;n1c5c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c5c10c2c1c9c2m1r1a1&quot;}">Microsoft Industry</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Business_DataPlatform_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c6c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c10c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_33" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/sql-server/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Business_DataPlatform_nav&quot;,&quot;id&quot;:&quot;n1c6c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c6c10c2c1c9c2m1r1a1&quot;}">Data platform</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_MicrosoftAdvertising_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c7c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c10c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_34" class="js-subm-uhf-nav-link" href="https://go.microsoft.com/fwlink/?linkid=2026638" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_MicrosoftAdvertising_nav&quot;,&quot;id&quot;:&quot;n1c7c10c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c7c10c2c1c9c2m1r1a1&quot;}">Microsoft Advertising</a>
+            
+        </li>
+            </ul>
+            
+        </li>
+        <li class="f-sub-menu js-nav-menu nested-menu" data-m="{&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:11,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+
+            <button type="button" role="presentation" f-multi-parent="true" aria-expanded="false" data-m="{&quot;id&quot;:&quot;nn1c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c11c2c1c9c2m1r1a1&quot;}">Developer &amp; IT  </button>
+            <ul aria-hidden="true" role="presentation">
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_DeveloperAndIT_.Net_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c11c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_36" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/net/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_DeveloperAndIT_.Net_nav&quot;,&quot;id&quot;:&quot;n1c2c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c11c2c1c9c2m1r1a1&quot;}">.NET</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_DevelopersAndIT_VisualStudio_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c11c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_37" class="js-subm-uhf-nav-link" href="https://visualstudio.microsoft.com/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_DevelopersAndIT_VisualStudio_nav&quot;,&quot;id&quot;:&quot;n1c3c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c11c2c1c9c2m1r1a1&quot;}">Visual Studio</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_ProductsandServices_WindowsServer_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c4c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c11c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_38" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/cloud-platform/windows-server" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_ProductsandServices_WindowsServer_nav&quot;,&quot;id&quot;:&quot;n1c4c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c4c11c2c1c9c2m1r1a1&quot;}">Windows Server</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_DeveloperAndIT_WindowsDevCenter_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c5c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c11c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_39" class="js-subm-uhf-nav-link" href="https://developer.microsoft.com/en-us/windows" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_DeveloperAndIT_WindowsDevCenter_nav&quot;,&quot;id&quot;:&quot;n1c5c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c5c11c2c1c9c2m1r1a1&quot;}">Windows Dev Center</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_DeveloperAndIT_Docs.microsoft.com_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c6c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c11c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_40" class="js-subm-uhf-nav-link" href="https://docs.microsoft.com/en-us/" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_DeveloperAndIT_Docs.microsoft.com_nav&quot;,&quot;id&quot;:&quot;n1c6c11c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c6c11c2c1c9c2m1r1a1&quot;}">Docs</a>
+            
+        </li>
+            </ul>
+            
+        </li>
+        <li class="f-sub-menu js-nav-menu nested-menu" data-m="{&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:12,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}">
+
+            <button type="button" role="presentation" f-multi-parent="true" aria-expanded="false" data-m="{&quot;id&quot;:&quot;nn1c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c12c2c1c9c2m1r1a1&quot;}">Other</button>
+            <ul aria-hidden="true" role="presentation">
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Other_MicrosoftStore_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c12c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_42" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/home" data-m="{&quot;cN&quot;:&quot;GlobalNav_Other_MicrosoftStore_nav&quot;,&quot;id&quot;:&quot;n1c2c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c12c2c1c9c2m1r1a1&quot;}">Microsoft Store</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Other_Microsoft Rewards_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c12c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_43" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/rewards" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Other_Microsoft Rewards_nav&quot;,&quot;id&quot;:&quot;n1c3c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c12c2c1c9c2m1r1a1&quot;}">Microsoft Rewards </a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Products_SoftwareAndServices_FreeDownloadsAndSecurity_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c4c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c12c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_44" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/download/default.aspx" data-m="{&quot;cN&quot;:&quot;GlobalNav_Products_SoftwareAndServices_FreeDownloadsAndSecurity_nav&quot;,&quot;id&quot;:&quot;n1c4c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c4c12c2c1c9c2m1r1a1&quot;}">Free downloads &amp; security</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Products_ForStudentsAndEducators_Education_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c5c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:5,&quot;aN&quot;:&quot;c12c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_45" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/education?icid=CNavMSCOML0_Studentsandeducation" data-m="{&quot;cN&quot;:&quot;GlobalNav_Products_ForStudentsAndEducators_Education_nav&quot;,&quot;id&quot;:&quot;n1c5c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c5c12c2c1c9c2m1r1a1&quot;}">Education</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;More_Other_Store_Locations_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c6c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:6,&quot;aN&quot;:&quot;c12c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_46" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/locations/find-a-store?icid=TopNavStoreLocations" data-m="{&quot;cN&quot;:&quot;GlobalNav_More_Other_Store_Locations_nav&quot;,&quot;id&quot;:&quot;n1c6c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c6c12c2c1c9c2m1r1a1&quot;}">Store locations</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m="{&quot;cN&quot;:&quot;Store_More_GiftCards_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c7c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:7,&quot;aN&quot;:&quot;c12c2c1c9c2m1r1a1&quot;}">
+            <a id="shellmenu_47" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/store/b/gift-cards" data-m="{&quot;cN&quot;:&quot;GlobalNav_Store_More_GiftCards_nav&quot;,&quot;id&quot;:&quot;n1c7c12c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c7c12c2c1c9c2m1r1a1&quot;}">Gift cards</a>
+            
+        </li>
+            </ul>
+            
+        </li>
+                                                            <li class="f-multi-column-info">
+                                    <a data-m="{&quot;id&quot;:&quot;n13c2c1c9c2m1r1a1&quot;,&quot;sN&quot;:13,&quot;aN&quot;:&quot;c2c1c9c2m1r1a1&quot;}" href="https://www.microsoft.com/en-us/sitemap.aspx" aria-label="" class="c-glyph">View Sitemap</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+</div>
+		<form class="c-search" autocomplete="off" id="searchForm" name="searchForm" role="search" action="https://docs.microsoft.com/en-us/search/index" method="GET" title="Search" data-seautosuggest="{&quot;queryParams&quot;:{&quot;market&quot;:&quot;en-us&quot;,&quot;clientId&quot;:&quot;7F27B536-CF6B-4C65-8638-A0F8CBDFCA65&quot;,&quot;sources&quot;:&quot;Microsoft-Terms,Iris-Products,DCatAll-Products&quot;,&quot;filter&quot;:&quot;+ClientType:StoreWeb&quot;,&quot;counts&quot;:&quot;5,1,5&quot;},&quot;familyNames&quot;:{&quot;Apps&quot;:&quot;App&quot;,&quot;Books&quot;:&quot;Book&quot;,&quot;Bundles&quot;:&quot;Bundle&quot;,&quot;Devices&quot;:&quot;Device&quot;,&quot;Fees&quot;:&quot;Fee&quot;,&quot;Games&quot;:&quot;Game&quot;,&quot;MusicAlbums&quot;:&quot;Album&quot;,&quot;MusicTracks&quot;:&quot;Song&quot;,&quot;MusicVideos&quot;:&quot;Video&quot;,&quot;MusicArtists&quot;:&quot;Artist&quot;,&quot;OperatingSystem&quot;:&quot;Operating System&quot;,&quot;Software&quot;:&quot;Software&quot;,&quot;Movies&quot;:&quot;Movie&quot;,&quot;TV&quot;:&quot;TV&quot;,&quot;CSV&quot;:&quot;Gift Card&quot;,&quot;VideoActor&quot;:&quot;Actor&quot;}}" data-seautosuggestapi="https://www.microsoft.com/services/api/v3/suggest" data-m="{&quot;cN&quot;:&quot;GlobalNav_Search_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c1c9c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c1c9c2m1r1a1&quot;}" aria-expanded="false">
+			<input id="cli_shellHeaderSearchInput" aria-label="search expanded" aria-autocomplete="list" aria-controls="universal-header-search-auto-suggest-transparent" aria-owns="universal-header-search-auto-suggest-ul" type="search" name="search" placeholder="Search" data-m="{&quot;cN&quot;:&quot;SearchBox_nav&quot;,&quot;id&quot;:&quot;n1c3c1c9c2m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c1c9c2m1r1a1&quot;}"><div class="x-screen-reader" aria-live="assertive"></div>
+			<button id="search" aria-label="Search" class="c-glyph" data-m="{&quot;cN&quot;:&quot;Search_nav&quot;,&quot;id&quot;:&quot;n2c3c1c9c2m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c3c1c9c2m1r1a1&quot;}" data-bi-dnt="true" data-bi-mto="true" aria-expanded="false">
+				<span role="presentation">Search</span>
+			</button>
+			<div class="m-auto-suggest" id="universal-header-search-auto-suggest-transparent" role="group">
+				<ul class="c-menu" id="universal-header-search-auto-suggest-ul" aria-hidden="true" data-bi-dnt="true" data-bi-mto="true" data-js-auto-suggest-position="default" role="listbox" data-tel="jsll" data-m="{&quot;cN&quot;:&quot;search suggestions_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c3c1c9c2m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c3c1c9c2m1r1a1&quot;}"></ul>
+			</div>
+			
+		<input name="scope" hidden=""><a class="search-scope" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#" role="button" title="Search filter is &quot;.NET&quot;. Tap to remove." style=""><span class="search-scope-text">.NET</span> <span class="docon docon-navigate-close"></span></a></form>
+		<button data-m="{&quot;cN&quot;:&quot;cancel-search&quot;,&quot;pid&quot;:&quot;Cancel Search&quot;,&quot;id&quot;:&quot;nn4c1c9c2m1r1a1&quot;,&quot;sN&quot;:4,&quot;aN&quot;:&quot;c1c9c2m1r1a1&quot;}" id="cancel-search" class="cancel-search" aria-label="Cancel Search">
+			<span>Cancel</span>
+		</button>
+				
+			<div class="auth-control" aria-busy="true" aria-label="Loading..."></div></div>
+		</div>
+		
+		
+	</div>
+	
+</header>
+
+
+
+
+    </div>
+        </div>
+
+    </div>
+</div>
+	<div class="content-header uhf-container has-padding has-default-focus" data-bi-name="content-header">
+		<nav class="has-padding-none-mobile" data-bi-name="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+		<ul class="breadcrumbs"><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="https://docs.microsoft.com/en-us/">Docs</a></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="https://docs.microsoft.com/en-us/dotnet/index">.NET</a></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="https://docs.microsoft.com/en-us/dotnet/csharp/index">C# Guide</a></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/index">Language reference</a></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="mobile-breadcrumb"><a itemprop="item" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index">Keywords</a></li></ul>
+		</nav>
+		<div class="content-header-controls exit-focus">
+			<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse">
+				<span class="icon"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit focus mode</span>
+			</button>
+			
+		</div>
+		<div class="content-header-controls">
+			<button type="button" class="contents-button button" data-bi-name="contents-expand">
+				<span class="icon"><span class="docon docon-menu"></span></span>
+				<span>Contents</span>
+			</button>
+		</div>
+		<div class="action-bar">
+			<ul class="action-list">
+						<li>
+							<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#feedback" class="button is-text is-size-7 is-icon-only-touch" data-bi-name="comments">
+								<span class="icon">
+									<span class="docon docon-comment-lines" aria-hidden="true"></span>
+								</span>
+								<span class="action-item-text">Feedback</span>
+							</a>
+						</li>
+							<li id="contenteditbtn">
+									<a href="https://github.com/dotnet/docs/blob/master/docs/csharp/language-reference/keywords/out-parameter-modifier.md" class="button is-text is-icon-only-touch is-size-7" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://github.com/dotnet/docs/blob/live/docs/csharp/language-reference/keywords/out-parameter-modifier.md" data-original_content_git_url_template="" data-pr_repo="" data-pr_branch="">
+									<span class="icon">
+										<span class="docon docon-edit-outline" aria-hidden="true"></span>
+									</span>
+									<span class="action-item-text">Edit</span>
+								</a>
+							</li>
+				<li>
+					<div class="sharing dropdown has-caret" auto-align="">
+						<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#" class="dropdown-trigger button is-text is-size-7 is-icon-only-touch" aria-haspopup="true" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+							<span class="icon">
+								<span class="docon docon-sharing" aria-hidden="true"></span>
+							</span>
+							<span class="action-item-text">Share</span>
+						</a>
+						<div class="dropdown-menu" id="sharing-menu" role="menu">
+							<ul data-bi-name="share-links">
+								<li><a class="share-twitter" data-bi-name="twitter" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdotnet%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier%3FWT.mc_id%3Dtwitter&amp;text=out%20parameter%20modifier%20-%20C%23%20Reference%20%7C%20Microsoft%20Docs&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdotnet%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier%3FWT.mc_id%3Dtwitter">
+									<span class="icon">
+										<span class="docon docon-brand-twitter" aria-hidden="true"></span>
+									</span>
+									<span>Twitter</span></a></li>
+								<li><a class="share-linkedin" data-bi-name="linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdotnet%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier%3FWT.mc_id%3Dlinkedin">
+									<span class="icon">
+										<span class="docon docon-brand-linkedin" aria-hidden="true"></span>
+									</span>
+									<span>LinkedIn</span></a></li>
+								<li><a class="share-facebook" data-bi-name="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdotnet%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier%3FWT.mc_id%3Dfacebook">
+									<span class="icon">
+										<span class="docon docon-brand-facebook" aria-hidden="true"></span>
+									</span>
+									<span>Facebook</span></a></li>
+								<li><a class="share-email" data-bi-name="email" href="mailto:?subject=%5BShared%20Article%5D%20out%20parameter%20modifier%20-%20C%23%20Reference%20%7C%20Microsoft%20Docs&amp;body=out%20parameter%20modifier%20-%20C%23%20Reference%20%7C%20Microsoft%20Docs%0A%0Ahttps%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdotnet%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier%3FWT.mc_id%3Demail">
+									<span class="icon">
+										<span class="docon docon-mail-message-fill" aria-hidden="true"></span>
+									</span>
+									<span>Email</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<button class="toggle-theme button is-text is-size-7 is-icon-only-touch" aria-label="toggle-theme" data-bi-name="select-theme">
+						<span class="icon">
+							<span class="docon docon-clear-night"></span>
+						</span>
+						<span class="action-item-text">Dark</span>
+					</button>
+				</li>
+				<li class="is-unstyled-action-list-item">
+					<a class="docs-sign-in auth-status-determined not-authenticated button is-text has-text-primary is-size-7" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#">Sign in</a>
+					<div class="dropdown has-caret auth-status-determined authenticated" auto-align="">
+						<button class="dropdown-trigger button is-text is-size-7 is-icon-only-touch has-inner-focus" aria-label="Your Account" aria-haspopup="true" aria-controls="user-menu" aria-expanded="false">
+							<span class="image icon" aria-hidden="true">
+								<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+							</span>
+							<span class="is-truncated" data-profile-property="userName"></span>
+						</button>
+						<div class="dropdown-menu box" id="user-menu" role="menu">
+							<div class="media is-user-dir">
+								<div class="media-left">
+									<span class="image is-64x64" aria-hidden="true">
+										<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+									</span>
+								</div>
+								<div class="media-content">
+									<p class="title has-margin-top-small">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="userName"></span>
+									</p>
+									<p class="subtitle">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="upn"></span>
+									</p>
+								</div>
+							</div>
+							<ul class="is-unstyled has-margin-none">
+								<li><a href="https://docs.microsoft.com/profile" data-profile-property="profileUrl">Profile</a></li>
+								<li><a class="docs-sign-out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#">Sign out</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="contents-button" aria-label="Contents" data-bi-name="contents-expand-">
+				<span class="docon docon-editor-list-bullet"></span><span>Contents</span>
+			</button>
+		</div>
+	</div>
+
+
+	<div id="disclaimer-holder" class="has-overflow-hidden"></div>
+	</div>
+
+	<div class="mainContainer uhf-container  has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps ">
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns has-large-gaps ">
+
+					<div id="page-actions" class="right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+							<nav id="side-doc-outline" class="doc-outline x-hidden-focus" data-bi-name="intopic toc" role="navigation" aria-label="On page navigation" style="top: 24px; bottom: 24px; width: 113.96px;">
+								<h3>In this article</h3>
+							<ol><li class="selected"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#declaring-out-arguments">Declaring out arguments</a></li><li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#calling-a-method-with-an-out-argument">Calling a method with an out argument</a></li><li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#c-language-specification">C# Language Specification</a></li><li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#see-also">See also</a></li></ol></nav>
+					</div>
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="out-parameter-modifier-c-reference" sourcefile="docs/csharp/language-reference/keywords/out-parameter-modifier.md" sourcestartlinenumber="10">out parameter modifier (C# Reference)</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li class="displayDate">
+								<time role="presentation" datetime="2018-03-06T00:00:00.000Z" data-article-date-source="ms.date">03/06/2018</time>
+							</li>
+								<li class="readingTime">
+									3 minutes to read
+								</li>
+							<li class="contributors-holder">
+								<span class="contributors-text">Contributors</span>
+								<ul class="contributors" data-bi-name="contributors">
+											<li><a href="https://github.com/BillWagner" title="Bill Wagner" data-bi-name="contributorprofile"><img src="./out parameter modifier - C# Reference _ Microsoft Docs_files/BillWagner.png" data-src="https://github.com/BillWagner.png?size=32" alt="Bill Wagner"></a></li>
+											<li><a href="https://github.com/NextTurn" title="NextTurn" data-bi-name="contributorprofile"><img src="./out parameter modifier - C# Reference _ Microsoft Docs_files/NextTurn.png" data-src="https://github.com/NextTurn.png?size=32" alt="NextTurn"></a></li>
+											<li><a href="https://github.com/calvinallen" title="Calvin A. Allen" data-bi-name="contributorprofile"><img src="./out parameter modifier - C# Reference _ Microsoft Docs_files/calvinallen.png" data-src="https://github.com/calvinallen.png?size=32" alt="Calvin A. Allen"></a></li>
+											<li><a href="https://github.com/pkulikov" title="pkulikov" data-bi-name="contributorprofile"><img src="./out parameter modifier - C# Reference _ Microsoft Docs_files/pkulikov.png" data-src="https://github.com/pkulikov.png?size=32" alt="pkulikov"></a></li>
+											<li><a href="https://github.com/nemrism" title="Aymeric A" data-bi-name="contributorprofile"><img src="./out parameter modifier - C# Reference _ Microsoft Docs_files/nemrism.png" data-src="https://github.com/nemrism.png?size=32" alt="Aymeric A"></a></li>
+											<li><a href="https://github.com/dotnet/docs/blob/master/docs/csharp/language-reference/keywords/out-parameter-modifier.md" title="all 13 contributors" data-bi-name="contributorshowall"><span aria-hidden="true">all</span></a></li>
+								</ul>
+							</li>
+
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="On page navigation">
+							<h3>In this article</h3>
+						<ol><li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#declaring-out-arguments">Declaring out arguments</a></li><li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#calling-a-method-with-an-out-argument">Calling a method with an out argument</a></li><li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#c-language-specification">C# Language Specification</a></li><li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#see-also">See also</a></li></ol></nav>
+
+
+						<!-- <content> -->
+							
+<p class="x-hidden-focus">The <code>out</code> keyword causes arguments to be passed by reference. It is like the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref" data-linktype="relative-path">ref</a> keyword, except that <code>ref</code> requires that the variable be initialized before it is passed. It is also like the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/in-parameter-modifier" data-linktype="relative-path">in</a> keyword, except that <code>in</code> does not allow the called method to modify the argument value. To use an <code>out</code> parameter, both the method definition and the calling method must explicitly use the <code>out</code> keyword. For example:</p>
+<div class="codeHeader" data-bi-name="code-header"><span class="language">C#</span>
+			<button class="action" data-bi-name="copy">
+				<span class="docon docon-edit-copy" role="presentation"></span>
+				<span>Copy</span>
+			</button>
+			<button class="action action-interactive" data-bi-name="code-header-try-it-csharp">
+				<span class="docon docon-play" role="presentation"></span>
+				<span>Run</span>
+			</button></div><pre><code class="lang-csharp" data-interactive="csharp" name="cs-out-keyword"><span class="hljs-keyword">int</span> initializeInMethod;
+OutArgExample(<span class="hljs-keyword">out</span> initializeInMethod);
+Console.WriteLine(initializeInMethod);     <span class="hljs-comment">// value is now 44</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OutArgExample</span>(<span class="hljs-params"><span class="hljs-keyword">out</span> <span class="hljs-keyword">int</span> number</span>)
+</span>{
+    number = <span class="hljs-number">44</span>;
+}
+</code></pre>
+<div class="alert is-info">
+<p class="alert-title"><span class="docon docon-status-error-outline"></span> Note</p>
+<p>The <code>out</code> keyword can also be used with a generic type parameter to specify that the type parameter is covariant. For more information on the use of the <code>out</code> keyword in this context, see <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-generic-modifier" data-linktype="relative-path">out (Generic Modifier)</a>.</p>
+</div>
+<p class="x-hidden-focus">Variables passed as <code>out</code> arguments do not have to be initialized before being passed in a method call. However, the called method is required to assign a value before the method returns.</p>
+<p>Although the <code>in</code>, <code>ref</code>, and <code>out</code> keywords cause different run-time behavior, they are not considered part of the method signature at compile time. Therefore, methods cannot be overloaded if the only difference is that one method takes a <code>ref</code> or <code>in</code> argument and the other takes an <code>out</code> argument. The following code, for example, will not compile:</p>
+<div class="codeHeader" data-bi-name="code-header"><span class="language">C#</span>
+			<button class="action" data-bi-name="copy">
+				<span class="docon docon-edit-copy" role="presentation"></span>
+				<span>Copy</span>
+			</button></div><pre><code class="lang-csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">CS0663_Example</span>
+{
+    <span class="hljs-comment">// Compiler error CS0663: "Cannot define overloaded </span>
+    <span class="hljs-comment">// methods that differ only on ref and out".</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SampleMethod</span>(<span class="hljs-params"><span class="hljs-keyword">out</span> <span class="hljs-keyword">int</span> i</span>) </span>{ }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SampleMethod</span>(<span class="hljs-params"><span class="hljs-keyword">ref</span> <span class="hljs-keyword">int</span> i</span>) </span>{ }
+}
+</code></pre>
+<p>Overloading is legal, however, if one method takes a <code>ref</code>, <code>in</code>, or <code>out</code> argument and the other has none of those modifiers, like this:</p>
+<div class="codeHeader" data-bi-name="code-header"><span class="language">C#</span>
+			<button class="action" data-bi-name="copy">
+				<span class="docon docon-edit-copy" role="presentation"></span>
+				<span>Copy</span>
+			</button></div><pre><code class="lang-csharp" name="cs-out-keyword"><span class="hljs-keyword">class</span> <span class="hljs-title">OutOverloadExample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SampleMethod</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> i</span>) </span>{ }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SampleMethod</span>(<span class="hljs-params"><span class="hljs-keyword">out</span> <span class="hljs-keyword">int</span> i</span>) </span>=&gt; i = <span class="hljs-number">5</span>;
+}
+</code></pre>
+<p>The compiler chooses the best overload by matching the parameter modifiers at the call site to the parameter modifiers used in the method call.</p>
+<p>Properties are not variables and therefore cannot be passed as <code>out</code> parameters.</p>
+<p>You can't use the <code>in</code>, <code>ref</code>, and <code>out</code> keywords for the following kinds of methods:</p>
+<ul>
+<li><p>Async methods, which you define by using the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async" data-linktype="relative-path">async</a> modifier.</p>
+</li>
+<li><p>Iterator methods, which include a <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/yield" data-linktype="relative-path">yield return</a> or <code>yield break</code> statement.</p>
+</li>
+</ul>
+<h2 id="declaring-out-arguments" class="heading-with-anchor">Declaring <code>out</code> arguments<a class="docon docon-link heading-anchor" tabindex="-1" aria-hidden="true" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#declaring-out-arguments"></a></h2>
+<p>Declaring a method with <code>out</code> arguments is useful when you want a method to return multiple values. The following example uses <code>out</code> to return three variables with a single method call. Note that the third argument is assigned to null. This enables methods to return values optionally.</p>
+<div class="codeHeader" data-bi-name="code-header"><span class="language">C#</span>
+			<button class="action" data-bi-name="copy">
+				<span class="docon docon-edit-copy" role="presentation"></span>
+				<span>Copy</span>
+			</button>
+			<button class="action action-interactive" data-bi-name="code-header-try-it-csharp">
+				<span class="docon docon-play" role="presentation"></span>
+				<span>Run</span>
+			</button></div><pre><code class="lang-csharp" data-interactive="csharp" name="cs-out-keyword"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Method</span>(<span class="hljs-params"><span class="hljs-keyword">out</span> <span class="hljs-keyword">int</span> answer, <span class="hljs-keyword">out</span> <span class="hljs-keyword">string</span> message, <span class="hljs-keyword">out</span> <span class="hljs-keyword">string</span> stillNull</span>)
+</span>{
+    answer = <span class="hljs-number">44</span>;
+    message = <span class="hljs-string">"I've been returned"</span>;
+    stillNull = <span class="hljs-literal">null</span>;
+}
+
+<span class="hljs-keyword">int</span> argNumber;
+<span class="hljs-keyword">string</span> argMessage, argDefault;
+Method(<span class="hljs-keyword">out</span> argNumber, <span class="hljs-keyword">out</span> argMessage, <span class="hljs-keyword">out</span> argDefault);
+Console.WriteLine(argNumber);
+Console.WriteLine(argMessage);
+Console.WriteLine(argDefault == <span class="hljs-literal">null</span>);
+
+<span class="hljs-comment">// The example displays the following output:</span>
+<span class="hljs-comment">//      44</span>
+<span class="hljs-comment">//      I've been returned</span>
+<span class="hljs-comment">//      True</span>
+
+</code></pre>
+<p>The <a href="https://docs.microsoft.com/en-us/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods" data-linktype="absolute-path">Try pattern</a> involves returning a <code>bool</code> to indicate whether an operation succeeded or failed, and returning the value produced by the operation in an <code>out</code> argument. A number of parsing methods, such as the <a class="xref" href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tryparse#System_DateTime_TryParse_System_String_System_DateTime__" data-linktype="absolute-path">DateTime.TryParse</a> method, use this pattern.</p>
+<h2 id="calling-a-method-with-an-out-argument" class="heading-with-anchor">Calling a method with an <code>out</code> argument<a class="docon docon-link heading-anchor" tabindex="-1" aria-hidden="true" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#calling-a-method-with-an-out-argument"></a></h2>
+<p>In C# 6 and earlier, you must declare a variable in a separate statement before you pass it as an <code>out</code> argument. The following example declares a variable named <code>number</code> before it is passed to the <a class="xref" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.tryparse#System_Int32_TryParse_System_String_System_Int32__" data-linktype="absolute-path">Int32.TryParse</a> method, which attempts to convert a string to a number.</p>
+<div class="codeHeader" data-bi-name="code-header"><span class="language">C#</span>
+			<button class="action" data-bi-name="copy">
+				<span class="docon docon-edit-copy" role="presentation"></span>
+				<span>Copy</span>
+			</button>
+			<button class="action action-interactive" data-bi-name="code-header-try-it-csharp">
+				<span class="docon docon-play" role="presentation"></span>
+				<span>Run</span>
+			</button></div><pre><code class="lang-csharp" data-interactive="csharp" name="cs-out-keyword"><span class="hljs-keyword">string</span> numberAsString = <span class="hljs-string">"1640"</span>;
+
+<span class="hljs-keyword">int</span> number;
+<span class="hljs-keyword">if</span> (Int32.TryParse(numberAsString, <span class="hljs-keyword">out</span> number))
+    Console.WriteLine(<span class="hljs-string">$"Converted '<span class="hljs-subst">{numberAsString}</span>' to <span class="hljs-subst">{number}</span>"</span>);
+<span class="hljs-keyword">else</span>
+    Console.WriteLine(<span class="hljs-string">$"Unable to convert '<span class="hljs-subst">{numberAsString}</span>'"</span>);
+<span class="hljs-comment">// The example displays the following output:</span>
+<span class="hljs-comment">//       Converted '1640' to 1640</span>
+</code></pre>
+<p>Starting with C# 7.0, you can declare the <code>out</code> variable in the argument list of the method call, rather than in a separate variable declaration. This produces more compact, readable code, and also prevents you from inadvertently assigning a value to the variable before the method call. The following example is like the previous example, except that it defines the <code>number</code> variable in the call to the <a class="xref" href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.tryparse#System_Int32_TryParse_System_String_System_Int32__" data-linktype="absolute-path">Int32.TryParse</a> method.</p>
+<div class="codeHeader" data-bi-name="code-header"><span class="language">C#</span>
+			<button class="action" data-bi-name="copy">
+				<span class="docon docon-edit-copy" role="presentation"></span>
+				<span>Copy</span>
+			</button>
+			<button class="action action-interactive" data-bi-name="code-header-try-it-csharp">
+				<span class="docon docon-play" role="presentation"></span>
+				<span>Run</span>
+			</button></div><pre><code class="lang-csharp" data-interactive="csharp" name="cs-out-keyword"><span class="hljs-keyword">string</span> numberAsString = <span class="hljs-string">"1640"</span>;
+
+<span class="hljs-keyword">if</span> (Int32.TryParse(numberAsString, <span class="hljs-keyword">out</span> <span class="hljs-keyword">int</span> number))
+    Console.WriteLine(<span class="hljs-string">$"Converted '<span class="hljs-subst">{numberAsString}</span>' to <span class="hljs-subst">{number}</span>"</span>);
+<span class="hljs-keyword">else</span>
+    Console.WriteLine(<span class="hljs-string">$"Unable to convert '<span class="hljs-subst">{numberAsString}</span>'"</span>);
+<span class="hljs-comment">// The example displays the following output:</span>
+<span class="hljs-comment">//       Converted '1640' to 1640</span>
+</code></pre>
+<p>In the previous example, the <code>number</code> variable is strongly typed as an <code>int</code>. You can also declare an implicitly typed local variable, as the following example does.</p>
+<div class="codeHeader" data-bi-name="code-header"><span class="language">C#</span>
+			<button class="action" data-bi-name="copy">
+				<span class="docon docon-edit-copy" role="presentation"></span>
+				<span>Copy</span>
+			</button>
+			<button class="action action-interactive" data-bi-name="code-header-try-it-csharp">
+				<span class="docon docon-play" role="presentation"></span>
+				<span>Run</span>
+			</button></div><pre><code class="lang-csharp" data-interactive="csharp" name="cs-out-keyword"><span class="hljs-keyword">string</span> numberAsString = <span class="hljs-string">"1640"</span>;
+
+<span class="hljs-keyword">if</span> (Int32.TryParse(numberAsString, <span class="hljs-keyword">out</span> <span class="hljs-keyword">var</span> number))
+    Console.WriteLine(<span class="hljs-string">$"Converted '<span class="hljs-subst">{numberAsString}</span>' to <span class="hljs-subst">{number}</span>"</span>);
+<span class="hljs-keyword">else</span>
+    Console.WriteLine(<span class="hljs-string">$"Unable to convert '<span class="hljs-subst">{numberAsString}</span>'"</span>);
+<span class="hljs-comment">// The example displays the following output:</span>
+<span class="hljs-comment">//       Converted '1640' to 1640</span>
+</code></pre><h2 id="c-language-specification" class="heading-with-anchor">C# Language Specification<a class="docon docon-link heading-anchor" tabindex="-1" aria-hidden="true" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#c-language-specification"></a></h2>
+<p>For more information, see the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/index" data-linktype="relative-path">C# Language Specification</a>. The language specification is the definitive source for C# syntax and usage.</p>
+<h2 id="see-also" class="heading-with-anchor">See also<a class="docon docon-link heading-anchor" tabindex="-1" aria-hidden="true" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#see-also"></a></h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/index" data-linktype="relative-path">C# Reference</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/index" data-linktype="relative-path">C# Programming Guide</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index" data-linktype="relative-path">C# Keywords</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters" data-linktype="relative-path">Method Parameters</a></li>
+</ul>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- feedback section -->
+
+
+
+<section class="feedback-section" data-bi-name="feedback-section">
+	<h2 id="feedback">Feedback</h2>
+
+	<div class="alert choose-feedback-type">
+		<p>
+We'd love to hear your thoughts. Choose the type you'd like to provide:		</p>
+
+		<div class="choose-feedback-buttons">
+			<a class="button feedback-type-product has-margin-bottom-small" href="https://developercommunity.visualstudio.com/spaces/61/index.html" data-bi-name="product-feedback">
+				<span>Product feedback</span>
+				<span class="icon docon docon-navigate-external" aria-hidden="true"></span>
+			</a>
+
+			<div class="field has-addons is-inline-flex has-margin-bottom-small">
+				<div class="control has-margin-top-none has-margin-bottom-none">
+					<button class="button feedback-sign-in-button has-text-wrap" data-bi-name="feedback-sign-in">
+						<span class="icon docon docon-brand-github" aria-hidden="true"></span>
+						<span>
+							Sign in to give documentation feedback						</span>
+					</button>
+				</div>
+				<div class="control dropdown has-caret has-margin-top-none has-margin-bottom-none" auto-align="">
+					<button class="button dropdown-trigger has-text-wrap" aria-haspopup="true" aria-expanded="false" aria-controls="fbm0" aria-label="Expand documentation feedback menu" data-bi-name="documentation-feedback-menu">
+						<span class="icon docon docon-chevron-down-light" aria-hidden="true"></span>
+					</button>
+					<div class="dropdown-menu documentation-feedback-menu" id="fbm0" role="menu">
+						You may also leave feedback <a data-bi-name="create-issue-on-github" href="https://github.com/dotnet/docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%208f6c8480-77a7-7505-5224-0efe15b9b755%0A*%20Version%20Independent%20ID%3A%20993250d1-108c-ab1a-886e-ca1bfa9104c7%0A*%20Content%3A%20%5Bout%20parameter%20modifier%20-%20C%23%20Reference%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdotnet%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier)%0A*%20Content%20Source%3A%20%5Bdocs%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier.md%5D(https%3A%2F%2Fgithub.com%2Fdotnet%2Fdocs%2Fblob%2Fmaster%2Fdocs%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier.md)%0A*%20Product%3A%20**dotnet-csharp**%0A*%20GitHub%20Login%3A%20%40BillWagner%0A*%20Microsoft%20Alias%3A%20**wiwagn**">directly on GitHub <span class="docon docon-navigate-external" aria-hidden="true"></span></a>.					</div>
+				</div>
+			</div>
+
+			<div class="field has-addons is-inline-flex has-margin-bottom-small" hidden="">
+				<div class="control has-margin-top-none has-margin-bottom-none">
+					<button class="button feedback-form-toggle" aria-expanded="false" aria-controls="feedback-form" data-bi-name="documentation-feedback">
+Content feedback					</button>
+				</div>
+				<div class="control dropdown has-caret has-margin-top-none has-margin-bottom-none" auto-align="">
+					<button class="button dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="fbm1" aria-label="Expand documentation feedback menu" data-bi-name="documentation-feedback-menu">
+						<span class="icon docon docon-chevron-down-light" aria-hidden="true"></span>
+					</button>
+					<div class="dropdown-menu documentation-feedback-menu" id="fbm1" role="menu">
+						You may also leave feedback <a data-bi-name="create-issue-on-github" href="https://github.com/dotnet/docs/issues/new?title=&amp;body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%208f6c8480-77a7-7505-5224-0efe15b9b755%0A*%20Version%20Independent%20ID%3A%20993250d1-108c-ab1a-886e-ca1bfa9104c7%0A*%20Content%3A%20%5Bout%20parameter%20modifier%20-%20C%23%20Reference%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdotnet%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier)%0A*%20Content%20Source%3A%20%5Bdocs%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier.md%5D(https%3A%2F%2Fgithub.com%2Fdotnet%2Fdocs%2Fblob%2Fmaster%2Fdocs%2Fcsharp%2Flanguage-reference%2Fkeywords%2Fout-parameter-modifier.md)%0A*%20Product%3A%20**dotnet-csharp**%0A*%20GitHub%20Login%3A%20%40BillWagner%0A*%20Microsoft%20Alias%3A%20**wiwagn**">directly on GitHub <span class="docon docon-navigate-external" aria-hidden="true"></span></a>.					</div>
+				</div>
+			</div>
+		</div>
+		<p class="has-margin-top-none"><small>Our feedback system is built on GitHub Issues. Read more on <a href="https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs">our blog</a>.</small></p>
+	</div>
+
+	<form class="feedback-form" id="feedback-form" accept-charset="UTF-8" autocomplete="off" action="javascript:" hidden="">
+		<h3 class="feedback-form-heading current-user">
+			<img class="avatar" alt="Avatar" width="36" height="36" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9InRyYW5zcGFyZW50IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==">
+			<span class="username" aria-hidden="true"></span>
+			<span class="visually-hidden">Liquid error: Can't find the localized string giveDocumentationFeedback for template Conceptual.</span>
+		</h3>
+
+		<label>
+			<span class="visually-hidden">Issue Title</span>
+			<input class="input is-radiusless has-margin-bottom-small" name="title" type="text" placeholder="Issue Title" required="" pattern=".*\w.*">
+		</label>
+		<label>
+			<span class="visually-hidden">Leave a comment</span>
+			<textarea name="body" placeholder="Leave a comment" class="textarea is-radiusless" required=""></textarea>
+		</label>
+
+		<div class="action-container">
+			<button class="button is-primary" type="submit" name="submit">Submit feedback</button>
+		</div>
+	</form>
+
+	<div class="feedback-status alert is-loading" role="alert">
+		<p>Loading feedback...</p>
+	</div>
+
+	<div class="feedback-tab-group tabGroup" data-tab-group-independent="" hidden="" data-bi-name="tab-group">
+		<ul role="tablist">
+			<li role="presentation">
+				<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#tabpanel-issues-open" role="tab" aria-controls="tabpanel-issues-open" data-tab="issues-open" aria-label="Open Issues" data-bi-name="tab" aria-selected="true" tabindex="0"></a>
+			</li>
+			<li role="presentation">
+				<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#tabpanel-issues-closed" role="tab" aria-controls="tabpanel-issues-closed" data-tab="issues-closed" aria-label="Closed Issues" data-bi-name="tab" aria-selected="false" tabindex="-1"></a>
+			</li>
+		</ul>
+		<section id="tabpanel-issues-open" role="tabpanel" data-tab="issues-open">
+			<div class="no-issues-placeholder">There are no open issues</div>
+			<ul class="github-issues-list" aria-label="Open Issues"></ul>
+		</section>
+		<section id="tabpanel-issues-closed" role="tabpanel" data-tab="issues-closed" hidden="hidden" aria-hidden="true">
+			<div class="no-issues-placeholder">There are no closed issues</div>
+			<ul class="github-issues-list" aria-label="Closed Issues"></ul>
+		</section>
+	</div>
+	<div class="action-container">
+		<a class="view-on-github" href="https://github.com/dotnet/docs/issues?utf8=%E2%9C%93&amp;q=%22993250d1-108c-ab1a-886e-ca1bfa9104c7%22&amp;in=body" data-bi-name="view-on-github" hidden="">
+			<span class="docon docon-brand-github" aria-hidden="true"></span>
+			<span>View on GitHub</span>
+			<span class="docon docon-navigate-external" aria-hidden="true"></span>
+		</a>
+	</div>
+</section>
+						<!-- end feedback section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="https://docs.microsoft.com/en-us/locale?target=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text">English (United States)</span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+				<div id="left-container" class="left-container column is-one-third-tablet is-one-quarter-desktop">
+					<nav class="sidebar" id="sidebar" data-bi-name="left toc" role="navigation" aria-label="Main Navigation" style="width: 221.943px; top: 24px; bottom: 24px;">
+						<button class="sidebar-header" type="button" aria-label="Close" data-bi-name="contents-collapse">
+							<span>Contents</span>
+							<span class="docon docon-navigate-close" aria-hidden="true"></span>
+						</button>
+						<div id="sidebarContent">
+							<div class="filterHolder">
+							<form class="tocFilter" aria-label="Filter Table of Contents"><input class="input is-size-7" placeholder="Filter by title" aria-label="Filter" data-bi-name="toc-filter" id="toc-filter" type="search" aria-controls="filterResults"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#" title="Clear Filter" class="clearInput"><span class="visually-hidden">Clear Filter</span></a></form><div class="emptyFilterMessage">No results</div></div>
+							<nav class="toc" role="application" aria-label="Table of Contents" id="filterResults"><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)" class="noSibs"><li role="group" aria-expanded="true" aria-label="c# keywords " onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/" data-text="c# keywords ">C# Keywords</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="group" aria-expanded="false" aria-label="types " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/types" data-text="types ">Types</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="group" aria-expanded="false" aria-label="value types " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/value-types" data-text="value types ">Value Types</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool" data-text="bool ">bool</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/byte" data-text="byte ">byte</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/char" data-text="char ">char</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/decimal" data-text="decimal ">decimal</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/double" data-text="double ">double</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/enum" data-text="enum ">enum</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/float" data-text="float ">float</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int" data-text="int ">int</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/long" data-text="long ">long</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sbyte" data-text="sbyte ">sbyte</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/short" data-text="short ">short</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/struct" data-text="struct ">struct</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint" data-text="uint ">uint</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ulong" data-text="ulong ">ulong</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ushort" data-text="ushort ">ushort</a></li></ul></li><li role="group" aria-expanded="false" aria-label="reference types " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types" data-text="reference types ">Reference Types</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/class" data-text="class ">class</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/delegate" data-text="delegate ">delegate</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/dynamic" data-text="dynamic ">dynamic</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface" data-text="interface ">interface</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/object" data-text="object ">object</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string" data-text="string ">string</a></li></ul></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/void" data-text="void ">void</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/var" data-text="var ">var</a></li><li role="group" aria-expanded="false" aria-label="reference tables for types " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-tables-for-types" data-text="reference tables for types ">Reference tables for types</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/built-in-types-table" data-text="built-in types table ">Built-in types table</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/integral-types-table" data-text="integral types table ">Integral types table</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/floating-point-types-table" data-text="floating-point types table ">Floating-point types table</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/value-types-table" data-text="value types table ">Value types table</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/default-values-table" data-text="default values table ">Default values table</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/implicit-numeric-conversions-table" data-text="implicit numeric conversions table ">Implicit numeric conversions table</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/explicit-numeric-conversions-table" data-text="explicit numeric conversions table ">Explicit numeric conversions table</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/formatting-numeric-results-table" data-text="formatting numeric results table ">Formatting numeric results table</a></li></ul></li></ul></li><li role="group" aria-expanded="false" aria-label="modifiers " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/modifiers" data-text="modifiers ">Modifiers</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="group" aria-expanded="false" aria-label="access modifiers " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/access-modifiers" data-text="access modifiers ">Access Modifiers</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/accessibility-levels" data-text="accessibility levels ">Accessibility Levels</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/accessibility-domain" data-text="accessibility domain ">Accessibility Domain</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/restrictions-on-using-accessibility-levels" data-text="restrictions on using accessibility levels ">Restrictions on Using Accessibility Levels</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/internal" data-text="internal ">internal</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/private" data-text="private ">private</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected" data-text="protected ">protected</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/public" data-text="public ">public</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected-internal" data-text="protected internal ">protected internal</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/private-protected" data-text="private protected ">private protected</a></li></ul></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract" data-text="abstract ">abstract</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async" data-text="async ">async</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const" data-text="const ">const</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event" data-text="event ">event</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern" data-text="extern ">extern</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/in-generic-modifier" data-text="in (generic modifier) ">in (Generic Modifier)</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-generic-modifier" data-text="out (generic modifier) ">out (Generic Modifier)</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/override" data-text="override ">override</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly" data-text="readonly ">readonly</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed" data-text="sealed ">sealed</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/static" data-text="static ">static</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unsafe" data-text="unsafe ">unsafe</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual" data-text="virtual ">virtual</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/volatile" data-text="volatile ">volatile</a></li></ul></li><li role="group" aria-expanded="false" aria-label="statement keywords " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/statement-keywords" data-text="statement keywords ">Statement Keywords</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="group" aria-expanded="false" aria-label="selection statements " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/selection-statements" data-text="selection statements ">Selection Statements</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/if-else" data-text="if-else ">if-else</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/switch" data-text="switch ">switch</a></li></ul></li><li role="group" aria-expanded="false" aria-label="iteration statements " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/iteration-statements" data-text="iteration statements ">Iteration Statements</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/do" data-text="do ">do</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/for" data-text="for ">for</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in" data-text="foreach, in ">foreach, in</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/while" data-text="while ">while</a></li></ul></li><li role="group" aria-expanded="false" aria-label="jump statements " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/jump-statements" data-text="jump statements ">Jump Statements</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/break" data-text="break ">break</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/continue" data-text="continue ">continue</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/goto" data-text="goto ">goto</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/return" data-text="return ">return</a></li></ul></li><li role="group" aria-expanded="false" aria-label="exception handling statements " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/exception-handling-statements" data-text="exception handling statements ">Exception Handling Statements</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw" data-text="throw ">throw</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch" data-text="try-catch ">try-catch</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-finally" data-text="try-finally ">try-finally</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch-finally" data-text="try-catch-finally ">try-catch-finally</a></li></ul></li><li role="group" aria-expanded="false" aria-label="checked and unchecked " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/checked-and-unchecked" data-text="checked and unchecked ">Checked and Unchecked</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/checked" data-text="checked ">checked</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/unchecked" data-text="unchecked ">unchecked</a></li></ul></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/fixed-statement" data-text="fixed statement ">fixed Statement</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/lock-statement" data-text="lock statement ">lock Statement</a></li></ul></li><li role="group" aria-expanded="true" aria-label="method parameters " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters" data-text="method parameters ">Method Parameters</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/params" data-text="params ">params</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/in-parameter-modifier" data-text="in (parameter modifier) ">in (Parameter Modifier)</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref" data-text="ref ">ref</a></li><li role="treeitem" class="selectedHolder"><a tabindex="0" class="selected" aria-current="page" data-showme="true" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier" data-text="out (parameter modifier) ">out (Parameter Modifier)</a></li></ul></li><li role="group" aria-expanded="false" aria-label="namespace keywords " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace-keywords" data-text="namespace keywords ">Namespace Keywords</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace" data-text="namespace ">namespace</a></li><li role="group" aria-expanded="false" aria-label="using " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using" data-text="using ">using</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive" data-text="using directive ">using Directive</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-static" data-text="using static directive ">using static Directive</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement" data-text="using statement ">using Statement</a></li></ul></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern-alias" data-text="extern alias ">extern alias</a></li></ul></li><li role="group" aria-expanded="false" aria-label="operator keywords " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/operator-keywords" data-text="operator keywords ">Operator Keywords</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/as" data-text="as ">as</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await" data-text="await ">await</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/is" data-text="is ">is</a></li><li role="group" aria-expanded="false" aria-label="new " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new" data-text="new ">new</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new-operator" data-text="new operator ">new Operator</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new-modifier" data-text="new modifier ">new Modifier</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new-constraint" data-text="new constraint ">new Constraint</a></li></ul></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sizeof" data-text="sizeof ">sizeof</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/typeof" data-text="typeof ">typeof</a></li><li role="group" aria-expanded="false" aria-label="true " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true" data-text="true ">true</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true-false-operators" data-text="true operator ">true Operator</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true-literal" data-text="true literal ">true Literal</a></li></ul></li><li role="group" aria-expanded="false" aria-label="false " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false" data-text="false ">false</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true-false-operators" data-text="false operator ">false Operator</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false-literal" data-text="false literal ">false Literal</a></li></ul></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/stackalloc" data-text="stackalloc ">stackalloc</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/nameof" data-text="nameof ">nameof</a></li></ul></li><li role="group" aria-expanded="false" aria-label="conversion keywords " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/conversion-keywords" data-text="conversion keywords ">Conversion Keywords</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/explicit" data-text="explicit ">explicit</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/implicit" data-text="implicit ">implicit</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/operator" data-text="operator ">operator</a></li></ul></li><li role="group" aria-expanded="false" aria-label="access keywords " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/access-keywords" data-text="access keywords ">Access Keywords</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/base" data-text="base ">base</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/this" data-text="this ">this</a></li></ul></li><li role="group" aria-expanded="false" aria-label="literal keywords " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/literal-keywords" data-text="literal keywords ">Literal Keywords</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null" data-text="null ">null</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/default" data-text="default ">default</a></li></ul></li><li role="group" aria-expanded="false" aria-label="contextual keywords " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/contextual-keywords" data-text="contextual keywords ">Contextual Keywords</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/add" data-text="add ">add</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/get" data-text="get ">get</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/global" data-text="global ">global</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/partial-type" data-text="partial (type) ">partial (Type)</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/partial-method" data-text="partial (method) ">partial (Method)</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/remove" data-text="remove ">remove</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/set" data-text="set ">set</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/when" data-text="when (filter condition) ">when (filter condition)</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/where-generic-type-constraint" data-text="where (generic type constraint) ">where (generic type constraint)</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/value" data-text="value ">value</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/yield" data-text="yield ">yield</a></li></ul></li><li role="group" aria-expanded="false" aria-label="query keywords " tabindex="0" onclick="event.stopPropagation();msDocs.functions.toggleAriaExpanded(this)" class="noSubs"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/query-keywords" data-text="query keywords ">Query Keywords</a><ul role="tree" onclick="msDocs.functions.stopSomePropagation(event, &quot;top&quot;)"><li role="treeitem"><a onclick="msDocs.functions.stopSomePropagation(event, &quot;left&quot;)" tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/from-clause" data-text="from clause ">from clause</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/where-clause" data-text="where clause ">where clause</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/select-clause" data-text="select clause ">select clause</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/group-clause" data-text="group clause ">group clause</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/into" data-text="into ">into</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/orderby-clause" data-text="orderby clause ">orderby clause</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/join-clause" data-text="join clause ">join clause</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/let-clause" data-text="let clause ">let clause</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ascending" data-text="ascending ">ascending</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/descending" data-text="descending ">descending</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/on" data-text="on ">on</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/equals" data-text="equals ">equals</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/by" data-text="by ">by</a></li><li role="treeitem"><a tabindex="0" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/in" data-text="in ">in</a></li></ul></li></ul></li></ul></nav>
+							<div class="pdf-download-holder">
+		<a href="https://docs.microsoft.com/en-us/dotnet/opbuildpdf/csharp/language-reference/keywords/toc.pdf?branch=live" class="pdf-download-link has-inner-focus" data-bi-name="downloadPdf">
+			<span class="icon">
+				<span class="docon docon-arrow-down" aria-hidden="true"></span>
+			</span>
+			<span class="pdf-download-text">Download PDF</span>
+		</a>
+	</div>
+						</div>
+					</nav>
+				</div>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container">
+		<form class="rating has-default-focus rating-mobile-feedback-active" action="javascript:" data-bi-name="rating">
+			<button class="rating-close has-inner-focus docon docon-navigate-close" type="button" aria-label="Close" data-bi-name="rating-close"></button>
+			<button class="button is-primary rating-mobile-feedback" type="button" data-bi-name="rating-mobile-feedback">Feedback</button>
+			<div class="rating-helpful">
+				<label>Is this page helpful?</label>
+				<div class="buttons">
+					<button class="button is-primary" type="button" data-bi-name="rating-yes" data-bi-sat="1">Yes</button>
+					<button class="button is-primary" type="button" data-bi-name="rating-no" data-bi-sat="0">No</button>
+				</div>
+			</div>
+			<div class="rating-verbatim">
+				<label for="rating-0">How can we improve?</label>
+				<textarea class="rating-textarea" id="rating-0" placeholder="Please share your ideas. We welcome feedback in any language."></textarea>
+				<button class="button is-primary" type="submit" data-bi-name="rating-verbatim" disabled="">Submit</button>
+			</div>
+			<div class="rating-thanks1">
+				<p>Thanks for the feedback!</p>
+				<p>Comments or suggestions? <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier#" data-bi-name="rating-verbatim-link">Tell us here</a>.</p>
+			</div>
+			<div class="rating-thanks2">
+				<span>Thanks for the feedback!</span>
+			</div>
+		</form></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="https://docs.microsoft.com/en-us/locale?target=https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text">English (United States)</span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>
+	</div>
+
+	<div class="action-panel has-default-focus"></div>
+<noscript><img src="https://docs.microsoft.com/akam/10/pixel_1fba0845?a=dD1iNDQ2YzE3ZjU1ZjJlYjQ2OTU2MGEyODUyOTEyYWRhY2MyMjdiNGE5JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript>
+
+</body></html>

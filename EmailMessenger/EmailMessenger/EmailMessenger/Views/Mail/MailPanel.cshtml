@@ -1,0 +1,146 @@
+﻿
+@{
+    Layout = null;
+    string classNameList = "";
+    string classNameConnect = "";
+}
+@*https://bootsnipp.com/snippets/MaA0A*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*bootstrap supported version >= 3.2 for client.cshtml registration page design*@
+    <link href="~/Content/bootstrap-3.3.7.min.css" rel="stylesheet" />
+  
+    <style>
+         /**************************** Example 4****************************************/
+        .panel.with-nav-tabs .panel-heading{
+          padding: 5px 5px 0 5px;
+        }
+        .panel.with-nav-tabs .nav-tabs{
+	        border-bottom: none;
+        }
+        .panel.with-nav-tabs .nav-justified{
+	        margin-bottom: -1px;
+        }
+
+        /*** PANEL PRIMARY ***/
+        .with-nav-tabs.panel-primary .nav-tabs > li > a,
+        .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+        .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+            color: #fff;
+        }
+        .with-nav-tabs.panel-primary .nav-tabs > .open > a,
+        .with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+        .with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+        .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+        .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+	        color: #fff;
+	        background-color: #3071a9;
+	        border-color: transparent;
+        }
+        .with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+        .with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+        .with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+	        color: #428bca;
+	        background-color: #fff;
+	        border-color: #428bca;
+	        border-bottom-color: transparent;
+        }
+        .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
+            background-color: #428bca;
+            border-color: #3071a9;
+        }
+        .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
+            color: #fff;   
+        }
+        .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+        .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+            background-color: #3071a9;
+        }
+        .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+        .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+        .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+            background-color: #4a9fe9;
+        }
+        /********************************************************************/
+    </style>
+    <script src="~/Scripts/jquery.min.js"></script> @*1.11.1*@
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrapValidator.js"></script>  @*validate input field*@
+    @*https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js*@
+</head>
+<body>
+
+       
+    <div class="container"><h2>Mail Messenger </h2></div>
+       <div class="container" style="margin-top:20px">
+            @*<div class="col-md-6">*@
+                <div class="panel with-nav-tabs panel-primary">
+                    <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="dropdown">
+                                <a href="#" data-toggle="dropdown">Settings <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class=""><a href="#tab4primary" data-toggle="tab">Client List</a></li>
+                                    <li class=""><a href="#tab5primary" data-toggle="tab">Create Client</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="active"><a href="#tab1DbServer" data-toggle="tab">Server</a></li>
+                            <li class=""><a href="#tab2primary" data-toggle="tab">Group</a></li>
+                            <li class=""><a href="#tab3primary" data-toggle="tab">Send Mail</a></li>
+                            <li class=""><a href="#tab6primary" data-toggle="tab">Dynamic Field validation</a></li>
+                           
+                        </ul>
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="tab1DbServer">
+                                @*@if (ViewBag.Data != null)
+                                {
+                                    classNameList = "";
+                                    classNameConnect = "hide";
+                                }
+                                else
+                                {
+                                    classNameList = "hide";
+                                    classNameConnect = "";
+                                   
+                                }*@
+                                @*<div id="ServerList" class="@classNameList ">
+                                    @Html.Partial("ServerList")
+                                </div>*@
+                                <div id="ServerConnectForm" class="@classNameConnect">
+                                    @Html.Partial("ServerConnecttion")
+                                 </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab2primary">Primary 2</div>
+                            <div class="tab-pane fade" id="tab3primary">
+                                @Html.Partial("SendMail")
+                            </div>
+                            <div class="tab-pane fade" id="tab4primary">
+                                asdf
+                            </div>
+                            <div class="tab-pane fade" id="tab5primary">
+                                @Html.Partial("Client")
+                            </div>
+                            <div class="tab-pane fade" id="tab6primary">
+                                @Html.Partial("DynamicValidation") 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @*</div>*@
+        </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+       
+        @*<script src="~/Scripts/bootstrap-3.2.min.js"></script>*@
+        @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>*@
+    
+</body>
+</html>

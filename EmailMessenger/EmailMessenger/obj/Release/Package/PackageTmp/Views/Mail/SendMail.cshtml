@@ -1,0 +1,203 @@
+﻿@*https://codepen.io/jaycbrf/pen/iBszr*@
+@*https://formvalidation.io/guide/plugins/bootstrap3/*@
+@*https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js*@
+@*https://stackoverflow.com/questions/38713956/why-is-mvc-httppostedfilebase-always-null*@
+
+@using (Html.BeginForm("SendMail", "Mail", FormMethod.Post,new {@class="well form-horizontal",id="contact_form", enctype = "multipart/form-data" }))
+{
+@*<form class="well form-horizontal" action="/Mail/SendMail" id="contact_form" method="post" enctype="multipart/form-data">*@
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Send Mail Individual or group!</legend>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">From Name</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="from_name" placeholder="From Name" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label">From(E-Mail)</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">From Password</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input name="from_password" placeholder="Password(minimum 4 character)" class="form-control" type="password">
+                </div>
+            </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Subject</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="subject" placeholder="subject" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Target Group</label>
+            <div class="col-md-4 selectContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select name="target_group" id="target_group" class="form-control selectpicker">
+                        <option value=" ">Please select your Target Group</option>
+                        <option>Individual</option>
+                        <option>Friends</option>
+                        <option>Family</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">To(E-Mail)</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input name="to_email" placeholder="E-Mail Address" class="form-control" type="text">
+                </div>
+            </div>
+        </div>
+
+        <!-- radio checks -->
+        <div class="form-group">
+            <label class="col-md-4 control-label">Send mail from hosting?</label>
+            <div class="col-md-4">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="hosting" value="yes" /> Yes
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="hosting" value="no" /> No
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text area -->
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Mail Body</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                    <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Attachment</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-paperclip"></i></span>
+                    <input type="file" name="file" multiple />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4 inputGroupContainer">
+                <ul id="filelist"></ul>
+            </div>
+        </div>
+        <!-- Success message -->
+        <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4">
+                <span>
+                    <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                    <button type="button" id="refresh" class="btn btn-info">Refresh <span class="glyphicon glyphicon-refresh"></span></button>
+                </span>
+            </div>
+
+        </div>
+
+    </fieldset>
+@*</form>*@
+}
+
+<style>
+    #success_message {
+        display: none;
+    }
+</style>
+
+<script src="~/Scripts/EmSendMail.js"></script>
+
+@*send file by ajax
+<form id="formTest" method="post" enctype="multipart/form-data">
+
+    <label for="file">Filename:</label>
+    <input type="file" name="files" id="files" />
+
+    <input type="submit" name="submit" value="Upload" />
+</form>
+<script type="text/javascript">
+    var form = document.getElementById('formTest').onsubmit = function (e) {
+        e.preventDefault();
+        var formdata = new FormData(); //FormData object
+        var fileInput = document.getElementById('files');
+        if (fileInput != "" && fileInput.files.length > 0) {
+            //Iterating through each files selected in fileInput
+            for (i = 0; i < fileInput.files.length; i++) {
+                //Appending each file to FormData object
+                formdata.append(fileInput.files[i].name, fileInput.files[i]);
+            }
+            //Creating an XMLHttpRequest and sending
+            var xhr = new XMLHttpRequest();
+
+            var url = '@Url.Action("Index","Home")';
+            xhr.open('POST', url);
+            xhr.send(formdata);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var result = xhr.responseText;
+
+                }
+            }
+            return false;
+        }
+    }
+</script>
+public ActionResult Index()
+{
+   if (Request.Files.Count > 0)
+   {
+      var file = Request.Files[0];
+      if (file != null && file.ContentLength > 0)
+      {
+         var fileName = Path.GetFileName(file.FileName);
+         var path = Path.Combine(Server.MapPath("~/Images/"), fileName);
+         file.SaveAs(path);
+      }
+    return View();
+
+   }
+}*@

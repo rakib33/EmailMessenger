@@ -1,0 +1,168 @@
+﻿
+    <form class="well form-horizontal" data-remote="true" data-toggle="validator" role="form" method="post" id="contactServer_form">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Server Connection Form</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Connection Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="ConnectionName" id="ConnectionName" placeholder="Create a Name" onkeyup="enableConnect()" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Server Host/IP</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="HostNameOrIP" id="HostNameOrIP" placeholder="Server Name or IP" onkeyup="enableConnect()" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Server UserName</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="DataBaseUser" id="DataBaseUser" placeholder="DataBase User Name" onkeyup="enableConnect()" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Server Password</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input name="UserPassword" id="UserPassword" placeholder="Server Password" onkeyup="enableConnect()" class="form-control" type="password">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Direct Connection</label>
+                <div class="col-md-8">
+                    <span style="margin-top:4px">
+                        <input type="checkbox" style="width:17px;height:17px" class="ChkBoxdirectConnect" name="directConnect" id="ChkBoxdirectConnect">
+                    </span>
+            
+                    <span id="connect">
+                        <span>
+                            <button disabled type="button" id="ConnectServer" class="btn btn-warning">Connect <span class="glyphicon glyphicon-send"></span></button>
+                        </span>
+                        <span>
+                            <img height="30" width="30" id="load-image" style="display:none" src="~/images/ajax-loader.gif" />
+                        </span>
+                    </span>
+    
+                
+                </div>
+            </div>
+
+
+            <div class="hide" id="dbBlock">
+                @*style="display:none"*@
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Database Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="option[]" id="dbName" placeholder="DataBase User Name" onkeyup="enableConnect()" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Table Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="option[]" id="tbName" placeholder="DataBase User Name" onkeyup="enableConnect()" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*<div class="form-group" id="connect">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <span>
+                        <button disabled type="button" id="ConnectServer" class="btn btn-warning">Connect <span class="glyphicon glyphicon-send"></span></button>
+                    </span>
+                    <span>
+                        <img height="40" width="40" id="load-image" style="display:none" src="~/images/ajax-loader.gif" />
+                    </span>
+                </div>
+            </div>*@
+
+            <div id="default">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Databse Name</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="DbName" id="DbName" class="form-control selectpicker">
+                                <option value="text">db name</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Table Name</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="TableName" id="TableName" class="form-control selectpicker">
+                                <option value="tableName">table name</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*<div class="form-group">
+                    <label class="col-md-4 control-label">Field(Email)</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="field_name" id="field_name" class="form-control selectpicker"></select>
+                        </div>
+                    </div>
+                </div>*@
+            <!-- Success message -->
+            <div class="alert alert-success" role="alert" id="success_message">
+                Success <i class="glyphicon glyphicon-thumbs-up"></i>
+                Thanks for saving Mail ServerInfo.
+            </div>
+
+            <!-- Button -->
+            <div class="form-group" id="submit">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <span>
+                        <button type="submit" class="btn btn-warning">Save <span class="glyphicon glyphicon-send"></span></button> @*disabled*@
+                        <button type="button" id="ServerRefresh" class="btn btn-info">Refresh <span class="glyphicon glyphicon-refresh"></span></button>
+                        <button type="button" id="btnEnableTableField" class="btn btn-info"> Next <span class="glyphicon glyphicon-"></span></button>
+                    </span>
+                </div>
+
+            </div>
+
+        </fieldset>
+    </form>
+
+
+    <style>
+        #success_message {
+            display: none;
+        }
+    </style>
+
+
+<div id="tableFieldSelect" class="hide">
+    @Html.Partial("TableFieldSelectForm")
+</div>
+
+<script src="~/Scripts/EmServerConnect.js"></script>

@@ -1,0 +1,10 @@
+E:\0.RiProject\EmailMessenger\EmEntity\bin\Release\EmEntity.dll
+E:\0.RiProject\EmailMessenger\EmEntity\bin\Release\EmEntity.pdb
+E:\0.RiProject\EmailMessenger\EmEntity\obj\Release\EmEntity.csprojResolveAssemblyReference.cache
+E:\0.RiProject\EmailMessenger\EmEntity\obj\Release\EmEntity.dll
+E:\0.RiProject\EmailMessenger\EmEntity\obj\Release\EmEntity.pdb
+E:\Miracle\EmailMessenger\EmailMessenger\EmEntity\bin\Release\EmEntity.dll
+E:\Miracle\EmailMessenger\EmailMessenger\EmEntity\bin\Release\EmEntity.pdb
+E:\Miracle\EmailMessenger\EmailMessenger\EmEntity\obj\Release\EmEntity.csprojResolveAssemblyReference.cache
+E:\Miracle\EmailMessenger\EmailMessenger\EmEntity\obj\Release\EmEntity.dll
+E:\Miracle\EmailMessenger\EmailMessenger\EmEntity\obj\Release\EmEntity.pdb

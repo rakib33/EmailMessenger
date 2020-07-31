@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://bootstrapvalidator.votintsev.ru/examples/adding-dynamic-field/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<title>Adding dynamic field - BootstrapValidator</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="BootstrapValidator, a jQuery plugin to validate form fields">
+<meta name="keywords" content="Bootstrap, jQuery, validate, plugin, validator, form">
+<meta name="author" content="Nguyen Huu Phuoc">
+<meta name="google-site-verification" content="uzi08FxE8yqb9q-PlBzFxZeuUGalNFp3gX2haopVWBc">
+
+<link rel="stylesheet" href="./Adding dynamic field - BootstrapValidator_files/bootstrap.min.css">
+<link rel="stylesheet" href="./Adding dynamic field - BootstrapValidator_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Adding dynamic field - BootstrapValidator_files/bootstrapValidator.min.css">
+<link rel="stylesheet" href="./Adding dynamic field - BootstrapValidator_files/css">
+<link rel="stylesheet" href="./Adding dynamic field - BootstrapValidator_files/css(1)">
+<link rel="stylesheet" href="./Adding dynamic field - BootstrapValidator_files/css(2)">
+<link rel="stylesheet" href="./Adding dynamic field - BootstrapValidator_files/github.css">
+<link rel="stylesheet" href="./Adding dynamic field - BootstrapValidator_files/style.css">
+
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" async="" src="./Adding dynamic field - BootstrapValidator_files/ga.js.download"></script><script src="./Adding dynamic field - BootstrapValidator_files/jquery.min.js.download"></script>
+<script src="./Adding dynamic field - BootstrapValidator_files/bootstrap.min.js.download"></script>
+<script src="./Adding dynamic field - BootstrapValidator_files/bootstrapValidator.min.js.download"></script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-44786951-2']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<script id="_carbonads_projs" type="text/javascript" src="./Adding dynamic field - BootstrapValidator_files/CKYICKQI.json"></script></head>
+<body>
+    <nav class="doc-nav" tabindex="-1">
+    <ul>
+        <li><a href="http://bootstrapvalidator.votintsev.ru/">Home</a></li>
+    
+        
+            
+        
+        <li class=""><a href="http://bootstrapvalidator.votintsev.ru/getting-started/">Getting Started</a></li>
+    
+        
+            
+        
+        <li class=""><a href="http://bootstrapvalidator.votintsev.ru/settings/">Settings</a></li>
+    
+        
+            
+        
+        <li class=""><a href="http://bootstrapvalidator.votintsev.ru/validators/">Validators</a></li>
+    
+        
+            
+        
+        <li class=""><a href="http://bootstrapvalidator.votintsev.ru/api/">API</a></li>
+    
+        
+            
+        
+        <li class="doc-nav-active"><a href="http://bootstrapvalidator.votintsev.ru/examples/">Examples</a></li>
+    
+        
+            
+        
+        <li class=""><a href="http://bootstrapvalidator.votintsev.ru/developing/">Developing</a></li>
+    
+        
+            
+        
+        <li class=""><a href="http://bootstrapvalidator.votintsev.ru/news/">News</a></li>
+    
+    </ul>
+
+    <div class="doc-hr"></div>
+
+    <ul>
+        <li><a href="https://github.com/nghuuphuoc/bootstrapvalidator"><i class="fa fa-github"></i> Github</a></li>
+        <li><a href="https://github.com/nghuuphuoc/bootstrapvalidator/issues"><i class="fa fa-bug"></i> Report issues</a></li>
+        <li><a href="http://twitter.com/bsvalidator"><i class="fa fa-twitter"></i> @bsvalidator</a></li>
+        <li><a href="https://plus.google.com/u/0/communities/114931136856987817254"><i class="fa fa-google-plus"></i> Google+ community</a></li>
+    </ul>
+
+    <div class="doc-hr"></div>
+
+    <div class="doc-creator">
+        <p>
+            Handcrafted with <i class="fa fa-heart"></i> in Vietnam<br>
+            by <a href="http://twitter.com/nghuuphuoc">@nghuuphuoc</a><br>
+            <img src="./Adding dynamic field - BootstrapValidator_files/nghuuphuoc.png">
+        </p>
+        <p><a href="mailto:%20phuoc@huuphuoc.me" class="btn">Hire me</a></p>
+    </div>
+</nav>
+<button class="btn doc-logo">BV</button>
+
+    <div id="main" class="doc-content-wrapper">
+        <div class="doc-notification">
+    <i class="fa fa-bell-o"></i> <a href="http://programer.tips/" title="Daily tips, tricks and best practices for programmers" target="_blank">programer.tips</a>, another cool thing from <a href="http://twitter.com/nghuuphuoc" target="_blank">@nghuuphuoc</a>!
+</div>
+
+        <div class="doc-content-container">
+    <div class="doc-heading">
+        <h1>Adding dynamic field</h1>
+        <p>← <a href="http://bootstrapvalidator.votintsev.ru/examples/">Examples</a></p>
+        <a class="btn doc-edit-btn" href="https://github.com/nghuuphuoc/bootstrapvalidator/edit/docs/examples/adding-dynamic-field.html">Improve it on Github</a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>When working with complex form, the fields might be added to (or remove from) the form dynamically. The newly added fields also need to be validated.</p>
+                <p>This example demonstrates a sample scenario where you have to solve validating dynamic fields problem.</p>
+                <p>Before going to the details, there are some methods and events you need to know:</p>
+
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Method/Event</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="http://bootstrapvalidator.votintsev.ru/api/#add-field">addField()</a> method</td>
+                            <td>Adding new field</td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://bootstrapvalidator.votintsev.ru/api/#remove-field">removeField()</a> method</td>
+                            <td>Removing given field</td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://bootstrapvalidator.votintsev.ru/settings/#event-form">added.field.bv</a> event</td>
+                            <td>Called after adding new field</td>
+                        </tr>
+                        <tr>
+                            <td><a href="http://bootstrapvalidator.votintsev.ru/settings/#event-form">removed.field.bv</a> event</td>
+                            <td>Called after removing given field</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Assuming that you are managing a survey which consists of a question and some options that user can choose from. The form allows you to add more options but the number of options can't exceed 5.</p>
+
+                <div class="doc-demo">
+                    <ul class="nav nav-tabs">
+                        <li class="active bv-tab-error"><a href="http://bootstrapvalidator.votintsev.ru/examples/adding-dynamic-field/#survey-form-tab" data-toggle="tab">Try it</a></li>
+                        <li><a href="http://bootstrapvalidator.votintsev.ru/examples/adding-dynamic-field/#survey-html-tab" data-toggle="tab">HTML</a></li>
+                        <li><a href="http://bootstrapvalidator.votintsev.ru/examples/adding-dynamic-field/#survey-js-tab" data-toggle="tab">JS</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="survey-form-tab">
+                        <form id="surveyForm" method="post" class="form-horizontal bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" disabled="disabled" style="display: none; width: 0px; height: 0px;"></button>
+    <div class="form-group has-feedback has-error">
+        <label class="col-sm-3 control-label">Question</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="question" data-bv-field="question"><i class="form-control-feedback glyphicon glyphicon-remove" data-bv-icon-for="question" style=""></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="question" data-bv-result="INVALID" style="">The question required and cannot be empty</small></div>
+    </div>
+
+    <div class="form-group has-feedback has-error">
+        <label class="col-sm-3 control-label">Options</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" name="option[]" data-bv-field="option[]"><i class="form-control-feedback glyphicon glyphicon-remove" data-bv-icon-for="option[]" style=""></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="option[]" data-bv-result="INVALID" style="">The option required and cannot be empty</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="option[]" data-bv-result="VALID" style="display: none;">The option must be less than 100 characters long</small></div>
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-default addButton"><i class="fa fa-plus"></i></button>
+        </div>
+    </div>
+
+    <!-- The option field template containing an option field and a Remove button -->
+    <div class="form-group has-feedback has-error">
+        <div class="col-sm-offset-3 col-sm-5">
+            <input class="form-control" type="text" name="option[]" data-bv-field="option[]"><i class="form-control-feedback bv-no-label glyphicon glyphicon-remove" data-bv-icon-for="option[]" style=""></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="option[]" data-bv-result="INVALID" style="">The option required and cannot be empty</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="option[]" data-bv-result="VALID" style="display: none;">The option must be less than 100 characters long</small></div>
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-default removeButton"><i class="fa fa-minus"></i></button>
+        </div>
+    </div><div class="form-group hide has-feedback" id="optionTemplate">
+        <div class="col-sm-offset-3 col-sm-5">
+            <input class="form-control" type="text" name="option[]" data-bv-field="option[]"><i class="form-control-feedback bv-no-label" data-bv-icon-for="option[]" style="display: none;"></i>
+        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="option[]" data-bv-result="NOT_VALIDATED" style="display: none;">The option required and cannot be empty</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="option[]" data-bv-result="NOT_VALIDATED" style="display: none;">The option must be less than 100 characters long</small></div>
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-default removeButton"><i class="fa fa-minus"></i></button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-5 col-sm-offset-3">
+            <button type="submit" class="btn btn-default" disabled="disabled">Validate</button>
+        </div>
+    </div>
+</form>
+                        </div>
+
+                        <div class="tab-pane" id="survey-html-tab">
+                        <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">"surveyForm"</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">class=</span><span class="s">"form-horizontal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-3 control-label"</span><span class="nt">&gt;</span>Question<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">name=</span><span class="s">"question"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-3 control-label"</span><span class="nt">&gt;</span>Options<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">name=</span><span class="s">"option[]"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default addButton"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-plus"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="c">&lt;!-- The option field template containing an option field and a Remove button --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group hide"</span> <span class="na">id=</span><span class="s">"optionTemplate"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-offset-3 col-sm-5"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"option[]"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default removeButton"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-minus"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-5 col-sm-offset-3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Validate<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+                        </div>
+
+                        <div class="tab-pane" id="survey-js-tab">
+                        <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// The maximum number of options</span>
+    <span class="kd">var</span> <span class="nx">MAX_OPTIONS</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#surveyForm'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">bootstrapValidator</span><span class="p">({</span>
+            <span class="nx">feedbackIcons</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">valid</span><span class="o">:</span> <span class="s1">'glyphicon glyphicon-ok'</span><span class="p">,</span>
+                <span class="nx">invalid</span><span class="o">:</span> <span class="s1">'glyphicon glyphicon-remove'</span><span class="p">,</span>
+                <span class="nx">validating</span><span class="o">:</span> <span class="s1">'glyphicon glyphicon-refresh'</span>
+            <span class="p">},</span>
+            <span class="nx">fields</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">question</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="nx">validators</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="nx">notEmpty</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="nx">message</span><span class="o">:</span> <span class="s1">'The question required and cannot be empty'</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="s1">'option[]'</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="nx">validators</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="nx">notEmpty</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="nx">message</span><span class="o">:</span> <span class="s1">'The option required and cannot be empty'</span>
+                        <span class="p">},</span>
+                        <span class="nx">stringLength</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="nx">max</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+                            <span class="nx">message</span><span class="o">:</span> <span class="s1">'The option must be less than 100 characters long'</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Add button click handler</span>
+        <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="s1">'.addButton'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">$template</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#optionTemplate'</span><span class="p">),</span>
+                <span class="nx">$clone</span>    <span class="o">=</span> <span class="nx">$template</span>
+                                <span class="p">.</span><span class="nx">clone</span><span class="p">()</span>
+                                <span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>
+                                <span class="p">.</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'id'</span><span class="p">)</span>
+                                <span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">$template</span><span class="p">),</span>
+                <span class="nx">$option</span>   <span class="o">=</span> <span class="nx">$clone</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'[name="option[]"]'</span><span class="p">);</span>
+
+            <span class="c1">// Add new field</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'#surveyForm'</span><span class="p">).</span><span class="nx">bootstrapValidator</span><span class="p">(</span><span class="s1">'addField'</span><span class="p">,</span> <span class="nx">$option</span><span class="p">);</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Remove button click handler</span>
+        <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="s1">'.removeButton'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">$row</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parents</span><span class="p">(</span><span class="s1">'.form-group'</span><span class="p">),</span>
+                <span class="nx">$option</span> <span class="o">=</span> <span class="nx">$row</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'[name="option[]"]'</span><span class="p">);</span>
+
+            <span class="c1">// Remove element containing the option</span>
+            <span class="nx">$row</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+
+            <span class="c1">// Remove field</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'#surveyForm'</span><span class="p">).</span><span class="nx">bootstrapValidator</span><span class="p">(</span><span class="s1">'removeField'</span><span class="p">,</span> <span class="nx">$option</span><span class="p">);</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Called after adding new field</span>
+        <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'added.field.bv'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// data.field   --&gt; The field name</span>
+            <span class="c1">// data.element --&gt; The new field element</span>
+            <span class="c1">// data.options --&gt; The new field options</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">field</span> <span class="o">===</span> <span class="s1">'option[]'</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#surveyForm'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">':visible[name="option[]"]'</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="nx">MAX_OPTIONS</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#surveyForm'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'.addButton'</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'disabled'</span><span class="p">,</span> <span class="s1">'disabled'</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">})</span>
+
+        <span class="c1">// Called after removing the field</span>
+        <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'removed.field.bv'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+           <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">field</span> <span class="o">===</span> <span class="s1">'option[]'</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'#surveyForm'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">':visible[name="option[]"]'</span><span class="p">).</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">MAX_OPTIONS</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#surveyForm'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'.addButton'</span><span class="p">).</span><span class="nx">removeAttr</span><span class="p">(</span><span class="s1">'disabled'</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+<span class="p">});</span></code></pre></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    // The maximum number of options
+    var MAX_OPTIONS = 5;
+
+    $('#surveyForm')
+        .bootstrapValidator({
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                question: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The question required and cannot be empty'
+                        }
+                    }
+                },
+                'option[]': {
+                    validators: {
+                        notEmpty: {
+                            message: 'The option required and cannot be empty'
+                        },
+                        stringLength: {
+                            max: 100,
+                            message: 'The option must be less than 100 characters long'
+                        }
+                    }
+                }
+            }
+        })
+
+        // Add button click handler
+        .on('click', '.addButton', function() {
+            var $template = $('#optionTemplate'),
+                $clone    = $template
+                                .clone()
+                                .removeClass('hide')
+                                .removeAttr('id')
+                                .insertBefore($template),
+                $option   = $clone.find('[name="option[]"]');
+
+            // Add new field
+            $('#surveyForm').bootstrapValidator('addField', $option);
+        })
+
+        // Remove button click handler
+        .on('click', '.removeButton', function() {
+            var $row    = $(this).parents('.form-group'),
+                $option = $row.find('[name="option[]"]');
+
+            // Remove element containing the option
+            $row.remove();
+
+            // Remove field
+            $('#surveyForm').bootstrapValidator('removeField', $option);
+        })
+
+        // Called after adding new field
+        .on('added.field.bv', function(e, data) {
+            // data.field   --> The field name
+            // data.element --> The new field element
+            // data.options --> The new field options
+
+            if (data.field === 'option[]') {
+                if ($('#surveyForm').find(':visible[name="option[]"]').length >= MAX_OPTIONS) {
+                    $('#surveyForm').find('.addButton').attr('disabled', 'disabled');
+                }
+            }
+        })
+
+        // Called after removing the field
+        .on('removed.field.bv', function(e, data) {
+           if (data.field === 'option[]') {
+                if ($('#surveyForm').find(':visible[name="option[]"]').length < MAX_OPTIONS) {
+                    $('#surveyForm').find('.addButton').removeAttr('disabled');
+                }
+            }
+        });
+});
+</script>
+
+        <footer class="doc-footer">
+    <div class="container">
+        <p>
+            <a class="btn" href="https://github.com/nghuuphuoc/bootstrapvalidator/issues">Report an issue</a>
+            <a class="btn" href="mailto:%20phuoc@huuphuoc.me?subject=Commercial%20support%20for%20BootstrapValidator" data-toggle="tooltip" data-title="Pay me to get the issue solved" data-original-title="" title="">Commercial support</a>
+        </p>
+        <p>
+            © 2013 - 2014 <a href="http://twitter.com/nghuuphuoc">Nguyen Huu Phuoc</a><br>
+            <a href="https://github.com/nghuuphuoc/bootstrapvalidator">Code</a> licensed under <a href="http://opensource.org/licenses/mit-license.html">MIT</a>, <a href="https://github.com/nghuuphuoc/bootstrapvalidator/tree/docs">documentation</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
+        </p>
+        <p>handcrafted with <i class="fa fa-heart"></i> in Vietnam</p>
+    </div>
+</footer>
+    </div>
+    <script async="" type="text/javascript" src="./Adding dynamic field - BootstrapValidator_files/carbon.js.download" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="http://srv.carbonads.net/ads/click/x/GTND42QMCTYDL27YCTALYKQMCWYD453ECV7DCZ3JCWBITKJJCA7IEK3KC6BIPK3JC6SDEK3EHJNCLSIZ?segment=placement:bootstrapvalidatorcom;" class="carbon-img" target="_blank" rel="noopener"><img src="./Adding dynamic field - BootstrapValidator_files/1525189943-38523.png" alt="" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="http://srv.carbonads.net/ads/click/x/GTND42QMCTYDL27YCTALYKQMCWYD453ECV7DCZ3JCWBITKJJCA7IEK3KC6BIPK3JC6SDEK3EHJNCLSIZ?segment=placement:bootstrapvalidatorcom;" class="carbon-text" target="_blank" rel="noopener">Limited time offer: Get 10 free Adobe Stock images.</a></span><a href="http://carbonads.net/?utm_source=bootstrapvalidatorcom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a></span></div>
+
+<script src="./Adding dynamic field - BootstrapValidator_files/toc.min.js.download"></script>
+<script>
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('.doc-logo').on('click', function() {
+        $('body').toggleClass('doc-nav-shown');
+    });
+
+    $('form').each(function() {
+        $(this).on('success.form.bv', function(e) {
+            e.preventDefault();
+        });
+    });
+
+    // Create table of contents
+    if ($('#toc').length) {
+        $('#toc')
+            .css('max-width', $('#toc').width())
+            .toc({
+                selector: '#main h2, #main h3, #main h4, #main h5, #main h6',
+                elementClass: 'toc',
+                ulClass: 'nav',
+                indexingFormats: '______'
+            });
+
+        var $window = $(window),
+            $body   = $(document.body);
+        $body.scrollspy({
+            target: '#toc'
+        });
+
+        $window.on('load', function() {
+            $body.scrollspy('refresh');
+        });
+
+        setTimeout(function() {
+            var $sideBar = $('#toc');
+            $sideBar.affix({
+                offset: {
+                    top: function() {
+                        return (this.top = $sideBar.offset().top);
+                    }
+                }
+            });
+        }, 100);
+    }
+});
+</script>
+
+</body></html>

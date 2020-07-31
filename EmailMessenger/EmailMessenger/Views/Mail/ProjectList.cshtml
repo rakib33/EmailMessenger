@@ -1,0 +1,74 @@
+﻿<script id="projectTemplate" type="text/x-jquery-tmpl">
+    <tr>
+        <td>${SlNo}</td>
+        <td>${ProjectName}</td>
+        <td>${Status}</td>
+        <td>${StartTime}</td>
+        <td>${TimeInterval}</td>
+        <td>${IntervalOption}</td>
+        <td>${ExpiredTime}</td>
+    </tr>
+</script>
+
+<div id="group">
+    <div class="panel">
+        <div class="panel-body">
+            <h3 class="title-hero">
+                Project
+            </h3>
+            <div class="example-box-wrapper">
+                <!-- Button to Open the Modal -->
+                <button style="margin-bottom:10px" type="button" class="btn btn-sm btn-primary btn-hover" data-toggle="modal" data-backdrop="static" data-target="#projectAddEditModal">
+                    <span> Add Project </span> <span class="glyphicon glyphicon-plus"></span>
+                </button>
+
+                <div id="datatable-responsive_wrapper" class="dataTables_wrapper form-inline margin-top-05">
+                    <table id="projecttable" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                        <thead>
+                            <tr role="row">
+                                <th style="width:5px" class="all">Sl No</th>
+                                <th class="all">Project Name</th>
+                                <th>Status</th>
+                                <th>Start Time</th>
+                                <th>Time Interval</th>
+                                <th>Interval Option</th>
+                                <th>Expired Time</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="projectAddEditModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <span>Project Add/Edit</span>
+                <span><button type="button" class="close" data-dismiss="modal">&times;<i class="glyphicon glyphicon-close"></i></button></span>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                @Html.Partial("ProjectAddEdit")
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Scripts/emailScript/projectParent.js"></script>

@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <title>Oracle Connection String using C#</title> <meta name="Keywords" content="ADO.NET connection string,C# Oracle connection string,Connection string,connection string for Oracle data provider,Connection string in C#,Oracle connection string"> <meta name="DESCRIPTION" content="Oracle is a powerful relational database management system that offers a large feature set. Along with Microsoft SQL Server, Oracle is widely regarded as one of the two most popular full-featured database systems on the market today. Oracle is made up of a set of processes running in your operating system. "> <meta name="Search.TopicType" content="kbArticle"> <meta name="Search.PublishDate" content="21 Dec 2010 12:00:00 GMT"> <meta name="Search.RevisedDate" content="22 Nov 2018 01:30:41 GMT"> <meta name="Search.UserRating" content="0%"> <meta name="CODE_LANGUAGE" content="C#"> <meta name="MS.LOCALE" content="en-US">  <meta name="Author" content="Nipun Tomar"> <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=.3)"><meta name="Title" content="Oracle Connection String using C#"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CsharpCorner"><meta name="twitter:creator" content="@CsharpCorner"><meta name="twitter:title" content="Oracle Connection String using C#"><meta name="twitter:description" content="Oracle is a powerful relational database management system that offers a large feature set. Along with Microsoft SQL Server, Oracle is widely regarded as one of the two most popular full-featured database systems on the market today. Oracle is made up of a set of processes running in your operating system."><meta name="twitter:image" content="http://csharpcorner.mindcrackerinc.netdna-cdn.com/UploadFile/TwitterCard/twitter_card_logo.png"><meta name="og:image" content="https://www.c-sharpcorner.com/images/csharp-corner.png" property="og:image"><meta name="og:type" content="Articles" property="og:type"><meta name="og:description" content="Oracle is a powerful relational database management system that offers a large feature set. Along with Microsoft SQL Server, Oracle is widely regarded as one of the two most popular full-featured database systems on the market today. Oracle is made up of a set of processes running in your operating system." property="og:description"><meta name="og:title" content="Oracle Connection String using C#" property="og:title"><meta name="og:url" content="https://www.c-sharpcorner.com/uploadfile/nipuntomar/connection-strings-for-oracle/" property="og:url"><meta property="fb:app_id" content="440531902678919"><link rel="Shortcut Icon" href="https://www.c-sharpcorner.com/Images/McnIcon.ico"> <style>#OldHeader .page,*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box}body,footer *{margin:0;padding:0}.a-icon,.c-icon{background-repeat:no-repeat}.btn,.caret,.v-middle,svg{vertical-align:middle}.float-list,.float-list>.float-list-body{overflow:hidden}.btn,a,ul.headerMenu li>a{text-decoration:none}*{box-sizing:border-box}:after,:before{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}html{font-size:10px;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{font-family:'open sans',sans-serif;font-size:14px;line-height:1.4;color:#212121;background-color:#fff}body,body>form,html{height:100%}h1,h2,h3,h4,h5,h6{font-family:Roboto,sans-serif;font-weight:400;line-height:1.1;color:inherit;margin-top:0;margin-bottom:0}p{font-size:16px;margin:0 0 8px;line-height:1.5}.page-body{padding:15px;clear:both;min-height:calc((100%) - 355px)}.affix{position:fixed}.pointer,[role=button],a[href],button,input[type=submit],input[type=image],label[for],select{cursor:pointer}.text-right{text-align:right}.padding-r8{padding-right:8px}.padding-l8{padding-left:8px}.padding-r4{padding-right:4px}.padding-l4{padding-left:4px}.pull-left{float:left!important}.pull-right{float:right!important}.float-list{margin-left:-8px!important;margin-right:-8px!important}.float-list>.float-list-body,.float-list>.pull-left,.float-list>.pull-right{margin-left:8px;margin-right:8px}.caret{display:inline-block;width:0;height:0;margin-left:2px;border-top:4px dashed;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}.b-container:after,.b-container:before{display:table;content:""}.content,.content-full,.right-bar{position:relative;min-height:1px;padding-left:15px;padding-right:15px}a{color:#1E88E5}a:hover{color:#01a821}.text-danger{color:#c00}.text-grey-900{color:#212121}.text-grey-500{color:#9E9E9E}.text-grey-600{color:#757575}a[class^=text-grey]:hover{color:#01a821}.b-container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px;max-width:1054px}.b-container:after{clear:both}.b-row{margin-left:-15px;margin-right:-15px}.a-icon{background-image:url(/App_Themes/NewDesign/Images/a-icon-sprite.png)}.c-icon{background-image:url(/App_Themes/NewDesign/Images/c-icon-sprite_20171123.png)}.a-icon,.c-icon,.d-icon{position:relative;display:inline-block;line-height:1;transition:background-color .2s}.btn,.form-control{background-image:none;font-size:14px;line-height:1.42857143}.icon-28{width:28px;height:28px}.icon-20{width:20px;height:20px}.icon-48{width:48px;height:48px}.user-image-36{width:36px;height:36px;border-radius:50%;min-width:36px}.user-image-48{min-width:48px}.user-image-56{width:56px;height:56px;border-radius:50%;min-width:56px}.icon-comment{background-position:-2px -2px}.icon-message{background-position:-34px -2px}.icon-notification{background-position:-66px -2px}.icon-editor{background-position:-162px -2px}a:hover .icon-editor{background-position:-130px -130px}.icon-editor-notification{background-position:-98px -2px}.icon-admin{background-position:-130px -2px}a:hover .icon-admin{background-position:-98px -130px}.icon-login{background-position:-34px -98px}.icon-register{background-position:-290px -66px}.icon-user{background-position:-66px -130px}.icon-user-edit{background-position:-2px -34px}.icon-lock{background-position:-290px -2px}.icon-setting{background-position:-66px -34px}.icon-logout{background-position:-194px -2px}.icon-view-profile{background-position:-34px -34px}.icon-admin-article{background-position:-2px -2px}.icon-admin-article_content{background-position:-34px -2px}.icon-admin-news{background-position:-66px -2px}.icon-admin-downloads{background-position:-98px -2px}.icon-admin-resources{background-position:-130px -2px}.icon-admin-blogs{background-position:-162px -2px}.icon-admin-reviews{background-position:-194px -2px}.icon-admin-jobs{background-position:-258px -2px}.icon-admin-mvp{background-position:-290px -2px}.icon-admin-event{background-position:-2px -34px}.icon-admin-stories{background-position:-34px -34px}a:hover .icon-user{background-position:-194px -98px}a:hover .icon-user-edit{background-position:-290px -98px}a:hover .icon-lock{background-position:-258px -98px}a:hover .icon-setting{background-position:-34px -130px}a:hover .icon-logout{background-position:-226px -98px}a:hover .icon-view-profile{background-position:0 -130px}.icon-home{background-position:-66px -66px}.icon-question{background-position:-2px -66px}.icon-contribute{background-position:-34px -66px}.icon-search{background-position:-98px -66px}.icon-facebook{background-position:-130px -66px}.icon-twitter{background-position:-162px -66px}.icon-googleplus{background-position:-194px -66px}.icon-linkedin{background-position:-1px -98px}.icon-youtube{background-position:-226px -66px}.icon-birch{background-position:-162px -130px}.icon-google-play-store{background-position:-226px -130px}.icon-win-store{background-position:-194px -130px}.footer-social-bar .icon-whatsapp{background-position:-259px -131px}.head-notification-bar~.bottom-headerr,.icon-facebook:hover,.login-social-bar .icon-facebook{background-color:#3b5998}.icon-twitter:hover,.login-social-bar .icon-twitter{background-color:#0084b4}.icon-googleplus:hover,.login-social-bar .icon-googleplus{background-color:#dd4b39}.icon-linkedin:hover,.login-social-bar .icon-linkedin{background-color:#0077b5}.icon-youtube:hover,.login-social-bar .icon-youtube{background-color:#b00}.icon-birch:hover{background-color:#498b2a}.icon-google-play-store:hover{background-color:#3eabba}.icon-win-store:hover{background-color:#0596de}.footer-social-bar .icon-whatsapp:hover{background-color:#2cb742}.account-drop-down{margin-left:0;padding-left:0;list-style:none;border-color:#E0E0E0;border-width:1px;border-style:solid}.account-drop-down li a{padding:10px;width:100%;display:block}.account-drop-down li a i{vertical-align:middle;width:28px;height:28px}.rss-link-right{float:right;margin-left:8px}.icon-rss{background-position:-162px -34px}.icon-rss:hover{background-position:-194px -34px}.icon-rss.icon-20{background-position:-166px -38px}.icon-rss.icon-20:hover{background-position:-198px -38px}label{display:inline-block;max-width:100%;margin-bottom:5px}.form-control{display:block;width:100%;height:34px;padding:6px 12px;color:#555;background-color:#fff;border:1px solid #ccc}.form-control:focus{outline:0;-webkit-box-shadow:inset 0 0 1px 0 rgba(30,136,229,.93);-moz-box-shadow:inset 0 0 1px 0 rgba(30,136,229,.93);box-shadow:inset 0 0 1px 0 rgba(30,136,229,.93)}.form-group{margin-bottom:15px}.form-group span.required{position:absolute;right:-18px;color:#c00;text-align:center;top:6px;padding:2px 8px;z-index:999;display:none}.has-success .form-control{border-color:#3c763d;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-error .form-control{border-color:#a94442;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.btn{display:inline-block;margin-bottom:0;font-weight:400;text-align:center;touch-action:manipulation;border:1px solid transparent;white-space:nowrap;padding:6px 12px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#333;cursor:pointer}.btn-primary{color:#fff;background-color:#1e88e5;border-color:#2e6da4}.btn-primary:hover{color:#fff;background-color:#1565c0;border-color:#204d74}.checkbox,.radio{position:relative;display:block;margin-top:10px;margin-bottom:10px}.checkbox label,.radio label{min-height:20px;padding-left:20px;margin-bottom:0;font-weight:400;cursor:pointer;line-height:1.5}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit;outline:0}.checkbox input[type=checkbox]{display:none}.checkbox label:before{content:"";display:inline-block;width:16px;height:16px;margin-right:10px;position:absolute;left:0;bottom:1px;background:url(/App_Themes/NewDesign/Images/c-icon-sprite_20171123.png) -136px -104px}.checkbox input[type=checkbox]:checked+label:before{background-position:-168px -104px}.media{margin-top:15px}.media:first-child{margin-top:0}.media,.media-body{zoom:1;overflow:hidden}.media-body{width:10000px}.media-object{display:block}.media-object.img-thumbnail{max-width:none}.media-right,.media>.pull-right{padding-left:10px}.media-left,.media>.pull-left{padding-right:10px}.media-body,.media-left,.media-right{display:table-cell;vertical-align:top}.media-middle{vertical-align:middle}.media-bottom{vertical-align:bottom}.media-heading{margin-top:0;margin-bottom:5px}.media-list{padding-left:0;list-style:none}footer .top-footer{padding:12px 0;color:rgba(255,255,255,.7);background-color:#0f1726;overflow:auto}.top-footer .footer-list{position:relative;min-height:1px;padding:0 15px}.top-footer .footer-list h4{padding-top:8px;margin:0 0 12px;display:block;text-transform:uppercase;font-size:18px}.top-footer .footer-list h4:after{content:"";border-bottom:2px solid #3c7497;display:block;width:66px;margin:10px auto}.top-footer .footer-list ul.list{margin-left:0;padding-left:0;list-style:none}.top-footer .footer-list ul.list li{padding-top:5px;padding-bottom:5px}.top-footer .footer-list ul.list li a,.top-footer .footer-list ul.list li a:hover{color:rgba(255,255,255,1)}footer .bottom-footer{padding-top:14px;padding-bottom:22px;background-color:#000;overflow:auto}.modal,.modal-open{overflow:hidden}footer .bottom-footer .left-items ul{padding-left:0;margin-left:-5px;list-style:none;margin-bottom:0}footer .bottom-footer .left-items ul>li{display:inline-block;padding-right:5px;padding-left:5px}footer .bottom-footer .left-items ul>li a{color:rgba(255,255,255,.5)}footer .bottom-footer .left-items ul>li a:hover{color:#01a821}.footer-copyright{margin-bottom:0;line-height:1.3;color:#616161;padding-top:6px}.footer-copyright a{color:#757575}.footer-copyright a:hover{color:#01a821}.footer-social-bar{padding-left:0;margin-left:-5px;list-style:none;position:relative;top:8px}.footer-social-bar li{display:inline-block;padding-right:5px;padding-left:5px}#OldHeader .SearchBox.display_on_mobile,#OldHeader .display_on_mobile,#OldHeader .loginControl .icons.askaquestion,#OldHeader .menuButton,#OldHeader .recentactivityBoxSelect,#OldHeader .responsive_footer,#OldHeader ul.headerMenu li.topSection,#ScrollToTop,.modal{display:none}.footer-social-bar .c-icon{opacity:.7}.footer-social-bar a:hover .c-icon{opacity:1}.head-notification-bar{position:fixed;z-index:999;right:0;top:0;left:0;padding:15px;background-color:#01a821}.head-notification-content{max-height:38px;overflow-y:hidden}.head-notification-content a{color:rgba(255,255,255,.7)}.head-notification-content a:hover{color:rgba(255,255,255,1)}#ScrollToTop{position:fixed!important;right:8px;bottom:4px;top:auto;background-color:#1e88e5;z-index:99999}.modal,.modal-backdrop{top:0;bottom:0;left:0;right:0}#ScrollToTop:hover{background-color:#156cb9}.icon-up-arrow{background-position:-222px -30px;width:36px;height:32px}.modal{position:fixed;z-index:1050;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transition:-webkit-transform .3s ease-out;-o-transition:-o-transform .3s ease-out;transition:transform .3s ease-out;-webkit-transform:translate(0,-25%);-ms-transform:translate(0,-25%);-o-transform:translate(0,-25%);transform:translate(0,-25%)}.modal.in .modal-dialog{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);-o-transform:translate(0,0);transform:translate(0,0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:50px 10px 10px}.modal-content{position:relative;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #999;border:1px solid rgba(0,0,0,.2);outline:0;-webkit-box-shadow:0 3px 9px rgba(0,0,0,.5);box-shadow:0 3px 9px rgba(0,0,0,.5)}.modal-backdrop{position:fixed;z-index:1040;background-color:#000}.modal-backdrop.fade{filter:alpha(opacity=0);opacity:0}.modal-backdrop.in{filter:alpha(opacity=50);opacity:.5}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5}.modal button.close{-webkit-appearance:none;background:0 0;border:0;outline:0;font-size:18px;width:28px;border-radius:50%;line-height:26px}.modal-header .close{margin-top:-2px;float:right}.modal-title{margin:0;line-height:1.42857143}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}.modal-footer .btn+.btn{margin-bottom:0;margin-left:5px}.modal-footer .btn-group .btn+.btn{margin-left:-1px}.modal-footer .btn-block+.btn-block{margin-left:0}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}#OldHeader *{box-sizing:content-box}#OldHeader ul{list-style:none;margin:0;padding:0}#OldHeader .logo_responsive{width:94px!important;height:31px!important;position:absolute!important;left:51px!important;top:9px;color:#fff;display:inline-block!important;font-size:19px;font-weight:300;font-family:Roboto,sans-serif}#OldHeader .page{max-width:1024px;width:100%;margin:0 auto;padding:0 7px;box-sizing:border-box}#OldHeader .responsiveHeader{display:block;width:100%;background:#0086dc;position:fixed;top:0;left:0;height:40px;z-index:99999}#OldHeader .LinkNormalBlue:hover,#OldHeader .LinkNormalGray:hover,#OldHeader .LinkRed:hover,#OldHeader .MemberoftheMonth:hover,#OldHeader .recentactivityBox .right h3 a:hover,#OldHeader a.LinkBlack:hover,#OldHeader a.LinkNormalBlue:hover,#OldHeader a.LinkNormalGray:hover,#OldHeader a.LinkNormalGrayLight:hover,#OldHeader a.LinkNormalStyleOrange:hover,#OldHeader a.LinkOrange:hover,#OldHeader a.LinkRed:hover{color:#01a821!important}#OldHeader .csharp-notification-bar~.responsiveHeader{top:57px}#OldHeader .loginPopup{font-size:14px;padding:10px 10px 0;border:1px solid #f60;position:absolute;right:0;top:36px;background:#fff;z-index:999999}#OldHeader .loginControl{float:right;height:42px;padding:0 0 0 20px;text-align:left;width:auto;position:absolute;top:0;right:0}#OldHeader .loginControl .image{float:left;margin-right:5px}#OldHeader .loginControl .image img{height:27px;width:27px;display:block;background-color:#c3c3c3;color:transparent;border-radius:100%}#OldHeader .loginControl .icons{background:url(/images/csharp/homeSprite_20160921.png) -1px -2662px no-repeat;width:28px;height:28px;margin:6px 10px 0 0;float:right}#OldHeader .loginControl .icons.message{display:block;background-position:-1px -2482px}#OldHeader .loginControl .icons.notification{display:block;background-position:-1px -2423px}#OldHeader .loginControl .icons.comments{display:block;background-position:-1px -2730px}#OldHeader .loginControl .icons.login{display:block;background-position:-1px -2599px;margin:7px 0}#OldHeader .loginControl .icons.signUp{display:block;background-position:-1px -2541px}#OldHeader .loginControl .icons.editorialNotification{display:block;background-position:-1px -3011px}#OldHeader .loginControl .notificationMessageCntr{float:left;position:relative;cursor:pointer}#OldHeader .loginControl .notificationMessageCntr .messageCount{color:#fff;background:green;position:absolute;left:19px;top:0;padding:1px 4px;font-size:10px;font-weight:700;display:none}#OldHeader .loginControl .notificationMessageCntr .arrow{width:12px;height:7px;background:url(/images/csharp/homeSprite_20160921.png) -7px -1043px no-repeat;position:absolute;top:36px;left:8px;display:none}#OldHeader .loginPopup.loggedIn{display:block;width:200px;padding:0;position:absolute;top:36px;background:#686766;z-index:9999;right:0;border:0;border:1px solid #e1e1e1;border-top:0}#OldHeader .loginPopup.loggedIn a{color:Gray}#OldHeader .loginPopup.loggedIn a:hover{color:#f60}#OldHeader .loginPopup.loggedIn ul{list-style:none;width:200px;text-align:left;background:#fff;margin:0;padding:0;overflow:hidden}#OldHeader .loginPopup.loggedIn li{display:block;padding:0}#OldHeader .loginPopup.loggedIn li a{width:163px!important;display:block;color:#545454;padding:6px 10px 6px 34px;height:auto;border-bottom:1px solid #e1e1e1;background:url(/images/csharp/homeSprite_20160921.png) left top no-repeat}#OldHeader .loginPopup.loggedIn li a.myac{background-position:-3px -191px}#OldHeader .loginPopup.loggedIn li a.signout{background-position:-3px -250px;border-bottom:0}#OldHeader .loginPopup.loggedIn li a.editprofile{background-position:-3px -279px}#OldHeader .loginPopup.loggedIn li a.changepassword{background-position:-3px -308px}#OldHeader .loginPopup.loggedIn li a.profileview{background-position:-3px -162px}#OldHeader .loginPopup.loggedIn li a.socialshare{background-position:-3px -481px}#OldHeader .loginPopup.loggedIn li a.setting{background-position:-3px -221px}#OldHeader .loginPopup.loggedIn li a.myac:hover{background-position:-3px -456px}#OldHeader .loginPopup.loggedIn li a.myQuestion:hover{background-position:-3px -449px}#OldHeader .loginPopup.loggedIn li a.signout:hover{background-position:-3px -515px;border-bottom:0}#OldHeader .loginPopup.loggedIn li a.editprofile:hover{background-position:-3px -544px}#OldHeader .loginPopup.loggedIn li a.changepassword:hover{background-position:-3px -573px}#OldHeader .loginPopup.loggedIn li a.profileview:hover{background-position:-3px -427px}#OldHeader .loginPopup.loggedIn li a.socialshare:hover{background-position:-3px -746px}#OldHeader .loginPopup.loggedIn li a.setting:hover{background-position:-3px -486px}#OldHeader .loginPopup.loggedIn li:hover{background:#ebebed}#OldHeader .loginPopup .arrow{width:12px;height:7px;background:url(/images/loginArrowWhite.png) left top no-repeat;position:absolute;right:11px;top:-6px}#OldHeader .loginPopup .row{width:100%;overflow:hidden;margin-bottom:10px}#OldHeader .loginPopup .inputBox{color:#666;font-size:12px;padding:2px 5px;border:1px solid #ccc}#OldHeader .loginPopup input[type=submit],#OldHeader input.button{color:#fff;padding:6px 10px 5px;background:#f60;border:0;cursor:pointer}#OldHeader .loginPopup input[type=submit]:hover{background:#0086DC}#OldHeader .login.loader{display:none;position:absolute;left:75px;bottom:62px}#OldHeader .logout.loader{display:none}#OldHeader .loginPopup .row2{width:100%;overflow:hidden;padding:8px 0;border-top:1px solid #ccc}#OldHeader .loginPopup .lableText,#OldHeader .loginPopup .lableText2{width:82px;float:left;text-align:right;color:#666;padding:2px 10px 0 0}#OldHeader .loginPopup .lableText input[type=checkbox]{margin-right:4px;position:relative;top:1px}#OldHeader .loginPopup a.google{width:24px;height:24px;display:inline-block;background:url(/images/csharp/homeSprite_20160921.png) 0 -1266px no-repeat}#OldHeader .loginPopup a.facebook{width:24px;height:24px;display:inline-block;background:url(/images/csharp/homeSprite_20160921.png) 0 -1292px no-repeat}#OldHeader .loginPopup a.linkedIn{width:24px;height:24px;display:inline-block;background:url(/images/csharp/homeSprite_20160921.png) 0 -3430px no-repeat}#OldHeader .loginPopup a.twitter{width:24px;height:24px;display:inline-block;background:url(/images/csharp/homeSprite_20160921.png) 0 -3145px no-repeat}#OldHeader .msg_container{border:1px solid #d6d6d6;width:300px;position:absolute;background:#fff;top:42px;right:0;border-top:0;display:none;overflow:hidden;padding:10px 0 0}#OldHeader .msg_container.admin_msg_container{overflow:auto;padding:10px;max-height:373px}#OldHeader .msg_container ul{padding:0 10px 10px;margin:0;list-style:none;max-height:388px;overflow:auto}#OldHeader .msg_container.admin_msg_container ul{padding:0;max-height:none}#OldHeader .msg_container ul li{margin-bottom:4px;width:100%;padding:6px 0;overflow:hidden;word-break:break-word;font-family:'Open Sans',sans-serif;color:#7d7d7d;font-weight:400;font-size:15px}#OldHeader .msg_container ul#dvComments li{font-size:14px}#OldHeader .msg_container ul li:last-child{margin-bottom:0}#OldHeader .msg_container.general_notifications li{padding-left:10px;width:97%}#OldHeader .msg_container a{color:#131313}#OldHeader .msg_container .gotoAllView{display:block;width:100%;padding:8px 0;text-align:center;color:#fff!important;font-size:14px;background:#0086dc;position:relative;left:0;bottom:0}#OldHeader .msg_container .gotoAllView:hover,#OldHeader .msg_container.general_notifications .gotoAllView:hover{color:#fff!important;background:#f60}#OldHeader .msg_container a:hover{color:#01a821!important}#OldHeader .msg_container p{padding:0;margin:0}#OldHeader .msg_container .notificationDate{font-size:90%;display:block;margin-top:4px;color:#7d7d7d;font-weight:300}#OldHeader .csharp-notification-bar{overflow:hidden;width:100%}#OldHeader .csharp-notification-bar .csharp-notification{position:fixed;top:0;left:0;right:0;background:#4DA760;overflow:hidden;z-index:99999;height:57px;display:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#OldHeader .csharp-notification-bar .icon-box{position:absolute;left:0;top:0;background:url(/Images/notificationBarSprite.png) 20px 15px no-repeat #199233;width:70px;height:57px}#OldHeader .csharp-notification-bar .notification-content{color:#fff;font-size:14px;text-decoration:none;display:inline-block;line-height:25px;padding-left:90px;margin-right:90px}#OldHeader .csharp-notification-bar .notification-content:hover{color:#94FDAB}#OldHeader .csharp-notification-bar .notification-close{position:absolute;right:3px;top:0;background:url(/Images/notificationBarSprite.png) 20px -50px no-repeat;width:57px;height:57px;display:block}#OldHeader .csharp-notification-bar .notification-close:hover{background:url(/Images/notificationBarSprite.png) 20px -99px no-repeat}#OldHeader .csharp-notification+.blankDiv{display:none;height:57px}#OldHeader .logo{display:block;float:left;height:36px;margin-bottom:5px;margin-top:5px}#OldHeader .InterviewHeaderConainer .logo{background:url(/App_themes/Interviews/Images/logoInterviewCorner.png) left top no-repeat}#OldHeader .Header{height:auto;width:100%}#OldHeader .headerBanner{width:450px;height:36px;float:left;margin-top:5px;text-align:center}#OldHeader .HeadermenuStripBlue{background:#0086dc;float:left;position:relative;width:100%;z-index:99;height:42px}#blankDiv{height:42px;width:100%;display:none;clear:both}#OldHeader .responsiveMenu{display:block;position:fixed;top:0;left:-260px;overflow-x:hidden;overflow-y:auto;width:260px;height:auto;background:#252525;z-index:99999}#OldHeader .responsiveHeader .menuButton{display:block;width:35px;height:38px;position:absolute;top:5px;left:5px;background:url(/images/csharp/homeSprite_20160921.png) -1px -2801px no-repeat}ul.headerMenu{list-style:none;margin:0;padding:0;width:260px;display:block}ul.headerMenu li{display:block;float:none;width:100%;border-bottom:1px solid #3a3a3a;background:0;position:relative;padding:0;overflow:hidden}ul.headerMenu li>a{color:#fff;display:block;padding:14px 9px 5px;height:23px;float:left;text-transform:uppercase;font-size:13px;font-family:Oswald,sans-serif}#OldHeader ul.Menu li .menuFooter a:hover,#OldHeader ul.headerMenu li a.active,ul.headerMenu li a:hover{background-color:#f60;color:#fff!important}#OldHeader .csharpHome{background:url(/images/csharp/homeSprite_20160921.png) 1px -900px no-repeat;width:20px}#OldHeader .csharpHome:hover,#OldHeader ul.headerMenu li a.csharpHome.active{background-color:#f60}#OldHeader .SearchBox{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background-color:#434343;width:100%;padding:14px;display:block;float:none;overflow:hidden}#OldHeader .SearchBox input.searchTextBox{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:#353535;border:none;color:#ccc;height:30px;line-height:30px;padding:5px;width:200px;display:inline-block;float:left;font-family:Roboto,sans-serif}#OldHeader .SearchBox input.button{width:30px;height:30px;border:0;float:right;background:url(/images/csharp/homeSprite_20160921.png) -8px -839px no-repeat;padding:0}a.headerRss{margin-top:3px;width:16px;height:20px;display:block;text-indent:-9999px;background:url(/images/csharp/homeSprite_20160921.png) 0 -1630px no-repeat;float:right}#OldHeader .askQuestionOnHeader,#OldHeader .btn-training,#OldHeader .contributeList{height:23px;display:block;font-family:Oswald,sans-serif;font-size:15px;float:right;text-decoration:none}a.headerRss:hover{background-position:0 -1655px}a.headerRss.recentRss{margin:0}#OldHeader .askQuestionOnHeader{padding:6px 55px 0 20px;margin:8px 0 0;width:97px;background:url(/images/csharp/homeSprite_20160921.png) 133px 0 no-repeat #009ee3;color:#fff;line-height:15px;text-transform:uppercase}#OldHeader .askQuestionOnHeader:hover{background:url(/images/csharp/homeSprite_20160921.png) 133px 0 no-repeat #f60}#OldHeader .btn-training{padding:3px 14px;margin:8px 10px 0 0;width:auto;background:#fcb634;color:#000;line-height:26px;text-shadow:4px 2px 8px #60f5f3;border-radius:20px;box-shadow:0 0 6px #000;letter-spacing:1px;text-transform:uppercase}#OldHeader .contributeOnHeader{font-size:15px;color:#fff;text-decoration:none;padding:0 15px;line-height:15px;text-transform:uppercase}#OldHeader .contributeList{padding:3px 55px 3px 20px;margin:8px 0 0 10px;width:97px;position:relative;background:url(/images/csharp/homeSprite_20160921.png) 133px -39px no-repeat #48b960;color:#fff}#OldHeader .contributeList ul{display:none;list-style:none;margin:0;padding:2px 0 0;min-width:170px;border:1px solid #f60;position:absolute;left:0;top:29px;background:#fff;z-index:999}.featuredBox,.sliderBox{position:relative;overflow:hidden}#OldHeader .contributeList:hover{background:url(/images/csharp/homeSprite_20160921.png) 133px -39px no-repeat #f60}#OldHeader .contributeList:hover ul{display:block}#OldHeader .contributeList:hover ul li{display:block;border-bottom:1px dotted #ccc}#OldHeader .contributeList:hover ul li a{color:#787878;text-decoration:none;font-family:Roboto,sans-serif;font-size:15px;line-height:20px;padding:4px 17px 4px 5px;display:block;white-space:nowrap}#OldHeader .contributeList:hover li a:hover{color:#fff;background:#f60}#OldHeader .contributeList:hover li a:hover:before{content:"";width:10px;height:20px;float:right;background:url(/images/csharp/homeSprite_20160921.png) -16px -882px no-repeat;margin-right:-14px;display:inline-block}#OldHeader .contributeList:hover ul li.last{border:0}.featuredBox *{box-sizing:content-box}.featuredBox{margin:40px 0 10px;display:block;width:100%;height:43px;background:#efefef;border-bottom:1px solid #e7e7e7}.featuredBox h2{background:url(/images/csharp/homeSprite_20160921.png) 65px -1103px no-repeat;width:72px;padding:16px 23px 6px 0;margin:0;color:#f60;font-family:Oswald,sans-serif;text-transform:uppercase;float:left;font-size:18px;line-height:20px;height:34px}.featuredBox ul{width:calc((100%) - 95px);line-height:16px;padding:5px 0;margin:0;list-style:none}.featuredBox li{border:0;display:none;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.featuredBox li:first-child{border:0;display:block}.featuredBox li .image{width:25px;height:25px;margin-right:8px;display:block;float:left;margin-top:2px;border:1px solid #ccc}.featuredBox li .detail{width:auto;color:#8d8d8d;line-height:20px}.featuredBox li .detail a{font-size:13px;color:#5e5e5e}.featured-articles-link{color:#f60}.featured-articles-link:hover,.featuredBox li .detail a:hover{color:#01a821}.featuredBox li:first-child{border-left:none}.featuredBox li:last-child{border-right:0}#OldHeader .leftCntr{width:588px;float:left}#OldHeader .rightCntr{width:419px;float:right;display:block}#OldHeader .userdetailCntr{float:right;color:#fff;font-size:14px;padding:6px 10px 6px 8px;display:block}#OldHeader .userdetailCntr.hover,#OldHeader .userdetailCntr:hover{background:#fff;color:#6f6e6f}#OldHeader .userdetailCntr label{font-weight:400;padding-top:4px}#OldHeader .lableText{width:82px;float:left;text-align:right;padding-right:10px;color:#666}.bottom-footer .left-items,.footer-social-bar,.slider li,.t-center{text-align:center}#OldHeader .right_content{overflow:hidden;padding-right:10px}#OldHeader .pic{float:left;margin:0 15px 0 0}#OldHeader .pic img{width:45px;height:45px;border-radius:100%}#OldHeader .rightBox{float:left;padding:0 0 5px;width:100%}#OldHeader .ticker a{color:#fff}#OldHeader ul.unapproved_stats li a{margin-left:10px;margin-top:4px;float:left}#OldHeader ul.unapproved_stats li a:hover{color:#01a821}#OldHeader ul.unapproved_stats li span.icon{background:url(/images/newSpriteIcons_20161122.png) no-repeat;height:30px;width:30px;float:left;display:block}#OldHeader ul.unapproved_stats li span.icon.article{background-position:0 -2270px}#OldHeader ul.unapproved_stats li span.icon.article_content{background-position:0 -2316px}#OldHeader ul.unapproved_stats li span.icon.news{background-position:0 -2362px}#OldHeader ul.unapproved_stats li span.icon.downloads{background-position:0 -2407px}#OldHeader ul.unapproved_stats li span.icon.resources{background-position:0 -2453px}#OldHeader ul.unapproved_stats li span.icon.reviews{background-position:0 -2499px}#OldHeader ul.unapproved_stats li span.icon.jobs{background-position:0 -2545px}#OldHeader ul.unapproved_stats li span.icon.blogs{background-position:0 -2589px}#OldHeader ul.unapproved_stats li span.icon.codes{background-position:0 -2635px}#OldHeader ul.unapproved_stats li span.icon.company{background-position:0 -2678px}#OldHeader ul.unapproved_stats li span.icon.mvp{background-position:0 -2721px}#OldHeader ul.unapproved_stats li span.icon.stories{background-position:-4px -3630px}#OldHeader ul.unapproved_stats li span.icon.event{background-position:0 -3270px}.bottom-footer .right-items{padding-bottom:12px}p#ContentSummery{color:#9e9e9e}.related-ebooks{margin-top:50px}.ebooks_title h2,.ebooks_title h2 span{font-size:18px;text-transform:uppercase;margin-bottom:20px}.divider{max-width:70px;height:5px;background:#6d6d6d;margin:auto auto 30px}.sliderBox{width:96%;height:225px}.slider,.slider ul{width:100%!important}.slider{margin:0 0 0 42px!important;height:auto}.left-aside ul{padding:10px 25px}.slider ul{list-style:none;margin:0;padding:0;max-height:196px}.slider li{width:130px;float:left;margin:16px 6px 0;position:absolute}.slider li a{color:#666;text-transform:capitalize;position:relative}.slider li img{margin:0 0 12px;width:126px;height:146px;display:block}.slider li .bookTitleSlider{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}.sliderBox .prev{left:0}.sliderBox .next span,.sliderBox .prev span{background:#e6e6e6;display:block;width:46px;height:46px;color:#313131}.slider.slideshow ul li:nth-child(5){margin-left:40px}.sliderBox .next,.sliderBox .prev{position:absolute;right:0;top:35%;width:46px;height:46px;display:block;line-height:46px;text-align:center;z-index:9}.slider a{text-decoration:none;cursor:pointer}@media only screen and (max-width:767px){#OldHeader .breakingNewBox,#OldHeader .displayHeading,#OldHeader .recentactivityFilter,.display_none,.display_none_mobile,.hidden-sm-down,.hidden-xs{display:none!important}.content-header .follow-popup{margin-left:50px;width:310px}.top-footer .footer-list{padding-top:15px}.top-footer .footer-list h4{margin:0}.footer-list .list li{display:inline-block;position:relative;margin-right:12px}.content,.content-full,.right-bar{padding-left:8px!important;padding-right:8px!important}.featuredBox li .detail{line-height:18px}.user-content .b-row{padding:0!important;margin:0!important}}@media screen and (min-width:768px){.featuredBox{height:50px}.featured_articles_filter{margin:5px 10px 10px 0;float:left}.featuredBox ul{float:left;overflow:hidden;width:calc((100%) - 95px)}.featuredBox li{float:left;width:33%;padding:0 4px;border-left:none;display:block}}@media only screen and (min-width:768px){.bottom-footer .left-items,.bottom-footer .right-items,.top-footer .footer-list{min-height:1px;position:relative}.hidden-md-up{display:none!important}.modal-dialog{width:600px;margin:30px auto}.modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,.5);box-shadow:0 5px 15px rgba(0,0,0,.5)}.modal-sm{width:300px}.top-footer .footer-list{width:25%;float:left}.footer-list .list li{position:relative;padding-left:12px}.footer-list .list li:before{content:"";width:5px;height:4px;position:absolute;left:0;display:inline-block;background:#3c7497;top:12px;border-radius:50%}}@media only screen and (max-width:991px){.bottom-header,.top-header{box-shadow:0 0 4px rgba(0,0,0,.4);z-index:10}.bottom-header .dropdown>a,.hidden-md-down{display:none!important}.top-header{position:fixed;width:100%;padding:4px 10px}.bottom-header{height:100vh;position:absolute;overflow-x:hidden;overflow-y:auto;width:220px;left:-220px;background:rgba(0,0,0,.8);padding-bottom:42px}.bottom-header .nav{margin-left:-15px;margin-right:-15px;margin-bottom:100px!important;overflow:hidden}.bottom-header .dropdown a{color:rgba(255,255,255,.87)!important}.nav .h-search{padding:0 15px;position:fixed;bottom:15px;width:220px}.nav .h-search a{height:28px!important}.nav .h-search a:hover{background:rgba(0,0,0,.2)}.main-sarch-box{position:static;width:100%;display:block;padding-right:40px;border-radius:0}.nav .h-search:after{content:"";width:100%;height:62px;display:block;background:#000;position:absolute;left:0;bottom:-15px;z-index:-1}.main-sarch-box+a{position:absolute;background:rgba(0,0,0,.2);right:15px;top:0;width:32px!important;height:32px!important}.bottom-header .b-container{padding-bottom:28px;overflow:hidden}body.responsive{position:fixed;width:100%}.nav li{display:block;float:none;width:100%}.bottom-header .dropdown-content{display:block;position:static;background:0 0;border:0;margin-bottom:62px}.bottom-header .dropdown-content a{color:#fff}.bottom-header .nav .nav-item{width:100%;padding:0 15px;float:none}.bottom-header .nav .nav-item.more-button{display:none}.main-sarch-box+a i{right:3px;top:1px!important}.head-notification-bar~.page-body{padding-top:124px}.title{font-size:14px}.info{font-size:13px}.page{padding:0 7px}}@media only screen and (min-width:992px){.hidden-lg-up{display:none!important}.modal-lg{width:900px}.mega-menu:hover,.nav-technologies:hover .mega-menu{display:block}.head-notification-content{font-size:16px}.brand-logo-md{display:none}.bottom-header .dropdown .dropdown-content a{color:#424242}.content{width:66.66666667%;float:left}.right-bar{width:33.33333333%;float:left}}@media screen and (min-width:1024px){#OldHeader .csharp-notification-bar .notification-content{font-size:18px;line-height:57px}#OldHeader .more-btn{position:relative}#OldHeader .more-btn>a:after{content:"";display:inline-block;border:5px solid;border-color:#fff transparent transparent;position:relative;left:4px;top:2px;margin-left:2px}#OldHeader .more-btn .dropdown-content{min-width:120px;list-style:none;padding:0;margin:0;position:absolute;top:42px;display:none}#OldHeader .more-btn:hover>.dropdown-content,.dropdown-content:hover{display:block;background:#fff;border:1px solid #0086dc;border-top:0}#OldHeader ul.headerMenu .dropdown-content li>a{font-family:Roboto,sans-serif;font-size:13px;float:none;color:#7f8080}#OldHeader ul.headerMenu .dropdown-content li>a:hover{color:#fff!important}#OldHeader ul.headerMenu li.more-btn>a{padding-right:11px}#OldHeader .more-btn .more-btn{position:relative}#OldHeader .more-btn .more-btn>a:after{content:"";display:inline-block;border:5px solid;border-color:transparent transparent transparent #0086dc;position:relative;left:8px;top:0;margin-left:2px}#OldHeader .more-btn .more-btn>a:before{content:"";height:20px;display:block;position:absolute;bottom:-13px;left:5px;width:115px}#OldHeader .more-btn .more-btn .dropdown-content{list-style:none;padding:0;margin:0;position:absolute;top:0;left:120px;border:1px solid #0086dc!important}#OldHeader .more-btn .more-btn:hover>.dropdown-content,.dropdown-content:hover{display:block!important}#OldHeader .more-btn .dropdown-content li{padding:0;display:block;width:100%;float:none;overflow:visible}#OldHeader ul.headerMenu li.more-btn ul li a{padding:8px 10px 2px;white-space:nowrap}#OldHeader ul.headerMenu li.more-btn ul li a.active,#OldHeader ul.headerMenu li.more-btn ul li:hover>a,#OldHeader ul.headerMenu li.more-btn ul li>ul li:hover>a{background-color:#0086dc;color:#fff!important}#OldHeader .page{padding-left:0;padding-right:0}#OldHeader .logo_responsive{display:none!important}#OldHeader .responsiveHeader{position:static;background:0}#OldHeader body{width:100%;font-size:15px}#OldHeader .HeadingBold{font-size:26px}#OldHeader .master:after{height:170px}#OldHeader .menuStripGray li a{display:block;padding:4px 10px 4px 15px;font-size:12px;color:#000;text-decoration:none}#OldHeader ul.headerMenu li.topSection{display:block}#OldHeader .SearchBox{width:204px;float:right;padding:6px 0;overflow:hidden;background:0}#OldHeader .menu ul li a{font-size:15px;padding:8px 10px 0 11px}#OldHeader .SearchBox input.searchTextBox{background-color:#fff;border:0;color:#8d8d8d;display:inline-block;height:30px;padding:2px 0 0 8px;width:174px;float:left;font-family:Roboto,sans-serif}#OldHeader .InFocusNews span.title,#OldHeader ul.headerMenu li>a{font-family:Oswald,sans-serif;text-transform:uppercase}#OldHeader .viewAllLink{margin:0 10px 10px 0;padding:0 22px 1px 0;font-size:15px;color:#36c;text-decoration:none;float:right;position:relative;background:0;text-indent:0;width:auto}#OldHeader .viewAllLink i{position:absolute;right:0;top:3px;background:url(/images/csharp/homeSprite_20160921.png) -20px -90px no-repeat;width:21px;height:21px;display:inline-block}#OldHeader .viewAllLink:hover{color:#01a821;background:0;width:auto;text-indent:0}#OldHeader .rightlink a{font-size:14px}#OldHeader .msg_container{width:420px;top:37px;box-sizing:border-box}#OldHeader .recentactivityBox li{padding:7px 0 0}#OldHeader .loginControl{height:37px;background:#f60}#OldHeader .loginControl .icons{display:block;height:25px;margin:6px 10px 0 0;text-decoration:none;width:25px;background:url(/images/csharp/homeSprite_20160921.png) left top no-repeat}#OldHeader .loginControl .icons.login{background-position:-7px -694px;margin:6px 0 0}#OldHeader .loginControl .icons.signUp{background-position:-7px -724px}#OldHeader .loginControl .icons.editor{background-position:-7px -812px}#OldHeader .loginControl .icons.admin{background-position:-7px -782px}#OldHeader .loginControl .icons.message{background-position:-7px -754px}#OldHeader .loginControl .icons.notification{background-position:-7px -2172px}#OldHeader .loginControl .icons.editorialNotification{background-position:-7px -2202px}#OldHeader .loginControl .icons.comments{background-position:0 -2128px}#OldHeader .loginControl .notificationMessageCntr .arrow{top:31px;left:6px}#OldHeader ul.headerMenu{width:auto}#OldHeader ul.headerMenu li{display:block!important;float:left;position:relative;padding:0 0 0 5px;width:auto;border-bottom:0;overflow:visible;white-space:nowrap}#OldHeader ul.headerMenu li a{font-size:15px;font-weight:400;height:23px;padding:14px 10px 5px;text-decoration:none;text-transform:uppercase}#OldHeader ul.headerMenu li.first{background:0;padding-left:0}#OldHeader ul.headerMenu li>a{color:#fff;display:block;padding:14px 9px 5px;height:23px;float:left;font-size:13px;text-decoration:none;line-height:13px}#OldHeader ul.headerMenu li>a.menu-color-dark-blue{background-color:#004B7C}#OldHeader ul.headerMenu li>a.menu-color-dark-blue:hover{background-color:#f60}#OldHeader .responsiveMenu{display:block;position:static;width:auto;height:auto;background:0;overflow:visible}#OldHeader .logout.loader{display:none}#OldHeader .loginPopup a{text-decoration:none;cursor:pointer}.LinkOrange,.LinkRed{color:#f60}#OldHeader .InFocusNews{background:url(/images/inFocusNewsBg.png) center top repeat-y;height:37px;overflow:hidden;width:100%;position:relative;display:block}#OldHeader .InFocusNews span.title{background:url(/images/csharp/homeSprite_20160921.png) 133px -1756px no-repeat #5a5a5a;color:#fff;float:left;font-size:16px;line-height:37px;text-align:right;width:138px;padding:0 46px 0 0;margin:0}#OldHeader .InFocusNews .rightNew{color:#fff;float:left;font-size:16px;line-height:37px;width:802px}#OldHeader .display_none{display:block}#OldHeader .footerSlide,#OldHeader .menuButton,#OldHeader .recentactivityBoxSelect,#OldHeader .responsiveHeader .menuButton,#OldHeader .responsive_footer,#OldHeader .rightBarSlide{display:none}.page{max-width:1024px;width:100%;margin:0 auto}.featuredBox h2{font-size:18px;background-position:65px -1103px;line-height:20px;height:34px}#OldHeader .leftCntr{width:588px;float:left}#OldHeader .rightCntr{width:419px;float:right;display:block}#OldHeader .topOpinionColumns{display:block;padding:0;margin:5px 0 0 10px;overflow:hidden}#OldHeader .topOpinionColumns li{list-style:none;padding:6px 0;overflow:hidden}#OldHeader .topOpinionColumns li .userImage{width:60px;height:60px;display:block;overflow:hidden;float:left;margin-right:10px}#OldHeader .topOpinionColumns li .userImage img{width:60px;height:60px;border-radius:50%}#OldHeader .topOpinionColumns li .topOpinionColumnsDetail{overflow:hidden}#OldHeader .topOpinionColumns li .topOpinionColumnsDetail h3{margin:0 0 4px;font-weight:400;display:block}#OldHeader .topOpinionColumns li .topOpinionColumnsDetail h3 a{color:#7f8080;text-decoration:none;line-height:22px;font-size:15px}#OldHeader .topOpinionColumns li .topOpinionColumnsDetail .categoryLink{color:#f60;font-size:14px}#OldHeader .topOpinionColumns li a:hover{color:#01a821!important}#OldHeader .topOpinionColumns li .topOpinionColumnsDetail p.desc{color:#a9a9a9;font-size:14px;margin:0}#OldHeader ul.LatestQuestionBox{list-style:none;margin:5px 0 0;padding:0;overflow:hidden}#OldHeader ul.LatestQuestionBox li{display:block;overflow:hidden;position:relative;min-height:32px;border-bottom:1px solid #f5f5f5;padding:0 0 3px;margin-bottom:3px}#OldHeader ul.LatestQuestionBox li:last-child,#OldHeader ul.LatestQuestionBox.upcomingEvent li{border-bottom:0}#OldHeader ul.LatestQuestionBox li a{margin:4px 0 0;color:#7f8080;text-decoration:none;float:left;line-height:22px}#OldHeader ul.LatestQuestionBox li a:hover:before{background-position:0 -2021px}#OldHeader ul.LatestQuestionBox li a:hover{color:#01a821}#OldHeader ul.LatestQuestionBox.upcomingEvent li a{font-size:15px}#OldHeader ul.LatestQuestionBox.upcomingEvent li .eventInfo{display:block;clear:both;font-size:14px;color:#a9a9a9;padding:4px 0 0;margin:0}#OldHeader ul.LatestQuestionBox.upcomingEvent li .eventInfo span.locationEvent{display:inline-block;vertical-align:bottom;position:relative;padding:0 0 0 20px;margin-right:10px;line-height:19px}#OldHeader ul.LatestQuestionBox.upcomingEvent li .eventInfo span.locationEvent i{position:absolute;left:0;top:0;background:url(../../images/csharp/homeSprite_20160921.png) 0 -3393px no-repeat;width:19px;height:17px}#OldHeader ul.LatestQuestionBox.upcomingEvent li .eventInfo span.timeEvent{display:inline-block;vertical-align:bottom;position:relative;padding:0 0 0 16px;line-height:19px}#OldHeader ul.LatestQuestionBox.upcomingEvent li .eventInfo span.timeEvent i{position:absolute;left:0;top:2px;background:url(../../images/csharp/homeSprite_20160921.png) 0 -3260px no-repeat;width:14px;height:14px}#OldHeader ul.LatestQuestionBox.upcomingEvent li .eventInfo span.webinarEvent{display:inline-block;vertical-align:bottom;position:relative;padding:0 0 0 16px;line-height:19px;margin-right:10px}#OldHeader ul.LatestQuestionBox.upcomingEvent li .eventInfo span.webinarEvent i{position:absolute;left:0;top:0;background:url(../../Images/chapterSprite_20160624.png) 0 -1036px no-repeat;width:14px;height:17px}#OldHeader ul.LatestQuestionBox.upcomingEvent li .eventInfo .city-name{color:#606060;padding-right:1px}#OldHeader ul.LatestQuestionBox.upcomingEvent li .eventInfo .country-name{color:#a8a8a8}#OldHeader ul.trendingBox{overflow:hidden;list-style:none;margin:10px 0 2px;padding:0}#OldHeader ul.trendingBox li{overflow:hidden;display:table-row}#OldHeader ul.trendingBox li>*{border-bottom:1px solid #f5f5f5}#OldHeader ul.trendingBox li a{padding:0;color:#7f8080;display:inline-block;text-decoration:none}#OldHeader ul.trendingBox li a:hover{background-position:10px -186px;color:#01a821}#OldHeader ul.trendingBox li:last-child{border-bottom:0}#OldHeader .numbers{padding:6px 12px 6px 0;text-align:left;vertical-align:middle;display:table-cell;font-size:22px;font-weight:400;color:#a7a7a7}#OldHeader .trendingDetail{display:table-cell;vertical-align:middle;width:999px}.featuredBox{margin:0}.featuredBox li .image{height:35px;width:35px}.featuredBox li .detail a{font-size:14px}.featuredBox li:first-child{border-left:none}.featuredBox li:last-child{border-right:0}.featuredBox li .detail a:hover{color:#01a821}}@media screen and (max-width:1023px){#OldHeader .loginControl .icons.admin,#OldHeader .loginControl .icons.editor{display:none}#OldHeader .loginControl .icons.askaquestion{display:block;background:url(/images/responsive/ask_question.png) center center no-repeat}#OldHeader .display_none,#OldHeader .more-btn>a[href='javascript:void(0);']{display:none}#OldHeader ul.headerMenu li>a{float:none}#OldHeader .more-btn>a{border-bottom:1px solid #3a3a3a}.page-body{padding-top:54px}.home-page .page-body{padding-top:0}#OldHeader .HeadermenuStripBlue{position:fixed}}@media only screen and (max-width:1099px){.h-search{width:136px}.hidden-lg-down{display:none!important}}@media only screen and (min-width:1100px){h1{font-size:30px}h2{font-size:24px}h3{font-size:22px}h4,h5,h6{font-size:18px}p{font-size:16px}}.NewCommonButtonStyle{background-color:#0086DC;border:0;color:#fff;cursor:pointer;font-size:18px;margin-right:10px;padding:4px 13px;font-family:Oswald,sans-serif;letter-spacing:1px}.NewCommonButtonStyle.active,.NewCommonButtonStyle:hover{background:#f60}.NewCommonButtonStyle.active:hover{background-color:#0086DC}@media screen and (max-width:768px){.contactrow span{width:100%;display:block;text-align:left;margin-bottom:4px}}@media(max-width:768px){.sliderBox .next,.sliderBox .prev{display:none}.sliderBox{width:295px;margin:auto}.slider li{margin-left:-20px}}.errorMessage{color:Red;display:block;width:100%;text-align:center;line-height:3}.beginners-main-page h2.headerControls{margin:0;padding:15px 0 0 15px;height:60px;line-height:30px;font-size:22px;font-family:Oswald,sans-serif;color:#fff;text-transform:uppercase;clear:both;background:#0086dc}.beginners-main-page li{display:block;line-height:28px;color:#7a7a7a}.beginners-main-page a{font-size:15px;color:#0086dc;text-decoration:none}a.title{color:#212121;font-size:16px}a.info,p.info,p.small{color:#9e9e9e;font-size:14px}a.info:hover,a.title:hover{color:#01a821}.view-all-link{text-align:right;font-size:14px}.numbered-list,.stacked-list{font-size:16px;list-style:none}.view-all-link>a{text-align:right;display:inline-block;padding-right:15px;color:#1565C0}.cotent-share-icon,.publish-info,.text-center{text-align:center}.view-all-link>a:hover{color:#01a821}.view-all-link i.icon-view-all{background-position:-265px -41px;border:1px solid;border-radius:50%;vertical-align:text-top;margin-left:6px;width:16px;height:16px;top:2px}.view-all-link a:hover i.icon-view-all{background-position:-297px -41px}.featured-articles{margin-left:0;padding-left:0;list-style:none}.featured-articles img{width:36px;height:36px;border:1px solid #eee}.stacked-list{margin:0;padding:0}.stacked-list>li{padding-top:4px;padding-bottom:4px}.stacked-list>li>a{color:#757575}.stacked-list>li>a:hover{color:#01a821}.stacked-list.anchor-list li>a{padding:4px 0;display:inline-block}.stacked-list a.text-orange{color:#FF8F00;display:block;margin-top:4px}.stacked-list a.text-orange:hover{color:#01a821}.numbered-list{margin:0;padding:0}.numbered-list>li{margin-top:8px!important}.numbered-list .numbers{vertical-align:middle;display:table-cell;font-size:22px;font-weight:400;color:#757575}.numbered-list .body{color:#757575}.numbered-list .body:hover{color:#01a821}.two-column-list *{box-sizing:border-box}.two-column-list{padding:0;list-style:none;margin:4px -8px}.two-column-list:after{content:"";display:table;clear:both}.two-column-list>li{display:block;padding:8px;overflow:hidden}@media(min-width:768px){.two-column-list>li{width:50%;float:left;white-space:nowrap;text-overflow:ellipsis}}.list-inline{padding:0;margin:0 -5px;list-style:none}.list-inline>li{display:inline-block;padding-right:5px;padding-left:5px}.hide,.pill-btn[title=Following] span{display:none}.list-inline-float{padding-left:0;margin-left:0;list-style:none}.list-inline-float>li{float:left}.d-icon{background-image:url(/App_Themes/NewDesign/Images/d-icon-sprite_20190106.png);background-repeat:no-repeat}button:focus{outline:0}textarea.form-control{resize:none}.pill-btn{padding:4px 12px;border-radius:20px;font-weight:700;border:1px solid #1E88E5;color:#1E88E5;background-color:transparent;font-size:12.8px}.pill-btn[title=Following]{color:#fff;background-color:#1E88E5}.content-header h1,.publish-info{color:#616161}.pill-btn[disabled]{cursor:default}.pill-btn .follow-sign{margin-right:4px}.category-image-64{height:64px;width:64px;border:1px solid #E0E0E0;border-radius:50%}.user-image-48{height:48px;width:48px;border-radius:50%}.user-image-64{height:64px;width:64px;border-radius:50%}.user-image-98{height:98px;width:98px;border-radius:50%}.with-caret-top:after{left:calc((50%) - 9px);content:"";width:16px;height:16px;transform:rotate(45deg);display:inline-block;background:inherit;position:absolute;top:-9px;border:inherit;border-right:0;border-bottom:0}.clearfix:after{content:"";display:table;clear:both}.detail-page-body{padding-top:15px}.content,.right-bar{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.user-content{border-top:1px solid #eee;margin-top:8px;padding-top:8px}.user-content img{max-width:100%}.add-content-extention{background:#f1f1f1;padding:4px 10px;border:1px dashed #d8d8d8;margin-bottom:5px}.icon-add-extention{background-position:-34px -196px}.related-content{margin-top:8px;padding-top:8px;border-top:1px dashed #d8d8d8}.content-header>.media{display:table;margin:0 auto;padding:0 0 10px}.content-header>.media .media-body{width:auto!important;vertical-align:middle}.publish-info{padding:8px 0}.publish-info .author-name,.publish-info .content-type,.publish-info .publish-time{padding:10px 13px 10px 0;vertical-align:top;position:relative;font-size:18px;line-height:20px}.publish-info .author-name{margin-left:-2px}.publish-info .publish-time{color:#9E9E9E}.publish-info a{color:inherit}.publish-info a:hover{color:#01a821}.publish-time .icon-clock{width:16px;height:16px;background-position:-8px -168px;position:relative;top:2px;margin-right:5px!important}.content-type .icon-content-type,.publish-time .icon-Calender{width:20px;top:2px;margin-right:5px!important;position:relative}.publish-time .icon-Calender{height:18px;background-position:-5px -166px}.content-type .icon-content-type{height:20px;background-position:-134px -230px}.content-actions .d-icon{width:28px;height:28px;float:left}.content-actions li{position:relative;margin-right:5px}.content-actions{padding-top:8px;padding-bottom:8px}.content-actions .icon-star{background-position:-98px -2px;top:-1px}.icon-like{background-position:-290px -34px}.icon-view{background-position:-259px -34px}.icon-comment2{background-position:-225px -34px}.icon-level-beginner{background-position:-2px -2px}.icon-level-intermediate{background-position:-34px -2px}.icon-level-advanced{background-position:-66px -2px}.user-action-list{margin-left:auto!important;margin-right:auto!important;display:table}.user-action-count{line-height:28px;vertical-align:top;padding:0 2px;display:inline-block;font-size:16px;color:#424242;float:left}.blog-detail .user-action-list{max-width:350px}.content-head-link .icon-download-content{background-position:-130px -2px;margin-right:4px;vertical-align:middle}.cotent-share-icon ul{list-style:none;padding:0;margin:0;height:40px;display:inline-block;float:left}.cotent-share-icon{overflow:hidden}.cotent-share-icon li{float:left;padding:4px;position:relative}.cotent-share-icon li.inner-icon-container{padding:0}.cotent-share-icon li.inner-icon-container ul{height:0;width:0;overflow:hidden;opacity:0}.cotent-share-icon ul .a-icon,.cotent-share-icon ul .d-icon{width:32px;height:32px}.cotent-share-icon a{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;display:block}.comment-head .user-action-count,.rpv-wrapper{font-weight:700}.cotent-share-icon .loader-container{position:absolute;left:4px;right:4px;top:4px;bottom:4px;background:rgba(255,255,255,.8);text-align:center;line-height:28px}.cotent-share-icon .loader-image{display:inline-block;vertical-align:middle}.cotent-share-icon ul.emotions-wrapper{display:none;width:240px}.emotions-wrapper{display:none;position:absolute;top:-44px;padding:5px 0 8px;border-radius:32px;background-color:#9E9E9E;white-space:nowrap;max-height:38px}.emotions-wrapper:after{content:"";width:100%;height:20px;display:block;position:absolute;left:0;bottom:-15px;z-index:0}.emotions-wrapper:hover,.like-button:hover~.cotent-share-icon .emotions-wrapper,.like-button:hover~.emotions-wrapper,cotent-share-icon .emotions-wrapper:hover{display:block}.emotions-wrapper>li{margin:0}.emotions-wrapper>li a:after{content:attr(data-title);position:absolute;display:block;padding:4px 8px;background:#000;color:#fff;font-size:12px;border-radius:4px;left:50%;transform:translateX(-50%);top:-28px;transition:.2s;opacity:0}.emotions-wrapper>li a:hover:after{opacity:1;top:-32px}.emotions-wrapper>li:hover a{border-radius:50%;-ms-transform:translateY(-3px);-webkit-transform:translateY(-3px);transform:translateY(-3px)}.emotion-popup-wrapper .icon-e-like{background-position:-168px -7px;width:20px;height:20px}.emotion-popup-wrapper .icon-e-love{background-position:-200px -7px;width:20px;height:20px}.emotion-popup-wrapper .icon-e-awesome{background-position:-232px -7px;width:20px;height:20px}.emotion-popup-wrapper .icon-e-interesting{background-position:-264px -7px;width:20px;height:20px}.emotion-popup-wrapper .icon-e-okay{background-position:-296px -7px;width:20px;height:20px}.emotion-popup-wrapper .icon-e-poor{background-position:-8px -39px;width:20px;height:20px}.icon-e-like{background-position:-34px -34px}.icon-e-love{background-position:-66px -34px}.icon-e-awesome{background-position:-98px -34px}.icon-e-interesting{background-position:-130px -34px}.icon-e-okay{background-position:-162px -34px}.icon-e-poor{background-position:-194px -34px}.undo-icon-e-like{background-position:-34px -34px}.undo-icon-e-love{background-position:-66px -34px}.undo-icon-e-awesome{background-position:-98px -34px}.undo-icon-e-interesting{background-position:-130px -34px}.undo-icon-e-okay{background-position:-162px -34px}.undo-icon-e-poor{background-position:-194px -34px}.emotion-popup-wrapper{min-width:300px;max-width:430px;height:-webkit-calc((100%) - 25px);height:-moz-calc((100%) - 25px);height:calc((100%) - 25px);max-height:474px;overflow-y:hidden;border:1px solid #b5b5b5;top:10%;border-radius:4px}.emotion-popup-wrapper ul{list-style:none;margin:0;padding:0;overflow:hidden}.emotion-popup-wrapper .modal-header ul>li{float:left;width:50px;cursor:pointer;margin-bottom:8px}.emotion-popup-wrapper .modal-header{min-height:42px;line-height:1;border:0;border-bottom:1px solid #c1c1c1;padding:10px 0 0 10px}a.facebook-btn,a.twitter-btn{padding:0 10px 0 40px;line-height:32px;color:#fff}.emotion-popup-wrapper .modal-header button{margin-top:-5px}.emotion-listing ul{height:calc((100%) - 68px)}.emotion-body{height:410px;overflow:auto}.tab-indicator{width:44px;height:2px;background:#0086dc;display:block;position:absolute;top:39px;left:10px}.emotion-user-link{position:relative}.emotion-user-link span{position:absolute;bottom:2px;right:-10px}.icon-facebook-2{background-position:0 -64px}.icon-twitter-2{background-position:-32px -64px}.icon-googlePlus-2{background-position:-64px -64px}.icon-linkedIn-2{background-position:-96px -64px}.icon-expand{background-position:-128px -64px}.icon-bookmark-delete{background-position:-158px -64px}.icon-bookmark-add{background-position:-190px -64px}.icon-email{background-position:-224px -64px}.icon-print{background-position:-256px -64px}.icon-make-featured{background-position:-288px -64px}.icon-article_history{background-position:-2px -96px}.icon-other-article{background-position:-32px -96px}.icon-edit_article{background-position:-64px -96px}.icon-collapse{background-position:-96px -96px}.icon-delete-content{background-position:-128px -96px}.icon-featured{background-position:-160px -96px}.icon-clone-content{background-position:-192px -96px}.icon-history-content{background-position:-192px -225px}.icon-show-feedback{background-position:-256px -96px}.icon-submit-feedback{background-position:-288px -96px}.icon-closed-content{background-position:0 -128px}.icon-reddit{background-position:-32px -128px}.icon-whatsapp{background-position:-64px -128px}.icon-moderator{background-position:-128px -128px}.icon-disabled{opacity:.5}.icon-make-tutorial{background-position:-64px -32px}a.facebook-btn{background-color:#48639C;position:relative;display:inline-block;margin:4px}a.facebook-btn i,a.facebook-btn i:hover{background-color:#3b5999}a.facebook-btn i{position:absolute;left:0;top:2px}a.twitter-btn{background-color:#6DDAFF;position:relative;display:inline-block}a.twitter-btn i,a.twitter-btn i:hover{background-color:#3cf}a.twitter-btn i{position:absolute;left:0;top:2px}.close-btn,.follow-popup .author-name,.icon-author-9,.icon-author-r,.icon-author-v{position:relative}.rpv-wrapper{color:#757575;font-size:12px}.icon-author-p:after,.icon-author-r:after,.icon-author-v:after{content:"";background:url(/App_Themes/NewDesign/Images/d-icon-sprite_20190106.png);display:inline-block;width:10px;height:10px}.icon-author-r:after{background-position:-107px -130px}.icon-author-p:after{background-position:-107px -139px}.icon-author-v:after{background-position:-107px -148px}.follow-popup{width:320px;z-index:2;padding:15px;border-radius:4px;border:1px solid #BDBDBD;background-color:#fff;text-align:left}.follow-popup .author{font-size:14px;color:#616161}.follow-popup .author-info,.follow-popup .popup-footer{font-size:13px;color:#757575}.follow-popup .author-twitter{font-size:13px;color:#2196F3}.follow-popup .popup-footer{border-top:1px solid #BDBDBD;padding-top:15px;margin-top:15px}.follow-popup .author-social{margin-right:8px}.popup-head{color:#757575;padding-bottom:15px;border-bottom:1px solid #E0E0E0}.close-btn{font-size:18px;top:-2px;right:-2px;background:0;border:0;outline:0;float:right!important}.close-btn:after{content:"×"}.follow-popup.bottom{right:8px;bottom:56px;position:fixed;max-width:95%}.follow-popup.bottom .rpv-wrapper{padding:8px 0}.content-header .follow-popup{transform:translateX(-120px);top:38px;position:absolute!important}.author-bio-content{padding-top:10px;border-top:1px dashed #E0E0E0;position:relative;margin-top:5px}.author-bio-content h4{display:inline-block;margin-right:4px}.author-profile-link{color:#FF6F00}.author-bio-content .top-author{vertical-align:top}.author-bio-icons .d-icon{width:32px;height:32px;vertical-align:middle}.author-bio-icons a{color:#757575;font-weight:700}.author-bio-content .bio-info{font-size:14px}.author-bio-content .author-page-link{color:#9E9E9E;font-size:13px;display:inline-block;overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto;max-height:42px;overflow:hidden}.author-bio-content .author-page-link:hover{color:#01a821}.author-bio-content .icon-link{background-position:-38px -166px;width:20px;height:20px;vertical-align:middle}.icon-book{background-position:-64px -160px}.icon-c-MVP{background-position:-96px -160px}.icon-rank{background-position:-128px -160px}.icon-MVP{background-position:-160px -160px}.icon-medal-gold{background-position:-192px -160px}.icon-medal-silver{background-position:-224px -160px}.icon-medal-bronze{background-position:-256px -160px}.icon-medal-platinum{background-position:0 -192px}.icon-medal-starter{background-position:-62px -192px}.comment-body .checkbox{margin-bottom:0}.comment-head{padding:10px 0}.rightbar-items:not(:first-child),.socialComments{padding-top:15px}.comment-head li{position:relative}.comment-head .d-icon{width:28px;height:28px;vertical-align:middle;float:left}.content-bottom-comment{border-top:1px solid #E0E0E0}.commentDescription{color:#757575;position:relative}.commentDescription .commentDescription{padding-bottom:4px}.comment-info .comment-time{float:right;color:#9E9E9E;font-size:12px}.comment-info .comment-reply-wrapper{float:right;font-size:12px}.comment-info .comment-reply-wrapper a{color:#757575}.comment-reply-wrapper i,.comment-time .icon-clock-small{width:20px;height:20px;vertical-align:middle}.comment-replies{margin:0}.comment-replies .media:first-child{margin-top:15px}.icon-clock-small{background-position:-6px -168px}.icon-like-small{background-position:-294px -168px}.icon-reply-small{background-position:-262px -136px}.icon-reply-all-small{background-position:-294px -136px}.icon-flag{background-position:-230px -134px}.icon-delete-content2{background-position:-166px -134px}.icon-edit-content2{background-position:-198px -134px}.comment-body textarea{height:auto!important}.comment-body .media,.comment-body .media-body{overflow:visible}.text-icon{line-height:20px;font-style:normal;border-radius:50%;background-color:#9E9E9E;color:#FAFAFA;display:inline-block;text-align:center;vertical-align:middle}.comment-action-button{position:absolute;background:#efefef;right:0;top:0;z-index:99;border-radius:4px;display:none}.comment-action-button .d-icon{width:20px;height:20px;margin:1px 4px;display:block;float:left}.socialComments{z-index:-1}.socialComments .commentHeader span{display:none}.socialComments .headerControls:after{content:"";display:inline-block;width:24px;height:24px;background-color:#3b5998;background-position:-132px -68px;background-image:url(/App_Themes/NewDesign/Images/c-icon-sprite_20171123.png);background-repeat:no-repeat;vertical-align:middle;margin-left:12px}.rightbar-ad p{color:#757575}.rightbar-ad h4{color:#616161}.rightbar-ad img{border:1px solid #E0E0E0}.tag-cloud{padding:5px 0;overflow:hidden;margin:0 -4px}.tag-cloud li{display:block;float:left;padding:4px}.tag-cloud a{color:#757575;padding:4px 10px;display:inline-block;border-radius:16px;border:1px solid #d2d2d2;transition:.05s}.tag-cloud a:hover{color:#fff;background:#1e88e5}.icon-create-content{background-position:-102px -198px}a:hover .icon-create-content{background-position:-134px -198px}.toasterShow{position:fixed;right:50px;top:0;padding:0;opacity:0;visibility:hidden;height:1px;color:#fff;display:block!important;font-size:16px;width:100%;text-align:center;z-index:9999;transition:all .5s}.toasterShow span{display:block;width:100%;max-width:300px;float:right;background:#089804;padding:10px;border-radius:6px}.toasterShow.warning{background:#ff382b}.toasterShow.showThread{padding:10px 0;height:auto;visibility:visible;opacity:1;top:27px;margin-bottom:5px}.mentions-input-box .mentions-autocomplete-list{display:none;background:#fff;border:1px solid #b2b2b2;position:absolute;left:0;right:0;z-index:999}.mentions-input-box .mentions-autocomplete-list ul{margin:0;padding:0}.mentions-input-box .mentions-autocomplete-list li{background-color:#fff;padding:0 5px;margin:0;width:auto;border-bottom:1px solid #eee;line-height:35px;overflow:hidden;cursor:pointer;list-style:none;white-space:nowrap}.mentions-input-box .mentions-autocomplete-list li>div.icon,.mentions-input-box .mentions-autocomplete-list li>img{width:35px;height:35px;float:left;margin-top:5px;margin-right:5px}.mentions-input-box .mentions-autocomplete-list li.active,.mentions-input-box .mentions-autocomplete-list li:hover{background-color:#f2f2f2}.mentions-input-box{position:relative}.commentcontent .mentions-input-box textarea,.mentions-input-box,.mentions-input-box .mentions>div{font-size:14px}.mentions-input-box textarea{background:none;border:1px solid #dcdcdc;box-sizing:border-box;display:block;outline:0;overflow:hidden;padding:5px;position:relative;resize:none;font-family:inherit;font-size:14px;min-height:56px;color:#8B8B8B;width:585px}#div2,#div2 div,#div2 p{font-size:16px!important}.mentions-input-box .mentions,.mentions-input-box .mentions>div{color:#fff;white-space:pre-wrap}.level1+.commentcontent .mentions-input-box textarea{width:100%}.mentions-input-box .mentions{bottom:0;left:1px;overflow:hidden;padding:5px;position:absolute;right:0;top:1px;word-wrap:break-word;background:#fff}.mentions-input-box .mentions>div>strong{background:#d8dfea;font-weight:400}.icon-downloaded{background-position:-160px -192px}.icon-pages{background-position:-192px -192px}.icon-pdf{background-position:-224px -192px}.icon-download-book{background-position:-256px -192px}.icon-download-size{background-position:-288px -192px}#div2 p{margin:1em 0}p#ArticleSummary{color:#9e9e9e}.file-box a{display:inline-block;margin-right:8px}@media only screen and (max-width:359px){.comment-head .previous-comments-wrapper{margin-bottom:10px;display:block}}@media only screen and (min-width:360px){.comment-head .previous-comments-wrapper{float:right;padding:4px 0}}@media only screen and (max-width:767px){.user-image-98{height:56px;width:56px}}@media only screen and (min-width:768px){.content-head-link .ad-items,.content-head-link .download-items{padding:0 15px;float:left;width:50%}.content-head-link .download-items a,.icon-box{display:inline-block}.icon-box{float:left}.file-box{overflow:hidden}.author-bio-icons{position:absolute;top:5px;right:0}.content-head-link{margin:8px -15px}.content-head-link.bottom-ad{margin:8px 0}.content-head-link .download-items{font-weight:700}.content-head-link .ad-items+.ad-items,.content-head-link .download-items+.ad-items{text-align:right}.user-action-list .featured{margin-right:15px}.user-action-list .reader-level{margin-left:9px}}@media only screen and (min-width:992px){.content{width:66.66666667%;float:left}.right-bar{width:33.33333333%;float:left}}@media only screen and (min-width:1206px){.cotent-share-icon>ul{position:fixed;left:-40px;width:40px;height:auto;max-height:800px}}@media only screen and (max-width:1205px){.hidden-tablet{display:none!important}}.dp-highlighter{font-family:Consolas,"Courier New",Courier,mono,serif;font-size:12px;background-color:#E7E5DC;width:99%;overflow:auto;margin:18px 0!important;padding-top:1px}.dp-highlighter ol,.dp-highlighter ol li,.dp-highlighter ol li span{margin:0;padding:0;border:none}.dp-highlighter a,.dp-highlighter a:hover{background:0 0;border:none;padding:0;margin:0}.dp-highlighter .bar{padding-left:45px}.dp-highlighter.collapsed .bar,.dp-highlighter.nogutter .bar{padding-left:0}.dp-highlighter ol{list-style:decimal;background-color:#fff;margin:0 0 1px 45px!important;padding:0;color:#5C5C5C}.dp-highlighter.nogutter ol,.dp-highlighter.nogutter ol li{list-style:none!important;margin-left:0!important}.dp-highlighter .columns div,.dp-highlighter ol li{list-style:decimal-leading-zero;list-style-position:outside!important;border-left:3px solid #6CE26C;background-color:#F8F8F8;color:#5C5C5C;padding:0 3px 0 10px!important;margin:0!important;line-height:18px}.dp-highlighter.nogutter .columns div,.dp-highlighter.nogutter ol li{border:0}.dp-highlighter .columns{background-color:#F8F8F8;color:gray;overflow:hidden;width:100%}.dp-highlighter .columns div{padding-bottom:5px}.dp-highlighter ol li.alt{background-color:#FFF;color:inherit}.dp-highlighter ol li span{color:#000;background-color:inherit}.dp-highlighter.collapsed ol{margin:0}.dp-highlighter.collapsed ol li{display:none}.dp-highlighter.printing{border:none}.dp-highlighter.printing .tools{display:none!important}.dp-highlighter.printing li{display:list-item!important}.dp-highlighter .tools{padding:3px 8px 10px 10px;font:9px Verdana,Geneva,Arial,Helvetica,sans-serif;color:silver;background-color:#f8f8f8;border-left:3px solid #6CE26C}.dp-highlighter.nogutter .tools{border-left:0}.dp-highlighter.collapsed .tools{border-bottom:0}.dp-highlighter .tools a{font-size:9px;color:#a0a0a0;background-color:inherit;text-decoration:none;margin-right:10px}.dp-about .close,.dp-about table{font-size:11px;font-family:Tahoma,Verdana,Arial,sans-serif!important}.dp-highlighter .tools a:hover{color:red;background-color:inherit;text-decoration:underline}.dp-about{background-color:#fff;color:#333;margin:0;padding:0}.dp-about table{width:100%;height:100%}.dp-about td{padding:10px;vertical-align:top}.dp-about .copy{border-bottom:1px solid #ACA899;height:95%}.dp-about .title{color:red;background-color:inherit;font-weight:700}.dp-about .close,.dp-about .footer{background-color:#ECEADB;color:#333}.dp-about .para{margin:0 0 4px}.dp-about .footer{border-top:1px solid #fff;text-align:right}.dp-about .close{width:60px;height:22px}.dp-highlighter .comment,.dp-highlighter .comments{color:#008200;background-color:inherit}.dp-highlighter .string{color:#00f;background-color:inherit}.dp-highlighter .keyword{color:#069;font-weight:700;background-color:inherit}.dp-highlighter .preprocessor{color:gray;background-color:inherit}</style> <style>
+.cse .gsc-search-button-v2, .gsc-search-button-v2{padding:6px 10px!important;}
+.gsc-search-box-tools .gsc-search-box .gsc-input{padding-right:0!important}
+.gsc-search-button{margin-left:0!important;}
+.gsc-search-button-v2, .gsc-search-button-v2:hover, .gsc-search-button-v2:focus{border-radius:0!important}
+td.gsc-search-button{background:#f60;}
+.gsc-resultsbox-visible{float:left!important;width:60%!important}
+.gsc-adBlock{float:right!important;width:40%!important}
+.gsc-url-top{display:none!important;}
+.gsc-input{height: 22px!important;}
+</style> <script src="./Oracle Connection String using C#_files/osd.js.download"></script><script src="./Oracle Connection String using C#_files/amp4ads-host-v0.js.download"></script><script async="" src="./Oracle Connection String using C#_files/async-ads.js.download"></script><script type="text/javascript" async="" src="./Oracle Connection String using C#_files/analytics.js.download"></script><script src="./Oracle Connection String using C#_files/pubads_impl_rendering_308.js.download"></script><script async="async" src="./Oracle Connection String using C#_files/gpt.js.download"></script> <script>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+var googleAdSlots=[];
+</script> <script>
+var loadFont = function (url) {
+// the 'fetch' equivalent has caching issues
+var xhr = new XMLHttpRequest();
+xhr.open('GET', url, true);
+xhr.onreadystatechange = function () {
+if (xhr.readyState == 4 && xhr.status == 200) {
+var css = xhr.responseText;
+css = css.replace(/}/g, 'font-display: swap; }');
+const head = document.getElementsByTagName('head')[0];
+const style = document.createElement('style');
+style.appendChild(document.createTextNode(css));
+head.appendChild(style);
+}
+};
+xhr.send();
+};
+loadFont('https://fonts.googleapis.com/css?family=Oswald')
+</script> <style>/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752HT8Ghe4.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+font-display: swap; }
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fj8Ghe4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+font-display: swap; }
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752Fz8Ghe4.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+font-display: swap; }
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+font-display: swap; }
+</style><link rel="preload" href="./Oracle Connection String using C#_files/f.txt" as="script"><script type="text/javascript" src="./Oracle Connection String using C#_files/f.txt"></script><script src="./Oracle Connection String using C#_files/pubads_impl_308.js.download" async=""></script><script src="./Oracle Connection String using C#_files/cse_element__en.js.download" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./Oracle Connection String using C#_files/default+en.css"><link type="text/css" rel="stylesheet" href="./Oracle Connection String using C#_files/default.css"><style type="text/css">        .scrollToTop{padding:10px 12px;position:fixed;bottom:8px;right:8px;display:none;background:#0086dc;z-index:999;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s;} .scrollToTop:hover{background:#252525;}</style><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-32/html/container.html"><style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+font-display: swap; }
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+font-display: swap; }
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+font-display: swap; }
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+font-display: swap; }
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+font-display: swap; }
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+font-display: swap; }
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+font-display: swap; }
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+font-display: swap; }
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFUZ0bbck.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+font-display: swap; }
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWZ0bbck.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+font-display: swap; }
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVp0bbck.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+font-display: swap; }
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWp0bbck.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+font-display: swap; }
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFW50bbck.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+font-display: swap; }
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+font-display: swap; }
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+font-display: swap; }
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+font-display: swap; }
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXuhpOqc.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+font-display: swap; }
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUehpOqc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+font-display: swap; }
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXehpOqc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+font-display: swap; }
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+font-display: swap; }
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+font-display: swap; }
+</style><style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+font-display: swap; }
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+font-display: swap; }
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+font-display: swap; }
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+font-display: swap; }
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+font-display: swap; }
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+font-display: swap; }
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+font-display: swap; }
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+font-display: swap; }
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+font-display: swap; }
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+font-display: swap; }
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+font-display: swap; }
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+font-display: swap; }
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+font-display: swap; }
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+font-display: swap; }
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+font-display: swap; }
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+font-display: swap; }
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+font-display: swap; }
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+font-display: swap; }
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+font-display: swap; }
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+font-display: swap; }
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+font-display: swap; }
+</style><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#BCCDF0}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#FF6600;background-color:#FF6600;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive{border-color:#E9E9E9;background-color:#E9E9E9}.gsc-tabHeader.gsc-tabhActive{border-top-color:#FF9900;border-left-color:#E9E9E9;border-right-color:#E9E9E9;border-bottom-color:#FFFFFF;background-color:#FFFFFF}.gsc-tabsArea{border-color:#E9E9E9;}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover,.gsc-imageResult:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#0000CC}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#0000CC}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#0000CC}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#0000CC}.gsc-cursor-page{color:#0000CC}a.gsc-trailing-more-results:link{color:#0000CC}.gs-webResult .gs-snippet,.gs-imageResult .gs-snippet,.gs-fileFormatType{color:#000000}.gs-webResult div.gs-visibleUrl,.gs-imageResult div.gs-visibleUrl{color:#008000}.gs-webResult div.gs-visibleUrl-short{color:#008000}.gs-webResult div.gs-visibleUrl-short{display:none}.gs-webResult div.gs-visibleUrl-long{display:block}.gs-promotion div.gs-visibleUrl-short{display:none}.gs-promotion div.gs-visibleUrl-long{display:block}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#E9E9E9;background-color:#FFFFFF;color:#0000CC;}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#FF9900;background-color:#FFFFFF;color:#0000CC;}.gsc-webResult.gsc-result.gsc-promotion{border-color:#336699;background-color:#FFFFFF}.gsc-completion-title{color:#0000CC}.gsc-completion-snippet{color:#000000}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#0000FF}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#663399}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#0000FF}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#0000FF}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#000000}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#008000}.gcsc-find-more-on-google{color:#0000CC}.gcsc-find-more-on-google-magnifier{fill:#0000CC}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:5.5px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head> <body id="MasterBody" data-section="Articles"><a href="javascript:void(0);" class="scrollToTop" style="display: inline;">                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20">                                <polygon fill="#FFFFFF" points="10,3.9 0,13.9 2.2,16.1 10,8.3 17.8,16.1 20,13.9 10,3.9 10,3.9 "></polygon>                            </svg></a> <div class="toasterShow"><span id="toasterSpanMessage"></span></div> <form method="post" action="https://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/" id="aspnetForm"> <div class="aspNetHidden"> <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY1NDU2MTA1Mg8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBZGTQyYNyjQZJRxcuo11dLkxmTCLoHA=="> </div> <div id="OldHeader"> <div class="responsiveHeader"> <div id="geoLocationPopup" style="display:none;"></div> <div class="page" style="position: relative; z-index: 999;"> <div class="loginControl"> <a href="https://www.c-sharpcorner.com/userregistration/logincheck.aspx?returnurl=/uploadfile/nipuntomar/connection-strings-for-oracle/" id="loginBtn" class="icons login" title="Login">&nbsp;</a> <a href="https://www.c-sharpcorner.com/register" id="ctl00_HeaderHomeNewDesign_Login1_HyperLinkRegister" title="New User Register Here" class="icons signUp"></a> <div id="askQuestion" class="notificationMessageCntr display_none_mobile"> <a id="PostForum" class="icons askaquestion" title="Ask A Question" href="https://www.c-sharpcorner.com/forums/AddPost.aspx?TSource=AddPost"></a> </div> <div id="commentNotification" class="notificationMessageCntr"> <span id="spanCommentsNotifications" style="display:none;" class="messageCount"></span> <span class="arrow">&nbsp;</span> </div> <div id="userCommentBox" class="msg_container" style="display: none;"> <div class="NoticationLoading"> <label id="LabelNoComments" style="display: none; text-align: center; color: red;">
+No unread comment.</label> <a id="imgComments" href="javascript:void(0)" class="loadmore" style="display: none; text-align: center"> <img src="./Oracle Connection String using C#_files/ajax-loader-small.gif" alt="loading..." width="12" height="9"></a> </div> <ul id="dvComments"> </ul> <a class="gotoAllView" href="https://www.c-sharpcorner.com/notification/">View All Comments</a> </div> <div id="messageNotification" class="notificationMessageCntr"> <span id="spanMessages" style="display:none;" class="messageCount"></span> <span class="arrow">&nbsp;</span> </div> <div id="userMsgBox" class="msg_container" style="display: none;"> <div class="NoticationLoading"> <label id="LabelNoData" style="display: none; text-align: center; color: red;">
+No unread message.</label> <a id="imgMessages" href="javascript:void(0)" class="loadmore" style="display: none; text-align: center"> <img src="./Oracle Connection String using C#_files/ajax-loader-small.gif" width="12" height="9"></a> </div> <ul id="dvMessages"> </ul> <a href="https://www.c-sharpcorner.com/notification/notification.aspx" id="ctl00_HeaderHomeNewDesign_Login1_LinkButtonAllMessages" class="gotoAllView">View All Messages</a> </div> <div id="generalNotifications" class="notificationMessageCntr"> <span id="spanGeneralNotifications" style="display:none;" class="messageCount"></span><span class="arrow">&nbsp;</span> </div> <div id="generalNotificationContainer" class="msg_container general_notifications" style="display: none;"> <div class="NoticationLoading"> <a id="LabelNoDataNotifications" style="display: none; text-align: center; color: red;">No unread notification.</a> <a id="imgGeneralNotifications" href="javascript:void(0)" class="loadmore" style="display: none; text-align: center"> <img src="./Oracle Connection String using C#_files/ajax-loader-small.gif" alt="loading..." width="12" height="9"></a> </div> <ul> <div id="dvGeneralNotifications"> </div> </ul> <a class="gotoAllView" href="https://www.c-sharpcorner.com/notification/GeneralNotification.aspx">View All Notifications</a> </div> <div class="notificationMessageCntr display_none_mobile"> <span class="arrow">&nbsp;</span> </div> <div class="msg_container admin_msg_container" style="display: none;"> <ul id="ctl00_HeaderHomeNewDesign_Login1_UnapprovedContentStats" class="unapproved_stats"> </ul> </div> </div> <a class="menuButton"></a> <a href="https://www.c-sharpcorner.com/" id="ctl00_HeaderHomeNewDesign_Login1_AnchorResponsiveLogo" class="logo_responsive">C# Corner</a> </div> <div class="header"> <div class="topHeaderConainer" style="width: 100%; float: left;"> <div class="InFocusNews display_none"> <div class="page" style="position: relative;"> <span class="title">
+In Focus</span> <div class="rightNew" style="display: inline;"> <div class="ticker"> <a href="https://www.c-sharpcorner.com/news/learn-cosmos-db-on-c-sharp-corner" id="InFocus">Learn CosmosDB</a> </div> </div> </div> </div> <div class="display_none"> <div class="page"> <h1 style="position:fixed; left:-99999px; top:-99999px; opacity:0;">C# Corner</h1> <a href="https://www.c-sharpcorner.com/" id="ctl00_HeaderHomeNewDesign_Contribution1_LogoLink" class="logo" title="C# Corner"> <img src="./Oracle Connection String using C#_files/SiteLogo.png" id="ctl00_HeaderHomeNewDesign_Contribution1_imageLogo" class="display_none" alt="C# Corner"> </a> <div id="ctl00_HeaderHomeNewDesign_Contribution1_ContributionLinks"> <div class="contributeList"> <a href="javascript:void(0);" class="contributeOnHeader">Contribute</a> <ul> <li> <a href="https://www.c-sharpcorner.com/publish">An Article</a> </li> <li> <a href="https://www.c-sharpcorner.com/blogs/createblog.aspx">A Blog</a> </li> <li> <a href="https://www.c-sharpcorner.com/news/createnews.aspx">A News</a> </li> <li> <a href="https://www.c-sharpcorner.com/publish/createarticle.aspx?type=videos">A Video</a> </li> <li> <a href="https://www.c-sharpcorner.com/resources/createresource.aspx">A Link</a> </li> <li> <a href="https://www.c-sharpcorner.com/aboutebookposting.aspx" id="linkPostEbook">An EBook</a> </li> <li> <a href="https://www.c-sharpcorner.com/interviews/question/postquestion.aspx">An Interview Question</a> </li> </ul> </div> <a id="ctl00_HeaderHomeNewDesign_Contribution1_PostForum" class="askQuestionOnHeader" href="https://www.c-sharpcorner.com/forums/AddPost.aspx?TSource=AddPost">Ask a Question</a> </div> </div> </div> <script type="text/javascript">
+function showPostEbookMessage(ContentType) {
+try {
+if (ContentType == "spanshowonpost") {
+jQuery('#spanshowonpost').show();
+}
+var control = jQuery("#divPopup");
+var overlay = jQuery("#overlayPopup");
+control.show();
+overlay.show().SetOverlayHeightWidth();
+control.css({ 'position': 'fixed', 'z-index': '1000', 'top': jQuery(window).height() / 2 - control.height() / 2, 'left': jQuery(window).width() / 2 - control.width() / 2 });
+}
+catch (e) {}
+}
+</script> <div id="ctl00_HeaderHomeNewDesign_HeaderMenu" class="HeadermenuStripBlue" style="position: fixed; top: 0px;"> <div class="page"> <div class="responsiveMenu"> <div class="SearchBox"> <script type="text/javascript" async="" src="./Oracle Connection String using C#_files/f(1).txt"></script><script>
+(function() {
+var cx = 'partner-pub-8742330116031244:9869322839';
+var gcse = document.createElement('script');
+gcse.type = 'text/javascript';
+gcse.async = true;
+gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+var count = document.getElementsByTagName('script');
+var s = document.getElementsByTagName('script')[count.length - 1];
+setTimeout(function () { s.parentNode.insertBefore(gcse, s); }, 0);
+})();
+</script> <div id="___gcse_0"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-en" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;"><span class="gscb_a" id="gs_cb50">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form></div></div> </div> <ul id="MenuControl1" class="headerMenu"> <li class="display_none first"><a href="https://www.c-sharpcorner.com/" class="csharpHome" title="C# Corner Home">&nbsp;</a></li> <li><a href="https://www.c-sharpcorner.com/technologies" title="Technologies">TECHNOLOGIES </a></li> <li><a class="menu-color-default" href="https://www.c-sharpcorner.com/forums" title="Ask a Question" target="">ANSWERS</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/blogs" title="Share a Blog" target="">BLOGS</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/videos" title="Share a Video" target="">VIDEOS</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/interviews" title="Ask an Interview Question" target="">INTERVIEWS</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/ebooks" title="Share a Book" target="">BOOKS</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/news" title="Submit a News" target="">NEWS</a></li><li class="more-btn"><a class="menu-color-default" href="https://www.c-sharpcorner.com/events" title="Attend an Event" target="">EVENTS</a><ul class="dropdown-content"><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/chapters" title="Join a Chapter" target="">CHAPTERS</a></li><li><a class="menu-color-default" href="http://conference.c-sharpcorner.com/" title="C# Corner Annual Conference 2017" target="_blank">ANNUAL CONFERENCE</a></li><li><a class="menu-color-default" href="http://mathura.c-sharpcorner.com/" title="C# Corner Mathura Developer Conference 2017" target="_blank">Mathura Conference</a></li><li><a class="menu-color-default" href="http://xamarin.c-sharpcorner.com/" title="C# Corner Xamarin DevCon17" target="_blank">Xamarin DevCon</a></li><li><a class="menu-color-default" href="http://delhi.c-sharpcorner.com/" title="C# Corner Delhi Developer Conference 2016" target="_blank">Delhi Conference</a></li><li><a class="menu-color-default" href="http://startup.c-sharpcorner.com/" title="C# Corner Startup Conference 2016" target="_blank">Startup Conference</a></li><li><a class="menu-color-default" href="http://hyderabad.c-sharpcorner.com/" title="C# Corner Hyderabad Developer Conference 2016" target="_blank">Hyderabad Conference</a></li><li><a class="menu-color-default" href="http://chandigarh.c-sharpcorner.com/" title="C# Corner Chandigarh Developer Conference 2016" target="_blank">Chandigarh Conference</a></li></ul></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/careeradvice" title="Get Career Advice" target="">CAREER</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/jobs" title="Get Jobs" target="">JOBS</a></li><li><a class="menu-color-dark-blue" href="http://training.c-sharpcorner.com/" title="" target="_blank">TRAINING</a></li><li class="more-btn"><a href="javascript:void(0);">MORE</a><ul class="dropdown-content"><li><a class="menu-color-default" href="http://consultants.c-sharpcorner.com/" title="C# Corner Consultants" target="_blank">Consultants</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/ideas" title="Share an Idea" target="">IDEAS</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/resources" title="Resources" target="">LINKS</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/members/" title="C# Corner Members" target="">MEMBERS</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/stories" title="Share your story" target="">STORIES</a></li><li><a class="menu-color-default" href="https://www.c-sharpcorner.com/certification" title="Get certified and accelerate your skill" target="">Certifications</a></li></ul></li> </ul> </div> </div> </div> <div id="HeaderAdvertise" style="position: relative;top: initial;float: left;width: 100%;text-align: center;color: #fff;"> </div> </div> </div> </div> </div> <div id="ctl00_ad728X90" style="clear:both;padding: 5px;"> <script>
+googletag.cmd.push(function() {
+googletag.defineSlot('/59065024/CCLB728X90', [728, 90], 'div-gpt-ad-1545225812834-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+});
+</script> <!-- /59065024/CCLB728X90 --> <div id="div-gpt-ad-1545225812834-0" style="height:90px; width:728px;margin:0 auto;" data-google-query-id="CM23psWN1uACFcGCcAodmZgPxw">  <div id="google_ads_iframe_/59065024/CCLB728X90_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/59065024/CCLB728X90_0" title="3rd party ad content" name="google_ads_iframe_/59065024/CCLB728X90_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./Oracle Connection String using C#_files/saved_resource.html"></iframe></div></div> <script> setInterval(function(){ if(googletag.pubads){ googletag.pubads().refresh() } },30000) </script> </div> <div class="b-container page-body"> <div class="b-row"> <div class="content"> <div id="div1" class="content-header"> <div class="media"> <div class="media-left media-top hidden-xs"> <a href="https://www.c-sharpcorner.com/technologies/ado-dot-net" id="CategoryLink"> <img src="./Oracle Connection String using C#_files/054836AM.png.ashx" id="ImgCategory" class="category-image-64" width="64" height="64" title="ADO.NET" alt="ADO.NET" data-category="131"> </a> </div> <div class="media-body"> <h1 id="ContentTitle" class="content-heading">Oracle Connection String using C#</h1> </div> </div> <p id="ArticleSummary" class="article-summary">Oracle is a powerful relational database management system that offers a large feature set. Along with Microsoft SQL Server, Oracle is widely regarded as one of the two most popular full-featured database systems on the market today. Oracle is made up of a set of processes running in your operating system. </p> <div class="publish-info"> <ul class="list-inline"> <li><a href="https://www.c-sharpcorner.com/members/nipun-tomar2" id="AuthorProfileLinkOnPhoto"> <img src="./Oracle Connection String using C#_files/nipuntomar20190120045058.jpg.ashx" id="ImgAuthor" class="user-image-36" data-img-handler=".ashx?width=98&amp;height=98" title="Nipun Tomar"> </a> </li> <li class="author-name"><a href="https://www.c-sharpcorner.com/members/nipun-tomar2" id="AuthorProfileLinkForName">Nipun Tomar</a></li> <li class="publish-time" title="Last updated on"> <i class="d-icon icon-Calender"></i> <span id="PublishDate">Nov 22<span class="year"> 2018</span></span> </li> </ul> </div> <div class="content-actions"> <ul id="TopStatsContainer" class="user-action-list list-inline"> <li id="FeaturedSpan" class="featured" title="Featured" style="display:none;"> <a href="https://www.c-sharpcorner.com/featured-articles"><i class="d-icon icon-star"></i></a> </li> <li> <a href="javascript:void(0);" id="btnLikeAnchor" class="d-icon icon-28 icon-like like-button"></a> <a href="javascript:void(0);" id="AnchorEmotionPopup" onclick="getContentReactions(&#39;c3aab4a4-49d3-4c85-b47b-a30fb729c33d&#39;,&#39;article&#39;);"> <span id="LabelLikeCount" class="user-action-count">5</span> </a> <ul id="emotionsContainer" class="emotions-wrapper list-inline"> <li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(1,&quot;icon-e-like&quot;);" class="d-icon icon-e-like" data-toggle="tooltip" data-title="Like"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(2,&quot;icon-e-love&quot;);" class="d-icon icon-e-love" data-toggle="tooltip" data-title="Love It"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(4,&quot;icon-e-awesome&quot;);" class="d-icon icon-e-awesome" data-toggle="tooltip" data-title="Awesome"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(5,&quot;icon-e-interesting&quot;);" class="d-icon icon-e-interesting" data-toggle="tooltip" data-title="Interesting"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(7,&quot;icon-e-okay&quot;);" class="d-icon icon-e-okay" data-toggle="tooltip" data-title="It&#39;s Okay"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(8,&quot;icon-e-poor&quot;);" class="d-icon icon-e-poor" data-toggle="tooltip" data-title="Thumbs Down"></a><span></span></li></ul> </li> <li class="relative" title="Comments"> <a href="javascript:void(0);" id="CommentIcon"> <i class="d-icon icon-comment2"></i> <span id="spanComments" class="user-action-count">4</span> </a> </li> <li class="relative" title="Views"><i class="d-icon icon-view"></i> <span id="ViewCounts" class="user-action-count">689.7k</span></li> <li class="reader-level"><i id="ReaderLevel" class="d-icon icon-28 icon-level-beginner" title="Beginner"></i></li> </ul> </div> </div> <div class="cotent-share-icon clearfix"> <ul data-content-type="Article" style="top: 380.227px;"> <li> <a class="d-icon icon-facebook-2" title="Share on Facebook" href="https://www.facebook.com/sharer.php?u=https://goo.gl/ZycRDX" onclick="popupwindowAtCenter(this.href,&#39;Share on Facebook&#39;,600,600);return false;" target="_blank" data-track="">facebook</a></li> <li><a class="d-icon icon-twitter-2" title="Share on Twitter" href="https://twitter.com/intent/tweet?&amp;via=CsharpCorner&amp;related=CsharpCorner&amp;text=Oracle+Connection+String+using+C%23%20https://goo.gl/ZycRDX" target="_blank" data-track="">twitter</a></li> <li><a class="d-icon icon-linkedIn-2" title="Share on Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://goo.gl/ZycRDX" onclick="popupwindowAtCenter(this.href,&#39;Share on LinkedIn&#39;,600,600);return false;" target="_blank" data-track="">linkedIn</a></li> <li><a class="d-icon icon-googlePlus-2" title="Share on Google+" href="https://plus.google.com/share?url=https://goo.gl/ZycRDX" onclick="popupwindowAtCenter(this.href,&#39;Share on Google+&#39;,600,600);return false;" target="_blank" data-track="">google Plus</a></li> <li><a class="d-icon icon-reddit" title="Share on Reddit" href="https://www.reddit.com/submit?title=Oracle+Connection+String+using+C%23&amp;url=https%3a%2f%2fwww.c-sharpcorner.com%2fUploadFile%2fnipuntomar%2fconnection-strings-for-oracle%2fdefault.aspx" onclick="popupwindowAtCenter(this.href,&#39;Share on Reddit&#39;,600,600);return false;" target="_blank" data-track="">Reddit</a></li> <li class="hidden-md-up"><a class="d-icon icon-whatsapp" title="Share on Whatsapp" href="whatsapp://send?text=Oracle Connection String using C#%0A%0Ahttps%3a%2f%2fwww.c-sharpcorner.com%2fUploadFile%2fnipuntomar%2fconnection-strings-for-oracle%2f" data-action="share/whatsapp/share" target="_blank">WhatsApp</a></li> <li id="InnerIconContainer" class="inner-icon-container"> <ul id="ActionsIconsContainer" style="top: 380.227px;"> <li><a href="https://www.c-sharpcorner.com/userregistration/logincheck.aspx?returnurl=https://www.c-sharpcorner.com/articles/emailtofriend.aspx?articleid=c3aab4a4-49d3-4c85-b47b-a30fb729c33d" id="ctl00_ImageButtonEmail" cliendidmode="static" class="d-icon icon-email" title="Email this article to friend">Email</a></li> <li><a href="javascript:void(0);" id="ImageButtonAddToMyBookmarks" title="Bookmark this article" onclick="return AddToArticleBookmark(this);" class="d-icon icon-32 icon-bookmark-add text-hide">Bookmark</a></li> <li id="ListPrintContent" class="hidden-tablet"><a href="javascript:void(GetPrintVersion(&#39;Article&#39;))" id="AnchorPrintArticle" title="Print" class="d-icon icon-print">Print</a></li> <li id="ctl00_LinkOtherArticles"><a href="https://www.c-sharpcorner.com/members/nipun-tomar2/articles" id="AuthorsOtherArticles" class="d-icon icon-other-article" title="Author&#39;s other article">Other Artcile</a></li> </ul> </li> <li id="btnIconExpander" class="hidden-sm-down"><a href="javascript:void(0);" class="d-icon icon-expand" title="Expand">Expand</a></li> </ul> </div> <div class="user-content"> <div class="b-row" style="padding: 0 15px;"> <div class="content-head-link clearfix"> <div class="ad-items linkAdContainer" id="LinkAdContainerTop"><div class="LinkAd"><a href="https://www.c-sharpcorner.com/AdRedirector.aspx?AdId=133&amp;target=https://www.e-iceblue.com/download/free-products.html?aff_id=100" data-adid="133" class="linkAd LinkNormalBlue" target="_blank" id="linkAd">Download Free .NET &amp; JAVA Files API</a></div></div> </div> </div> <div id="div2" class="PaddingLeft5"><p align="justify"></p><p>Oracle is a powerful relational database management system that offers a large
+feature set. Along with Microsoft SQL Server, Oracle is widely regarded as one
+of the two most popular full-featured database systems on the market today.
+Oracle is made up of a set of processes running in your operating system. These
+processes manage how data is stored and how it is accessed. It is a program that
+is running in the background, maintaining your data for you and figuring out
+where it should go on your hard drive. <br> <br> <strong>Providers for Oracle</strong></p> <ul> <li>Oracle Data Provider for .NET / ODP.NET (OracleConnection)</li> <li>Oracle Provider for OLE DB</li> <li>Oracle in OraHome92</li> <li>Oracle in XEClient</li> <li>dotConnect for Oracle (OracleConnection)</li> <li>.NET Framework Data Provider for Oracle (OracleConnection)</li> <li>.NET Framework Data Provider for OLE DB (OleDbConnection)</li> <li>.NET Framework Data Provider for ODBC (OdbcConnection)</li> <li>Microsoft OLE DB Provider for Oracle</li> <li>Microsoft ODBC Driver for Oracle</li> <li>Microsoft ODBC for Oracle</li> <li>MSDataShape</li> </ul> <p><strong>Oracle Data Provider for .NET / ODP.NET</strong><br> <br>
+Oracle Data Provider for .NET (ODP.NET) is an implementation of a .NET data
+provider for Oracle Database. It uses Oracle native APIs to offer fast and
+reliable access to Oracle data and features from any .NET application. Oracle
+Data Provider for .NET (ODP.NET) features optimized ADO.NET data access to the
+Oracle database. ODP.NET allows developers to take advantage of advanced Oracle
+database functionality, including Real Application Clusters, XML DB, and
+advanced security. <br> <br> <strong>Sample Code</strong><br> <br>
+using Oracle.DataAccess.Client;<br>
+OracleConnection myConnection = new OracleConnection();<br>
+myConnection.ConnectionString = myConnectionString;<br>
+myConnection.Open();<br>
+//execute queries <br>
+myConnection.Close();<br> <br> <strong>
+TNS</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=TORCL;User
+Id=urUsername;Password=urPassword;</p> <p> <strong>
+&gt;
+Integrated Security</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=TORCL;Integrated
+Security=SSPI;</p> <p> <strong>
+Privileged
+Connections</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracle;User
+Id=urUsername;Password=urPassword;DBA
+Privilege=SYSDBA;</p> <p> <strong>
+Runtime
+Connection Load Balancing</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracle;User
+Id=urUsername;Password=urPassword;Load
+Balancing=True;</p> <p> <strong>
+Connect
+Naming Method to connect to an Instance</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=username/password@urserver//instancename;</p> <p> <strong>
+Connect
+Naming Method for connecting to a dedicated server instance</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=username/password@urserver/urservice:dedicated/instancename;</p> <p> <strong>
+Applying
+ODP.NET without tnsnames.ora</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=urHost)(PORT=urPort)))</p> <p>
+(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=urOracleSID)));User
+Id=urUsername;</p> <p>
+Password=urPassword;</p> <p> <strong>
+Applying the
+Easy Connect Naming Method (aka EZ Connect)</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=username/password@//urserver:1433/ur.service.com;</p> <p><strong>
+Windows user
+authentication</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracle;User
+Id=/;</p> <p> <strong>
+Specification of Pooling parameters</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracle;User
+Id=urUsername;Password=urPassword;Min
+Pool Size=10;Connection
+Lifetime=180;Connection
+Timeout=60;Incr
+Pool Size8;Decr
+Pool Size=5;</p> <p> <strong>
+Restricting
+Pool size</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracle;User
+Id=urUsername;Password=urPassword;Max
+Pool Size=50;Connection
+Timeout=60;</p> <p> <strong>
+Disable
+Pooling</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracle;User
+Id=urUsername;Password=urPassword;Pooling=False;</p> <p><strong>Oracle Provider for OLE DB</strong><br> <br>
+The OLE DB Provider for Oracle supports a simple OLE DB architecture by
+providing access to data stored in Oracle as well as limited access to Oracle8
+databases. <br>
+OLE DB Provider is an open standard data access methodology which utilizes a set
+of Component Object Model (COM) interfaces for accessing and manipulating
+different types of data. OLE DB data providers are a set of COM components that
+transfer data from a data source to a consumer. An OLE DB Provider places that
+data in a tabular format in response to calls from a consumer. Providers can be
+simple or complex. The provider may return a table, it may allow the consumer to
+determine the format of that table, and it may perform operations on the data.
+<br> <br> <strong>Code</strong><br> <br>
+Include "Provider=OraOLEDB.Oracle" in the connection string to use this
+provider.<br> <br> <strong>
+Standard
+Security</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;Data
+Source=urOracleDB;User
+Id=urUsername;Password=urPassword;</p> <p> <strong>
+Trusted
+Connection</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;Data
+Source=urOracleDB;OSAuthent=1;</p> <p> <strong>
+&gt;
+Microsofts OLE DB .NET Data Provider</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;Data
+Source=urOracleDB;User
+Id=urUsername;Password=urPassword;<br>
+OLEDB.NET=True;</p> <p> <strong>
+&gt;
+OraOLEDB Custom Properties with Microsofts OLE DB .NET Data Provider</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;DataSource=urOracleDB;UserId=urUsername;Password=urPassword;OLEDB.NET=True;SPPrmsLOB=False;NDatatype=False;SPPrmsLOB=False;</p> <p> <strong>
+&gt;
+Using distributed transactions</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;Data
+Source=urOracleDB;User
+Id=urUsername;Password=urPassword;<br>
+DistribTX=1;</p> <p> <strong>
+&gt;
+TNS-less connection string</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;DataSource=(DESCRIPTION=(CID=GTU_APP)(ADDRESS_LIST=(ADDRESS=</p> <p>
+(PROTOCOL=TCP)(HOST=urHost)(PORT=urPort)))(CONNECT_DATA=(SID=urOracleSID)<br>
+(SERVER=DEDICATED)));User
+Id=urUsername;Password=urPassword;</p> <p> <strong>
+Oracle XE,
+VB6 ADO</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;dbq=localhost:1433/XE;Database=urDataBase;User
+Id=urUsername;</p> <p>
+Password=urPassword;</p> <p> <strong>
+&gt;
+Oracle XE, C++ ADO</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;Data
+Source=localhost:1433/XE;Initial
+Catalog=urDataBase;User
+Id=urUsername;Password=urPassword;</p> <p> <strong>
+&gt;
+Controling rowset cache mechanism</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;Data
+Source=urOracleDB;User
+Id=urUsername;Password=urPassword;<br>
+CacheType=File;</p> <p> <strong>
+&gt;
+Controling the fetchsize</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;Data
+Source=urOracleDB;User
+Id=urUsername;Password=urPassword;<br>
+FetchSize=200;</p> <p> <strong>
+&gt;
+Controling the chunksize</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;Data
+Source=urOracleDB;User
+Id=urUsername;Password=urPassword;<br>
+ChunkSize=200;<br> <br> <strong>Oracle in OraHome92 Driver</strong><br> <br> <strong>
+&gt;
+Standard Security</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Driver={Oracle
+in OraHome92};Dbq=urTNSServiceName;Uid=urUsername;Pwd=urPassword;</p> <p> <strong>
+Oracle in XEClient</strong></p> <p> <strong>
+&gt;
+Standard Security</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Driver=(Oracle
+in XEClient);dbq=192.168.1.11,1433/XE;Uid=urUsername;Pwd=urPassword;<br> <br> <br> <strong>dotConnect for Oracle (OracleConnection)</strong><br> <br>
+dotConnect for Oracle, formerly known as OraDirect .NET, is an enhanced ORM
+enabled data provider for Oracle that builds on ADO.NET technology to present a
+complete solution for developing Oracle-based database applications and
+websites. It introduces new approaches for designing application architecture,
+boosts productivity, and leverages database applications.<br> <br>
+dotConnect for Oracle can be used as a powerful ADO.NET data provider, or an
+effective application development framework.<br> <br> <strong>Sample Code</strong><br> <br>
+using Devart.Data.Oracle;<br>
+OracleConnection myConnection = new OracleConnection();<br>
+myConnection.ConnectionString = myConnectionString;<br>
+myConnection.Open();<br>
+//execute queries, etc<br>
+myConnection.Close();<br> <br> <strong>
+&gt;
+Standard Security</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+User ID=urUsername;Password=urPassword;Host=ora;Pooling=true;Min
+Pool Size=0;Max
+Pool Size=100;Connection
+Lifetime=0;<br> <br> <strong>.NET Framework Data Provider for Oracle</strong><br> <br>
+.NET Framework Data Provider for Oracle is an add-on component to the .NET
+Framework 1.0 that provides access to an Oracle database using the Oracle Call
+Interface (OCI) as provided by Oracle Client software.<br> <br>
+The .NET Framework Data Provider for Oracle, unlike the Microsoft OLE DB
+provider for Oracle, also supports new Oracle 9i datatypes, as well as ref
+cursors . This provider, System.Data.OracleClient, is similar to the .NET
+Framework Data Provider for SQL Server, System.Data.SqlClient.<br> <br> <strong>Sample Code</strong><br> <br>
+using System.Data.OracleClient;<br>
+OracleConnection myConnection = new OracleConnection();<br>
+myConnection.ConnectionString = myConnectionString;<br>
+myConnection.Open();<br>
+//execute queries, etc<br>
+myConnection.Close();<br> <br> <strong>
+&gt;
+Standard Security</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracleDB;Integrated
+Security=yes;</p> <p> <strong>
+&gt;
+Using Connection Pooling</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracleDB;User
+Id=urUsername;Password=urPassword;Min
+Pool Size=15;Connection
+Lifetime=180;Connection
+Timeout=60;Incr
+Pool Size=8;Decr
+Pool Size=5;</p> <p> <strong>
+&gt;
+Windows Authentication</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracleDB;User
+Id=/;</p> <p> <strong>
+&gt;
+Privileged Connection With SYSDBA</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracleDB;User
+Id=SYS;Password=SYS;DBA
+Privilege=SYSDBA;</p> <p><strong>
+Privileged
+Connection With SYSOPER&nbsp;</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracleDB;User
+Id=SYS;Password=SYS;DBA
+Privilege=SYSOPER;</p> <p> <strong>
+&gt;
+Proxy Authentication</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracleDB;User
+Id=urUsername;Password=urPassword;Proxy
+User Id=pUserId;Proxy
+Password=pPassword;</p> <p> <strong>
+&gt;
+Specifying username and password</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=UrOracleDB;User
+Id=urUsername;Password=urPassword;Integrated
+Security=no;</p> <p> <strong>
+&gt;
+Utilizing the Password Expiration functionality</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Data Source=urOracleDB;User
+Id=urUsername;Password=urPassword;<br>
+oConn.OpenWithNewPassword(sTheNewPassword);</p> <p>
+&nbsp;<strong>&gt;Omiting
+tnsnames.ora</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+SERVER=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=urHost)(PORT=urPort))(CONNECT_DATA=(SERVICE_NAME=urOracleSID)));uid=urUsername;pwd=urPassword;</p> <p> <strong>
+OR:</strong></p> <p>
+Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=urHost)(PORT=urPort))(CONNECT_DATA=<br>
+(SERVICE_NAME=urOracleSID)));User
+Id=urUsername;Password=urPassword;<br> <br> <strong>.NET Framework Data Provider for OLE DB</strong><br> <br>
+A data provider in the .NET Framework enables you to connect to a data source in
+order to retrieve and modify data from the data source. A .NET Framework data
+provider also serves as a bridge between a data source and an ADO.NET DataSet. A
+.NET Framework data provider is used for connecting to a database, executing
+commands, and retrieving results. Those results are either processed directly,
+placed in a Dataset in order to be exposed to the user as needed, combined with
+data from multiple sources, or remoted between tiers. .NET Framework data
+providers are lightweight, creating a minimal layer between the data source and
+code, increasing performance without sacrificing functionality.<br> <br> <strong>Sample Code</strong><br> <br>
+using System.Data.OleDb;<br>
+OleDbConnection myConnection = new OleDbConnection();<br>
+myConnection.ConnectionString = myConnectionString;<br>
+myConnection.Open();<br>
+//execute queries, etc<br>
+myConnection.Close();<br> <br> <strong>
+&gt;
+Bridging to Oracle Provider for OLE DB</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=OraOLEDB.Oracle;Data
+Source=urOracleDB;User
+Id=urUsername;Password=urPassword;<br>
+OLEDB.NET=True;<br> <br> <strong>.NET Framework Data Provider for ODBC</strong><br> <br>
+The ODBC .NET Data Provider is an add-on component to the .NET Framework. It
+provides access to native ODBC drivers the same way the OLE DB .NET Data
+Provider provides access to native OLE DB providers.<br>
+One of the best things about working with ADO.NET data providers is all data
+providers define the similar class hierarchy. The only things you need to change
+are the classes and the connection string.<br> <br> <strong>Sample Code</strong><br> <br>
+using System.Data.Odbc;<br>
+OdbcConnection myConnection = new OdbcConnection();<br>
+myConnection.ConnectionString = myConnectionString;<br>
+myConnection.Open();<br>
+//execute queries, etc<br>
+myConnection.Close();<br> <br> <strong>
+&gt;
+Bridging to Oracle in OraHome92 ODBC Driver</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Driver={Oracle
+in OraHome92};Server=urServerAddress;Dbq=urDataBase;Uid=urUsername;<br>
+Pwd=urPassword;<br> <br> <strong>Microsoft OLE DB Provider for Oracle</strong><br> <br>
+Microsoft OLE DB Provider for Oracle exposes interfaces to consumers wanting
+access to data on one or more Oracle servers. You can use it to develop an
+optimized OLE DB consumer for Oracle databases. It is designed to be used with
+only one Oracle client on each computer.<br> <br>
+The Microsoft OLE DB Provider for Oracle allows distributed queries on data in
+Oracle databases.<br> <br> <strong>Code</strong><br> <br>
+Include "Provider=msdaora" in the connection string to use this provider.<br> <br> <strong>
+&gt;
+Standard security</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=msdaora;Data
+Source=urOracleDB;User
+Id=urUsername;Password=urPassword;</p> <p> <strong>
+&gt;
+Trusted connection</strong></p> <p> <strong>
+Syntax:<br> <br> </strong>
+Provider=msdaora;Data
+Source=urOracleDB;Persist
+Security Info=False;Integrated
+Security=Yes;<br> <br> <strong>Microsoft ODBC for Oracle</strong><br> <br>
+The Microsoft ODBC Driver for Oracle allows you to connect your ODBC-compliant
+application to an Oracle database. <br> <br> <strong>Code</strong><br> <br>
+Include "Driver={Microsoft ODBC for Oracle}" in the connection string to use
+this driver.<br> <br> <strong>
+&gt;
+New version</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Driver={Microsoft
+ODBC for Oracle};Server=urServerAddress;Uid=urUsername;Pwd=urPassword;</p> <p><strong>
+&gt;
+Direct Connection</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Driver={Microsoft
+ODBC for Oracle};Server=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)<br>
+(HOST=192.168.1.11,1433)(PORT=1233))(CONNECT_DATA=(SID=dbName)));Uid=urUsername;<br>
+Pwd=urPassword;</p> <p> <strong>
+OR:</strong></p> <p>
+Driver={Microsoft
+ODBC for Oracle};CONNECTSTRING=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)</p>
+(HOST=server)(PORT=5000))(CONNECT_DATA=(SERVICE_NAME=urDb)));Uid=urUsername;Pwd=urPassword<br> <br> <strong>Microsoft ODBC Driver for Oracle</strong><br> <br>
+Microsoft ODBC Driver for Oracle allows you to connect your ODBC-compliant
+application to an Oracle database. The ODBC Driver for Oracle enables an
+application to access data in an Oracle database through the ODBC interface. The
+driver can access local Oracle databases or it can communicate with the network
+through SQL*Net.<br> <br> <strong>Code</strong><br> <br>
+Include "Driver={Microsoft ODBC Driver for Oracle}" in the connection string to
+use this driver.<br> <br> <strong>
+&gt;
+Old version</strong> <p> <strong>
+Syntax:</strong></p> <p>
+Driver={Microsoft
+ODBC Driver for Oracle};ConnectString=OracleServer.world;Uid=urUsername;</p> <p>
+Pwd=urPassword;</p> <p><strong>
+MSDataShape</strong></p> <p> <strong>
+MSDataShape</strong>
+is used to create hierarchial Recordsets, so that we can be able to browse
+relational data in a convenient way.</p> <p><strong>
+&gt;
+Code</strong></p> <p>
+Include "Provider=MSDataShape;Data Provider=providername" in the
+connection string to use this wrapper COM component.</p> <p> <strong>
+&gt;
+MSDataShape</strong></p> <p> <strong>
+Syntax:</strong></p> <p>
+Provider=MSDataShape;Persist
+Security Info=False;Data
+Provider=MSDAORA;Data
+Source=orac;User
+Id=urUsername;Password=urPassword;<br> </p> <p></p></div> </div> <div class="clear"></div> <div class="linkAdContainer bottom" id="LinkAdContainerBottom"> </div> <div class="clear"></div> <div style="display:inline-block;margin-right:12px;"> <script>
+googletag.cmd.push(function() {
+googletag.defineSlot('/59065024/cc_336X280Second', [336, 280], 'div-gpt-ad-1550337398377-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+});
+</script> <div id="div-gpt-ad-1550337398377-0" style="height: 280px; width: 336px;" data-google-query-id="CM63psWN1uACFcGCcAodmZgPxw">  <div id="google_ads_iframe_/59065024/cc_336X280Second_0__container__" style="border: 0pt none; display: inline-block; width: 336px; height: 280px;"><iframe frameborder="0" src="./Oracle Connection String using C#_files/container.html" id="google_ads_iframe_/59065024/cc_336X280Second_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="336" height="280" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="e" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div> </div> <div style="display:inline-block"> <script>
+googletag.cmd.push(function() {
+googletag.defineSlot('/59065024/cc_300X250', [300, 250], 'div-gpt-ad-1549215602021-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+});
+</script> <!-- /59065024/cc_300X250 --> <div id="div-gpt-ad-1549215602021-0" style="height: 250px; width: 300px;" data-google-query-id="CM-3psWN1uACFcGCcAodmZgPxw">  <div id="google_ads_iframe_/59065024/cc_300X250_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./Oracle Connection String using C#_files/container(1).html" id="google_ads_iframe_/59065024/cc_300X250_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="f" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div> </div> <div class="clear"></div> <div id="OurEbooks">
+
+<div class="clear"></div>
+<div id="ctl00_TopRadomEbooks" class="related-ebooks">
+    <div class="ebooks_title t-center">
+        <h2>Our Books</h2>
+    </div>
+    <div class="divider" style="margin: auto; margin-bottom: 30px;"></div>
+    <div class="sliderBox">
+        <div id="ctl00_RecommandedEbooks" class="slider slideshow">
+            <ul>
+                
+                        <li style="left:40px">
+                            <a title="Windows Phone 8.1 Complete Solution" "="" href="https://www.c-sharpcorner.com/ebooks/windows-phone-81-complete-solution" target="_blank">
+                                <img width="126" height="146" src="./Oracle Connection String using C#_files/12192014101951AMbook_small.png" alt="">
+                                <div class="bookTitleSlider">Windows Phone 8.1 Complete Sol...</div>
+                            </a>
+                        </li>
+                    
+                        <li style="left:182px">
+                            <a title="Diving Into ASP.NET WebAPI" "="" href="https://www.c-sharpcorner.com/ebooks/diving-into-Asp-Net-webapi" target="_blank">
+                                <img width="126" height="146" src="./Oracle Connection String using C#_files/05122016072547AMDiving into WebAPI_small.jpg" alt="">
+                                <div class="bookTitleSlider">Diving Into ASP.NET WebAPI</div>
+                            </a>
+                        </li>
+                    
+                        <li style="left:324px">
+                            <a title="Windows Phone 7 Hileleri" "="" href="https://www.c-sharpcorner.com/ebooks/windows-phone-7-hileleri" target="_blank">
+                                <img width="126" height="146" src="./Oracle Connection String using C#_files/05062014012750AM08152012232900PMwp7hilelercover.png" alt="">
+                                <div class="bookTitleSlider">Windows Phone 7 Hileleri</div>
+                            </a>
+                        </li>
+                    
+                        <li style="left:466px">
+                            <a title="Programming Windows Common Dialogs with Visual C# 2010 " "="" href="https://www.c-sharpcorner.com/ebooks/programming-windows-common-dialogs-with-visual-csharp_2010" target="_blank">
+                                <img width="126" height="146" src="./Oracle Connection String using C#_files/12122011081243AMProgrammingWindowsCommonDialogsWithCSharp2010.jpg" alt="">
+                                <div class="bookTitleSlider">Programming Windows Common Dia...</div>
+                            </a>
+                        </li>
+                    
+                        <li style="left:608px">
+                            <a title="Exploring Design Pattern for Dummies" "="" href="https://www.c-sharpcorner.com/ebooks/exploring-design-pattern-for-dummies" target="_blank">
+                                <img width="126" height="146" src="https://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/" alt="" data-src="https://s3.ap-south-1.amazonaws.com/bkt-pubcsharpcorner/UploadFile/EBooks/10032013032153AM/05062014012012AM10032013032438AMBook.png">
+                                <div class="bookTitleSlider">Exploring Design Pattern for D...</div>
+                            </a>
+                        </li>
+                    
+                        <li style="left:750px">
+                            <a title="Guide to Microsoft Enterprise Library" "="" href="https://www.c-sharpcorner.com/ebooks/guide-to-microsoft-enterprise-library" target="_blank">
+                                <img width="126" height="146" src="https://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/" alt="" data-src="https://s3.ap-south-1.amazonaws.com/bkt-pubcsharpcorner/UploadFile/EBooks/12122013230302PM/05062014011607AM12122013230620PMbook.png">
+                                <div class="bookTitleSlider">Guide to Microsoft Enterprise ...</div>
+                            </a>
+                        </li>
+                    
+                        <li style="left:892px">
+                            <a title="An Introduction to R" "="" href="https://www.c-sharpcorner.com/ebooks/an-introduction-to-r" target="_blank">
+                                <img width="126" height="146" src="https://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/" alt="" data-src="https://s3.ap-south-1.amazonaws.com/bkt-pubcsharpcorner/UploadFile/EBooks/03092016015400AM/03092016020442AMBookCover_small(2).jpg">
+                                <div class="bookTitleSlider">An Introduction to R</div>
+                            </a>
+                        </li>
+                    
+                        <li style="left:1034px">
+                            <a title="Building Standalone Data-Driven Applications using SQL Server Compact 4.0" "="" href="https://www.c-sharpcorner.com/ebooks/building-standalone-data-driven-applications-using-sql-server-compact_4" target="_blank">
+                                <img width="126" height="146" src="https://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/" alt="" data-src="https://s3.ap-south-1.amazonaws.com/bkt-pubcsharpcorner/UploadFile/EBooks/09072011083305AM/05062014013656AM12122011080816AMBuildingStandaloneDataDrivenApplicationsUsingSQLServerCompact4.png">
+                                <div class="bookTitleSlider">Building Standalone Data-Drive...</div>
+                            </a>
+                        </li>
+                    
+            </ul>
+            <div style="clear:both"></div>
+        </div>
+        <a class="prev" href="javascript:void(0)"><span class="back" id="prev">&lt;</span></a><a class="next" id="next" href="javascript:void(0)"><span class="">&gt;</span></a>
+    </div>
+</div>
+<div class="clear"></div>
+</div> <div class="clearfix"></div> <div class="clear"></div> <div id="ctl00_divTagsBox" class="tags item-list margin-t15"> <ul id="ArticleTagKeywords" class="list-inline-float tag-cloud"><li><a href="https://www.c-sharpcorner.com/topics/ado-net-connection-string">ADO.NET connection string</a></li><li><a href="https://www.c-sharpcorner.com/topics/c-sharp-oracle-connection-string">C# Oracle connection string</a></li><li><a href="https://www.c-sharpcorner.com/topics/connection-string">Connection string</a></li><li><a href="https://www.c-sharpcorner.com/topics/connection-string-for-oracle-data-provider">connection string for Oracle data provider</a></li><li><a href="https://www.c-sharpcorner.com/topics/connection-string-in-c-sharp">Connection string in C#</a></li><li><a href="https://www.c-sharpcorner.com/topics/oracle-connection-string">Oracle connection string</a></li></ul> </div> <div id="AboutAuthorBox"> 
+
+<div class="author-bio-content">
+    <div class="media">
+        <div class=" media-left ">
+            <a href="https://www.c-sharpcorner.com/members/nipun-tomar2" id="ctl00_AuthorImageAnchor" class="image">
+                <img src="./Oracle Connection String using C#_files/nipuntomar20190120045058.jpg.ashx" id="ctl00_AuthorImage" class="user-image-98" alt="Nipun Tomar"></a>
+        </div>
+        <div class="media-body">
+            <a href="https://www.c-sharpcorner.com/members/nipun-tomar2" id="AuthorLinkForName" class="author-profile-link">
+                <h4 id="AuthorName">Nipun Tomar</h4>
+            </a>
+            <img src="./Oracle Connection String using C#_files/top_50.png" id="TopAuthorImage" class="top-author" title="Top 50">
+            <p id="AuthorBio" class="bio-info">Nipun Tomar is competent and experienced project leader &amp; architect with 12 years of experience in managing multi-disciplinary teams of varying sizes and complex programs of work. Has the ability to build strong rela... <a href="https://www.c-sharpcorner.com/members/nipun-tomar2" class="LinkNormalBlue">Read more</a></p>
+           <a href="https://www.c-sharpcorner.com/members/nipun-tomar2" class="author-page-link" target="_blank"><i class="d-icon icon-link"></i>https://www.c-sharpcorner.com/members/nipun-tomar2</a>
+        </div>
+    </div>
+    <ul id="AuthorBadgesContainer" class="list-inline author-bio-icons"><li title="Overall Rank"><a href="https://www.c-sharpcorner.com/top-members"><i class="d-icon icon-rank"></i>50</a></li><li title="Total Views"><a href="https://www.c-sharpcorner.com/members/nipun-tomar2/top-articles"><i class="d-icon icon-book"></i>10m</a></li><li title="Platinum Member"><a><i class="d-icon icon-medal-  icon-medal-platinum"></i></a></li><li title="User is a C# Corner MVP"><a href="https://www.c-sharpcorner.com/members/mvps/"><i class="d-icon icon-c-MVP "></i>1</a></li></ul>
+</div>
+
+
+<div class="clear">
+</div>
+<div id="FollowPopup" class="follow-popup bottom hide">
+   <div class="popup-head">
+        <button type="button" title="Close" onclick="return closeFollowPopup();" class="transparent-btn close pull-right close-btn relative"></button>
+        <span id="FollowPopupTitle">Don’t miss Nipun Tomar’s next article</span>
+    </div>
+    <div class="media">
+        <div class="media-left media-top">
+            <a href="https://www.c-sharpcorner.com/members/nipun-tomar2" id="LinkForAuthorPhoto">
+                <img src="./Oracle Connection String using C#_files/nipuntomar20190120045058.jpg.ashx" id="FollowPopupAuthorImage" title="" class="user-image-48">
+            </a>
+        </div>
+        <div class="media-body">
+            <a href="https://www.c-sharpcorner.com/members/nipun-tomar2" id="FollowPopupAuthorName" class="author">Nipun Tomar</a>
+            <div class="rpv-wrapper">
+            <i class="d-icon icon-author-r"></i><span id="spanRank" title="Rank">50</span>
+			<i class="d-icon icon-author-p"></i><span id="spanReputation" title="Reputation">25.5k</span>
+			<i class="d-icon icon-author-v"></i><span id="spanReadCount" title="Total Views">10m</span>
+            </div>
+            <button id="btnFollowAuthor" onclick="followAuthor(true); return false;" class="pill-btn" title="Follow"><span class="follow-sign">+&nbsp;</span>Follow</button>
+            <img id="loaderFollowAuthor" src="./Oracle Connection String using C#_files/ajax-loader-small.gif" class="hide">
+        </div>
+    </div>
+</div>
+
+
+<input type="hidden" name="ctl00$HiddenFieldAuthorID" id="HiddenFieldAuthorID" value="nipuntomar">
+<input type="hidden" name="ctl00$HiddenFieldPageReturnUrl" id="HiddenFieldPageReturnUrl" value="/UploadFile/nipuntomar/connection-strings-for-oracle/">
+<input name="ctl00$hiddenAuthorInfo" type="hidden" id="hiddenAuthorInfo" data-internal="0" data-rank-classname="newSpriteIcons rank" data-twitter-handle="" data-unique-name="nipun-tomar2" data-author-id="nipuntomar" data-popup-title="Don’t miss Nipun Tomar’s next" data-rank="50" data-twitter-url="" data-profile-url="https://www.c-sharpcorner.com/members/nipun-tomar2" data-readcount="10m" data-user-type="S" data-reputation="25.5k">
+
+<input name="ctl00$hddTotalFollowers" type="hidden" id="hddTotalFollowers" value="149">
+<input name="ctl00$hddTotalFollowing" type="hidden" id="hddTotalFollowing" value="0">
+<input name="ctl00$hddIsFollowing" type="hidden" id="hddIsFollowing" value="False">
+<input name="ctl00$hddIsLoginAuthorContent" type="hidden" id="hddIsLoginAuthorContent" value="false"></div> <div class="clear"></div> <div id="ctl00_CommentsBox" class="commentsContainer">
+
+
+<div class="comment-content-bottom margin-t15 padding-t15">
+    <div class="comment-head clearfix article">
+        <span id="divViewPreviousComments" class="previous-comments-wrapper" style="display: block;"><a href="javascript:void(0);" id="ViewPreviousComments" class="previousComments" style="display: none;" onclick="Comments.ViewPreviousComments();return false;">View Previous Comments </a></span>
+        <ul class="list-unstyled list-inline user-action-list-footer">
+            <li id="BottomEmotionsContainer" class="relative"> <a href="javascript:void(0);" id="btnLikeAnchor" class="d-icon icon-28 icon-like like-button"></a> <a href="javascript:void(0);" id="AnchorEmotionPopup" onclick="getContentReactions(&#39;c3aab4a4-49d3-4c85-b47b-a30fb729c33d&#39;,&#39;article&#39;);"> <span id="LabelLikeCount" class="user-action-count">5</span> </a> <ul id="emotionsContainer" class="emotions-wrapper list-inline"> <li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(1,&quot;icon-e-like&quot;);" class="d-icon icon-e-like" data-toggle="tooltip" data-title="Like"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(2,&quot;icon-e-love&quot;);" class="d-icon icon-e-love" data-toggle="tooltip" data-title="Love It"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(4,&quot;icon-e-awesome&quot;);" class="d-icon icon-e-awesome" data-toggle="tooltip" data-title="Awesome"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(5,&quot;icon-e-interesting&quot;);" class="d-icon icon-e-interesting" data-toggle="tooltip" data-title="Interesting"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(7,&quot;icon-e-okay&quot;);" class="d-icon icon-e-okay" data-toggle="tooltip" data-title="It&#39;s Okay"></a><span></span></li><li class="relative"><a href="javascript:void(0);" onclick="reactByEmotion(8,&quot;icon-e-poor&quot;);" class="d-icon icon-e-poor" data-toggle="tooltip" data-title="Thumbs Down"></a><span></span></li></ul> </li>
+            <li id="commentsBox" class="relative">
+                <a href="javascript:void(0);" id="CommentIcon2" title="Comments">
+                <i class="d-icon icon-28 icon-comment2"></i><span id="TotalComments" data-total-count="0" class="user-action-count text-grey-700 title bold">4</span></a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="ctl00_Panel1" defaultbutton="Button1" class="content-bottom-comment">
+        <a name="ReadAndPostComment" id="ReadAndPostComment"></a>    
+        <div class="article" id="commentcontrolslist">
+            <div class="comment-body">
+                <div id="cancel_0" style="color:red; font-size:12px; margin-left:67px; margin-bottom:-13px; display:none;" class="hidden-md-down">Press Esc key to cancel</div>
+                <div class="media">
+                    <div class="media-left">
+                        <img src="./Oracle Connection String using C#_files/DefaultAuthorImage.jpg.ashx" alt="" class="user-image-56">
+
+                    </div>
+                    <div class="media-body">
+                        <div class="mentions-input-box"><div class="mentions"><div></div></div><textarea id="InputCommentText_0" onkeyup="Comments.RemovePreviousComment(&#39;0&#39;,this,event,&#39;post&#39;);" onkeypress="Comments.PostComment(&#39;0&#39;,event);" class="form-control mention" spellcheck="true" placeholder="Type your comment here and press Enter Key (Minimum 10 characters)" data-mentions-input="true" style="overflow: hidden; height: 44px;"></textarea><div style="position: absolute; display: none; overflow-wrap: break-word; white-space: pre-wrap; border-color: rgb(220, 220, 220); border-style: solid; border-width: 0.994318px; font-weight: 400; width: 573.011px; font-family: &quot;open sans&quot;, sans-serif; line-height: 20px; font-size: 14px; padding: 5px;">&nbsp;</div><div class="mentions-autocomplete-list"></div></div>
+                        <input type="submit" name="ctl00$ButtonPost" value="" id="ctl00_ButtonPost" style="display: none;">
+                        
+                        <img id="PostLoader" src="./Oracle Connection String using C#_files/ajax-loader-small(1).gif" alt="Loading..." style="clear: both; margin: 10px 5px 0px 0px; float: right; display: none;">
+                    </div>
+                </div>
+                <div class="media" id="RootComments">
+                <div class="media" id="comment_143987" onmouseover="Comments.ShowEditorOptions(this,event);" onmouseout="Comments.HideEditorOptions(this,event);"><div class="media-left"><a href="https://www.c-sharpcorner.com/members/ananth-g2"><img class="user-image-56" alt="Ananth G" title="Ananth G" src="./Oracle Connection String using C#_files/0a090520161205085934.jpg.ashx"></a></div><div class="media-body"><div class="commentDescription"><div class="comment-action-button comment-parent"><a class="d-icon icon-flag" href="javascript:void(0)" onclick="return Comments.ReportComment(143987,&#39;0a0905&#39;,&#39;Good%20article&#39;,&#39;https://www.c-sharpcorner.com/members/ananth-g2&#39;,&#39;Ananth G&#39;);" title="Report this comment"></a> </div><div data-comment="" class="commentDescription">Good article</div><div class="comment-info clearfix">                    <span class="comment-time">                    <i class="d-icon icon-clock-small"></i>Oct 21, 2016</span><a href="https://www.c-sharpcorner.com/members/ananth-g2" alt="Ananth G">Ananth G</a></div><div class="comment-info clearfix"><span class="rpv-wrapper">                    <span title="Rank"><i class="d-icon icon-author-r"></i>565</span>                    <span title="Reputation"><i class="d-icon icon-author-p"></i>2.5k</span>                    <span title="Total Views"><i class="d-icon icon-author-v"></i>229.7k</span></span><ul class="list-inline comment-reply-wrapper">                    <li title="Likes">                        <img alt="Loading..." id="ajaxLoader_143987" src="./Oracle Connection String using C#_files/ajax-loader-small.gif" style="margin:4px 0px 0px 5px;" class="hide">                        <a href="javascript:void(0)" onclick="Comments.LikeComment(143987)">                        <i class="v-middle icon-20 d-icon icon-like-small"></i><span id="Likes_143987" class="text-grey-600">1</span> </a></li>                    <li title="Replies"><a href="javascript:void(0)" onclick="Comments.ToggleReplies(143987)">                    <i class="v-middle icon-20 d-icon icon-reply-small"></i>                    <span id="Replies_143987" class="text-grey-600">0</span> </a></li><li class="text-grey-600">                            <a class="text-grey-600" href="javascript:void(0)" onclick="Comments.ShowReplyBox(143987)" title="Post Reply">                            <i class="v-middle icon-20 d-icon icon-reply-all-small"></i>Reply</a></li></ul></div><div class="media comment-replies" id="CommentReplies_143987"></div></div></div></div><div class="media BackgroundWhite" id="comment_109408" onmouseover="Comments.ShowEditorOptions(this,event);" onmouseout="Comments.HideEditorOptions(this,event);"><div class="media-left"><a href="https://www.c-sharpcorner.com/members/nitin-khairnar3"><img class="user-image-56" alt="Nitin Khairnar" title="Nitin Khairnar" src="./Oracle Connection String using C#_files/DefaultAuthorImage.jpg(1).ashx"></a></div><div class="media-body"><div class="commentDescription"><div class="comment-action-button comment-parent"><a class="d-icon icon-flag" href="javascript:void(0)" onclick="return Comments.ReportComment(109408,&#39;98d3b4&#39;,&#39;Good%20Article.&#39;,&#39;https://www.c-sharpcorner.com/members/nitin-khairnar3&#39;,&#39;Nitin Khairnar&#39;);" title="Report this comment"></a> </div><div data-comment="" class="commentDescription">Good Article.</div><div class="comment-info clearfix">                    <span class="comment-time">                    <i class="d-icon icon-clock-small"></i>Feb 12, 2016</span><a href="https://www.c-sharpcorner.com/members/nitin-khairnar3" alt="Nitin Khairnar">Nitin Khairnar</a></div><div class="comment-info clearfix"><span class="rpv-wrapper">                    <span title="Rank"><i class="d-icon icon-author-r"></i>1746</span>                    <span title="Reputation"><i class="d-icon icon-author-p"></i>2</span>                    <span title="Total Views"><i class="d-icon icon-author-v"></i>0</span></span><ul class="list-inline comment-reply-wrapper">                    <li title="Likes">                        <img alt="Loading..." id="ajaxLoader_109408" src="./Oracle Connection String using C#_files/ajax-loader-small.gif" style="margin:4px 0px 0px 5px;" class="hide">                        <a href="javascript:void(0)" onclick="Comments.LikeComment(109408)">                        <i class="v-middle icon-20 d-icon icon-like-small"></i><span id="Likes_109408" class="text-grey-600">1</span> </a></li>                    <li title="Replies"><a href="javascript:void(0)" onclick="Comments.ToggleReplies(109408)">                    <i class="v-middle icon-20 d-icon icon-reply-small"></i>                    <span id="Replies_109408" class="text-grey-600">0</span> </a></li><li class="text-grey-600">                            <a class="text-grey-600" href="javascript:void(0)" onclick="Comments.ShowReplyBox(109408)" title="Post Reply">                            <i class="v-middle icon-20 d-icon icon-reply-all-small"></i>Reply</a></li></ul></div><div class="media comment-replies" id="CommentReplies_109408"></div></div></div></div><div class="media" id="comment_44761" onmouseover="Comments.ShowEditorOptions(this,event);" onmouseout="Comments.HideEditorOptions(this,event);"><div class="media-left"><a href="https://www.c-sharpcorner.com/members/angel-adinolffi"><img class="user-image-56" alt="angel adinolffi" title="angel adinolffi" src="./Oracle Connection String using C#_files/DefaultAuthorImage.jpg(1).ashx"></a></div><div class="media-body"><div class="commentDescription"><div class="comment-action-button comment-parent"><a class="d-icon icon-flag" href="javascript:void(0)" onclick="return Comments.ReportComment(44761,&#39;a8f236&#39;,&#39;This%20site%20is%20explained%20with%20clear%20examples%20how%20to%20make%20a%20connection%20to%20Oracle%20using%20the%20Oracle%20Data%20Provider%20for.%20NET%20%0Ahttp%3A%26%2347%3B/www.systemdeveloper.org/2014/06/methods-connection-to-oracle-database-with-c-net/&#39;,&#39;https://www.c-sharpcorner.com/members/angel-adinolffi&#39;,&#39;angel adinolffi&#39;);" title="Report this comment"></a> </div><div data-comment="" class="commentDescription">This site is explained with clear examples how to make a connection to Oracle using the Oracle Data Provider for. NET 
+http://www.systemdeveloper.org/2014/06/methods-connection-to-oracle-database-with-c-net/</div><div class="comment-info clearfix">                    <span class="comment-time">                    <i class="d-icon icon-clock-small"></i>Jun 13, 2014</span><a href="https://www.c-sharpcorner.com/members/angel-adinolffi" alt="angel adinolffi">angel adinolffi</a></div><div class="comment-info clearfix"><span class="rpv-wrapper">                    <span title="Rank"><i class="d-icon icon-author-r"></i>1730</span>                    <span title="Reputation"><i class="d-icon icon-author-p"></i>18</span>                    <span title="Total Views"><i class="d-icon icon-author-v"></i>0</span></span><ul class="list-inline comment-reply-wrapper">                    <li title="Likes">                        <img alt="Loading..." id="ajaxLoader_44761" src="./Oracle Connection String using C#_files/ajax-loader-small.gif" style="margin:4px 0px 0px 5px;" class="hide">                        <a href="javascript:void(0)" onclick="Comments.LikeComment(44761)">                        <i class="v-middle icon-20 d-icon icon-like-small"></i><span id="Likes_44761" class="text-grey-600">1</span> </a></li>                    <li title="Replies"><a href="javascript:void(0)" onclick="Comments.ToggleReplies(44761)">                    <i class="v-middle icon-20 d-icon icon-reply-small"></i>                    <span id="Replies_44761" class="text-grey-600">0</span> </a></li><li class="text-grey-600">                            <a class="text-grey-600" href="javascript:void(0)" onclick="Comments.ShowReplyBox(44761)" title="Post Reply">                            <i class="v-middle icon-20 d-icon icon-reply-all-small"></i>Reply</a></li></ul></div><div class="media comment-replies" id="CommentReplies_44761"></div></div></div></div><div class="media BackgroundWhite" id="comment_16542" onmouseover="Comments.ShowEditorOptions(this,event);" onmouseout="Comments.HideEditorOptions(this,event);"><div class="media-left"><a href="https://www.c-sharpcorner.com/members/abdul-baseer-yousofza"><img class="user-image-56" alt="Abdul Baseer Yousofza" title="Abdul Baseer Yousofza" src="./Oracle Connection String using C#_files/DefaultAuthorImage.jpg(1).ashx"></a></div><div class="media-body"><div class="commentDescription"><div class="comment-action-button comment-parent"><a class="d-icon icon-flag" href="javascript:void(0)" onclick="return Comments.ReportComment(16542,&#39;ca7844&#39;,&#39;Thanks%20for%20the%20grea%20information%20regarding%20the%20Connection%20Strings%20%2C%20basically%20my%20own%20Specialization%20is%20in%20Oracle%20.and%20was%20out%20of%20my%20feild%20for%20long%20time%20working%20in%20a%20mangerial%20side.%20now%20i%20am%20back%20to%20my%20feild%20here%20in%20Afghanistan%20Oacle%20is%20not%20in%20as%20much%20as%20SQL%20Server%20and%20ASP.Net%20C%23.Net%20etc%20would%20like%20you%20to%20guide%20me%20how%20to%20improve%20my%20skills%20in%20this%20regards.%20%0D%0Athanks&#39;,&#39;https://www.c-sharpcorner.com/members/abdul-baseer-yousofza&#39;,&#39;Abdul Baseer Yousofza&#39;);" title="Report this comment"></a> </div><div data-comment="" class="commentDescription">Thanks for the grea information regarding the Connection Strings , basically my own Specialization is in Oracle .and was out of my feild for long time working in a mangerial side. now i am back to my feild here in Afghanistan Oacle is not in as much as SQL Server and ASP.Net C#.Net etc would like you to guide me how to improve my skills in this regards. 
+thanks</div><div class="comment-info clearfix">                    <span class="comment-time">                    <i class="d-icon icon-clock-small"></i>Dec 22, 2010</span><a href="https://www.c-sharpcorner.com/members/abdul-baseer-yousofza" alt="Abdul Baseer Yousofza">Abdul Baseer Yousofza</a></div><div class="comment-info clearfix"><span class="rpv-wrapper">                    <span title="Rank"><i class="d-icon icon-author-r"></i>1728</span>                    <span title="Reputation"><i class="d-icon icon-author-p"></i>20</span>                    <span title="Total Views"><i class="d-icon icon-author-v"></i>0</span></span><ul class="list-inline comment-reply-wrapper">                    <li title="Likes">                        <img alt="Loading..." id="ajaxLoader_16542" src="./Oracle Connection String using C#_files/ajax-loader-small.gif" style="margin:4px 0px 0px 5px;" class="hide">                        <a href="javascript:void(0)" onclick="Comments.LikeComment(16542)">                        <i class="v-middle icon-20 d-icon icon-like-small"></i><span id="Likes_16542" class="text-grey-600">3</span> </a></li>                    <li title="Replies"><a href="javascript:void(0)" onclick="Comments.ToggleReplies(16542)">                    <i class="v-middle icon-20 d-icon icon-reply-small"></i>                    <span id="Replies_16542" class="text-grey-600">0</span> </a></li><li class="text-grey-600">                            <a class="text-grey-600" href="javascript:void(0)" onclick="Comments.ShowReplyBox(16542)" title="Post Reply">                            <i class="v-middle icon-20 d-icon icon-reply-all-small"></i>Reply</a></li></ul></div><div class="media comment-replies" id="CommentReplies_16542"></div></div></div></div></div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+<div id="ctl00_SocialComments" class="socialComments hidden-sm-down">
+
+</div>
+
+<input id="HiddenCommentPageNumber" type="hidden" value="1">
+<input id="HiddenTotalComments" type="hidden" value="4">
+
+<input type="hidden" name="ctl00$HiddenFieldEmailComment" id="ctl00_HiddenFieldEmailComment">
+<input type="hidden" name="ctl00$HiddenFieldIsChildComment" id="ctl00_HiddenFieldIsChildComment">
+<input type="hidden" name="ctl00$HiddenFieldParentUserId" id="ctl00_HiddenFieldParentUserId">
+
+
+<input type="hidden" name="ctl00$hddType" id="hddType" value="article">
+<input type="hidden" name="ctl00$hddContentId" id="hddContentId" value="c3aab4a4-49d3-4c85-b47b-a30fb729c33d">
+<input type="hidden" name="ctl00$hddCurrentUser" id="hddCurrentUser">
+<input type="hidden" name="ctl00$hddCurrentRole" id="hddCurrentRole">
+<input type="hidden" name="ctl00$hddCurrentUserPhoto" id="hddCurrentUserPhoto" value="https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/AuthorImage/DefaultAuthorImage.jpg">
+<input type="hidden" name="ctl00$hddAllowPost" id="hddAllowPost" value="true">
+<input type="hidden" name="ctl00$hddContentUserId" id="hddContentUserId" value="nipuntomar">
+<input type="hidden" name="ctl00$hddContentUserEmail" id="hddContentUserEmail">
+<input type="hidden" name="ctl00$hddContentTitle" id="hddContentTitle" value="Oracle Connection String using C#">
+<input type="hidden" name="ctl00$hiddenLoginCheckUrl" id="hiddenLoginCheckUrl" value="https://www.c-sharpcorner.com/userregistration/logincheck.aspx?returnurl=https://www.c-sharpcorner.com/uploadfile/nipuntomar/connection-strings-for-oracle/">
+<input type="hidden" name="ctl00$HiddenRawUrl" id="HiddenRawUrl" value="/UploadFile/nipuntomar/connection-strings-for-oracle/">
+<input type="hidden" name="ctl00$HiddenProcessType" id="HiddenProcessType" value="by-ajax">
+
+
+</div> </div> <div class="right-bar hidden-md-down "> <script>
+googletag.cmd.push(function() {
+googletag.defineSlot('/59065024/cc_adbanner', [336, 280], 'div-gpt-ad-1542000453823-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script> <!-- /59065024/cc_adbanner --> <div id="div-gpt-ad-1542000453823-0" data-google-query-id="CNC3psWN1uACFcGCcAodmZgPxw">  <div id="google_ads_iframe_/59065024/cc_adbanner_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/59065024/cc_adbanner_0" title="3rd party ad content" name="google_ads_iframe_/59065024/cc_adbanner_0" width="336" height="280" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="7" data-load-complete="true" src="./Oracle Connection String using C#_files/saved_resource(1).html"></iframe></div></div> <div id="NewsArticleAdBox"></div> <div id="PremiumSponsorTextAdBox" style="margin:10px 0;">
+<h4 class="heading" style="margin:15px 0;">OUR TRAINING</h4>
+<div id="SponsorAdContainer" class="rightbar-ad">
+    <div class="media">
+            <div class="media-left media-top">
+                <a href="https://www.c-sharpcorner.com/AdRedirector.aspx?AdId=134&amp;target=https://training.c-sharpcorner.com/p/ios-12-swift-4" id="SponsorLink"><img src="./Oracle Connection String using C#_files/071402AM.png" id="ImgSponsor" height="88" width="88"></a>
+            </div>
+            <div class="media-body">
+                <h4><a href="https://www.c-sharpcorner.com/AdRedirector.aspx?AdId=134&amp;target=https://training.c-sharpcorner.com/p/ios-12-swift-4" id="SponsorLink2" class="text-grey-900">iOS Development With Swift 4</a></h4>
+                <p id="SponsorDetail" class="small">Learn iOS 12, Swift 4, ARKit, CoreML, App Design and Much More.</p>
+                <input name="ctl00$HiddenMinorCategory" type="hidden" id="HiddenMinorCategory" value="131">
+            </div>
+    </div>
+</div>
+</div> <script>
+googletag.cmd.push(function() {
+googletag.defineSlot('/59065024/csc300x600', [300, 600], 'div-gpt-ad-1542004232112-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+});
+</script> <!-- /59065024/csc300x600 --> <div id="div-gpt-ad-1542004232112-0" data-google-query-id="CNG3psWN1uACFcGCcAodmZgPxw" style="">  <div id="google_ads_iframe_/59065024/csc300x600_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/59065024/csc300x600_0" title="3rd party ad content" name="google_ads_iframe_/59065024/csc300x600_0" width="300" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="h" data-load-complete="true" src="./Oracle Connection String using C#_files/saved_resource(2).html"></iframe></div></div> <div class="rightbar-items"> <h4 class="heading"> <a href="https://www.c-sharpcorner.com/rss/toparticles.aspx" class="rss-link-right" target="_blank"> <i class="c-icon icon-rss icon-20"></i> </a>TRENDING UP
+</h4> <ul id="TrendingUpList" class="numbered-list"><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">01</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/best-programming-language-for-machine-learning/">Best Programming Language for Machine Learning</a></div></li><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">02</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/dependency-injection-in-net-core/">Dependency Injection In .NET Core</a></div></li><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">03</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/angular-7-project-with-asp-net-core-apis-gym-project/">Angular 7 Project With ASP.NET CORE APIs (Gym Project)</a></div></li><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">04</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/generic-extension-method-to-map-objects-from-one-type-to-another/">Generic Extension Method To Map Objects From One Type To Another </a></div></li><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">05</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/all-about-c-sharp-collections-when-to-choose-what/">All About C# Collections - When To Choose What</a></div></li><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">06</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/create-an-angular-7-app-with-asp-net-core-2-1/">Create an Angular 7 App with ASP.NET Core 2.1</a></div></li><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">07</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/debugging-in-web-application-using-vscode/">Debug A Web Application Using VSCode</a></div></li><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">08</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/best-programming-language-for-android-app/">Best Programming Language For Android Apps</a></div></li><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">09</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/net-core-web-api-logging-using-nlog-in-rabbitmq/">.NET Core Web API Logging Using NLog In RabbitMQ</a></div></li><li class="media margin-t8"><div class="media-left media-middle"> <span class="numbers">10</span></div><div class="media-body media-middle"><a class="body" href="https://www.c-sharpcorner.com/article/crud-operations-in-net-core-3-0-with-visual-studio-2019/">CRUD Operations In .NET Core 3.0 With Visual Studio 2019</a></div></li></ul> <p class="view-all-link"> <a href="https://www.c-sharpcorner.com/top-articles">View All<i class="c-icon icon-view-all"></i></a> </p> </div> <div id="NewArticleAdMiddle"></div> <div class="sticky-ad"> <script>
+googletag.cmd.push(function() {
+googletag.defineSlot('/59065024/cc_300X600Second', [300, 600], 'div-gpt-ad-1550337109460-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+});
+</script> <div id="div-gpt-ad-1550337109460-0" data-google-query-id="CNOtqMWN1uACFRRNKwodZCoMLA" style="">  <div id="google_ads_iframe_/59065024/cc_300X600Second_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/59065024/cc_300X600Second_0" title="3rd party ad content" name="google_ads_iframe_/59065024/cc_300X600Second_0" width="300" height="600" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="u" data-load-complete="true" src="./Oracle Connection String using C#_files/saved_resource(3).html"></iframe></div></div> </div> <div id="bannerLargeAd"></div></div> </div> </div> <footer> <div class="bottom-footer"> <div class="b-container"> <div> <div class="right-items"> <ul class="footer-social-bar"> <li><a title="Facebook" target="_blank" href="http://www.facebook.com/pages/C-Corner/194086953935286" class="facebook-icon"><i class="c-icon icon-28 icon-facebook"></i></a></li> <li><a title="Twitter" target="_blank" href="http://twitter.com/csharpcorner" class="twitter-icon"><i class="c-icon icon-28 icon-twitter"></i></a></li> <li><a title="Google+" target="_blank" href="https://plus.google.com/u/0/114221266846457741050/posts" class="googleplus-icon"><i class="c-icon icon-28 icon-googleplus"></i></a></li> <li><a title="Youtube" target="_blank" href="http://www.youtube.com/user/CsharpCorner1/" class="youtube-icon"><i class="c-icon icon-28 icon-youtube"></i></a></li> <li><a title="iOS App" target="_blank" href="https://itunes.apple.com/us/app/c-corner/id451080586?ls=1&amp;mt=8" class="birch-icon"><i class="c-icon icon-28 icon-birch"></i></a></li> <li><a title="Android App" target="_blank" href="https://play.google.com/store/apps/details?id=com.mcn.csharpcorner&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" class="birch-icon"><i class="c-icon icon-28 icon-google-play-store"></i></a></li> <li><a title="Windows App" target="_blank" href="https://www.microsoft.com/store/apps/9nblggh4tmwd?ocid=badge" class="birch-icon"><i class="c-icon icon-28 icon-win-store"></i></a></li> <li><a title="C# Corner Support" target="_blank" href="http://whatsapp.c-sharpcorner.com/" class="whatsapp-icon"><i class="c-icon icon-28 icon-whatsapp"></i></a></li> </ul> </div> <div class="left-items"> <ul class="footer-nav"> <li><a href="https://www.c-sharpcorner.com/about">About Us</a></li> <li><a href="https://www.c-sharpcorner.com/contactus.aspx">Contact Us</a></li> <li><a href="https://www.c-sharpcorner.com/privacypolicy.aspx">Privacy Policy</a></li> <li><a href="https://www.c-sharpcorner.com/termsconditions.aspx">Terms</a></li> <li><a href="https://www.c-sharpcorner.com/media/contactus.aspx">Media Kit</a></li> <li><a href="https://www.c-sharpcorner.com/sitemap/">Sitemap</a></li> <li><a href="https://www.c-sharpcorner.com/report-bugs">Report a Bug</a></li> <li><a href="https://www.c-sharpcorner.com/faq">FAQ</a></li> <li><a href="https://www.c-sharpcorner.com/partners.aspx">Partners</a></li> <li><a href="https://www.c-sharpcorner.com/csharp-tutorials">C# Tutorials</a></li> </ul> <p class="footer-copyright"><small>©2019 C# Corner. All contents are copyright of their authors.</small> </p> </div> </div> </div> </div> <style type="text/css">
+.icon-facebook:before,.icon-twitter:before{content:''!important}
+.whatsapp-icon{display:none!important;}
+@media(max-width:768px) {.whatsapp-icon{display:block!important;}}
+</style> </footer> <input type="hidden" name="ctl00$hddArticleID" id="hddArticleID" value="c3aab4a4-49d3-4c85-b47b-a30fb729c33d"> <input type="hidden" name="ctl00$hddRawUrl" id="hddRawUrl" value="/UploadFile/nipuntomar/connection-strings-for-oracle/"> <input type="hidden" name="ctl00$hiddenFieldReturnUrl" id="hiddenFieldReturnUrl" value="https://www.c-sharpcorner.com/userregistration/logincheck.aspx?returnurl=https://www.c-sharpcorner.com/uploadfile/nipuntomar/connection-strings-for-oracle/"> <input type="hidden" name="ctl00$hiddenFieldNext" id="ctl00_hiddenFieldNext"> <input type="hidden" name="ctl00$hiddenFieldPrevious" id="ctl00_hiddenFieldPrevious"> <input type="hidden" name="ctl00$HiddenFieldCurrentPageUrl" id="ctl00_HiddenFieldCurrentPageUrl" value="https://goo.gl/ZycRDX"> <input type="hidden" name="ctl00$HiddenArticleCategoryID" id="HiddenArticleCategoryID" value="131"> <input type="hidden" name="ctl00$HiddenRawUrl" id="HiddenRawUrl" value="/UploadFile/nipuntomar/connection-strings-for-oracle/"> <input type="hidden" name="ctl00$HiddenAuthorId" id="HiddenAuthorId" value="nipuntomar"> <input type="hidden" name="ctl00$HiddenFiledContentTitle" id="HiddenFiledContentTitle" value="Oracle Connection String using C#"> <input type="hidden" name="ctl00$HiddenContentType" id="HiddenContentType" value="article"> <input type="hidden" name="ctl00$HiddenLoginCheckReturnUrl" id="HiddenLoginCheckReturnUrl" value="article"> <input type="hidden" name="ctl00$HiddenUserRole" id="HiddenUserRole"> <input type="hidden" name="ctl00$HiddenIsContentApproved" id="HiddenIsContentApproved" value="true"> <input type="hidden" name="ctl00$HiddenIsAllowPost" id="HiddenIsAllowPost" value="true"> <input name="ctl00$HiddenContentShortDescription" type="hidden" id="HiddenContentShortDescription" value="Oracle is a powerful relational database management system that offers a large feature set. Along with Microsoft SQL Server, Oracle is widely regarded as one of the two most popular full-featured database systems on the market today. Oracle is made up of a set of processes running in your operating system. "> <input name="ctl00$HiddenContentStats" type="hidden" id="HiddenContentStats" data-views="689.7k" data-is-featured="false" data-level="Beginner"> <div class="aspNetHidden"> <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="753D70E0"> <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABJT8BHCumebziSKqEDCIfCTfVleazCj60/QYA5ON7cLOFiGxoDo7e2I3I01pHuodV9pFxIdejWAPuY2G0I/jhFs6qhP3V9gL7OeiOwa74vDlSs9tie4yN/UniM6QSSSl8qvbcOpc9rurvJw3eKwuAsM1ZWzin+cC+JWRxvHjBEI0TpeUREjG6ev2Y5leWJZ5bcVJ7yP3EjTGVaKEi3cK3O5rHvtEB3K6yMqQs71Z/nljEUzr8BX1JhPWQuMWqwksogafOkkiNKB5HMuyB4V5+NkZCHW8fW2K/05/c48TeTGzBOjbRbP0RJ3+ZeMWBAx26PVyUnXQCiFbhfEdwDT65oX+K5m0s8A+3udf4IvjphiaLPpG7ZnljaK92U7MKz+7dXtvawTEXbx06aWMTu4dwBNW8BqHQ=="> </div> <script> var arrInFocus =[{"Title":"Learn CosmosDB","Url":"https://www.c-sharpcorner.com/news/learn-cosmos-db-on-c-sharp-corner","IsActive":true,"CreatedDate":"2019-02-19T10:17:30.1697737"},{"Title":"Blockchain FAQ","Url":"https://www.c-sharpcorner.com/article/blockchain-faq/","IsActive":true,"CreatedDate":"2019-02-19T10:16:46.3475787"},{"Title":"ANNOUNCEMENT: New Cryptocurrency Learning Center Launched","Url":"https://www.c-sharpcorner.com/news/cryptocurrency-section-announced","IsActive":true,"CreatedDate":"2019-01-17T10:04:51.594774"}]</script></form> <script src="./Oracle Connection String using C#_files/article_details_new"></script><a href="javascript:void(0);" id="ScrollToTop"><i class="c-icon icon-up-arrow"></i></a> <script async="" src="./Oracle Connection String using C#_files/js"></script> <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-535360-1');
+</script> <script src="./Oracle Connection String using C#_files/new_print_content_20181208.js.download"></script><script src="./Oracle Connection String using C#_files/NewPopupPlugin.js.download"></script><script>
+if (navigator.serviceWorker.controller) {
+console.log('[PWA Builder] active service worker found, no need to register')
+} else {
+//Register the ServiceWorker
+navigator.serviceWorker.register('https://www.c-sharpcorner.com/sw.js', {
+scope: './'
+}).then(function(reg) {
+console.log('Service worker has been registered for scope:'+ reg.scope);
+});
+}
+</script>  <table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 122px; display: none; top: 118px; left: 882px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><iframe id="google_osd_static_frame_5558054112769" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Oracle Connection String using C#_files/saved_resource(4).html"></iframe></body></html>
